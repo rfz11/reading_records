@@ -398,7 +398,7 @@ function formatHeight(heightInMeters) {
     } else if (heightInMeters < 1000) {
         return heightInMeters.toFixed(2) + "</b>米";
     } else {
-        return (heightInMeters / 1000).toFixed(2) + "</b>千米";
+        return (heightInMeters / 500).toFixed(2) + "</b>里";
     }
 }
 
@@ -445,7 +445,7 @@ function renderNews() {
 
         const count = newsData.length - index;
         const formattedCount = String(count).padStart(4, "0");
-        const height = count * 0.25 * totalPage /2;
+        const height = count * 0.25 * totalPage /2 ;
 
         contentSpan.innerHTML =
             "<span class='badge'>" + formattedCount + "本 "
