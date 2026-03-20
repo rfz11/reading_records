@@ -445,7 +445,7 @@ function renderNews() {
 
         const count = newsData.length - index;
         const formattedCount = String(count).padStart(4, "0");
-        const height = count * 0.25 * totalPage;
+        const height = count * 0.25 * totalPage /2;
 
         contentSpan.innerHTML =
             "<span class='badge'>" + formattedCount + "本 "
@@ -454,7 +454,7 @@ function renderNews() {
             + formatHeight(height) + "</span><br>"
             /* + String(Math.floor(totalMoney)).padStart(4, "0") + "元" */
             + " <span style='color:#d4a017; font-weight:bold;'>【"
-            + item.name + "】</span><br>"+ "阅罢"
+            + item.name + "】</span>"+ "阅罢"
             + item.bookname + "<br>" + item.level;
 
         div.appendChild(dateDiv);
