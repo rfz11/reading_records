@@ -680,32 +680,40 @@ function updateEarthProgress(distanceInMeters) {
 // ===== 1. 定义参照物序列 =====
 const landmarks = [
     { name: "金家镇", dist: 7, img: "./books/金家镇.png" },
-    { name: "射洪市", dist: 10, img: "./books/射洪市.png" },
-    { name: "天府绿道", dist: 100, img: "./books/天府绿道.jpg" }
+    { name: "射洪市", dist: 34.3, img: "./books/射洪市.png" },
+    { name: "绵阳市", dist: 108.0, img: "./books/绵阳市.png" },
+    { name: "绵阳市一环", dist: 24.8, img: "./books/绵阳市规划.png" },
+    { name: "川西大环线", dist: 2547.4, img: "./books/川西大环线.jpg" },
+    { name: "天府绿道", dist: 100, img: "./books/天府绿道.jpg" },
+    { name: "环中国", dist: 28000, img: "./books/环中国.png" }
 ];
 
 // 2. 核心更新函数
 function updateEarthProgress(distanceInMeters) {
     if (isNaN(distanceInMeters)) distanceInMeters = 0;
     
+    // --- 核心修正：确保参照物按距离从小到大排序，防止累加逻辑出错 ---
+    const sortedLandmarks = [...landmarks].sort((a, b) => a.dist - b.dist);
+    
     const totalLi = distanceInMeters / 500; // 里
     const totalKm = distanceInMeters / 1000; // 公里
     
     // 计算当前参照物进度
     let accumulatedDist = 0;
-    let currentLandmark = landmarks[0];
+    let currentLandmark = sortedLandmarks[0]; // 使用排序后的
     let lapInCurrent = 0;
 
-    for (let i = 0; i < landmarks.length; i++) {
-        if (totalKm < accumulatedDist + landmarks[i].dist) {
-            currentLandmark = landmarks[i];
-            lapInCurrent = (totalKm - accumulatedDist) / landmarks[i].dist;
+    // 修改为遍历 sortedLandmarks
+    for (let i = 0; i < sortedLandmarks.length; i++) {
+        if (totalKm < accumulatedDist + sortedLandmarks[i].dist) {
+            currentLandmark = sortedLandmarks[i];
+            lapInCurrent = (totalKm - accumulatedDist) / sortedLandmarks[i].dist;
             break;
         }
-        accumulatedDist += landmarks[i].dist;
-        if (i === landmarks.length - 1) {
-            currentLandmark = landmarks[i];
-            lapInCurrent = (totalKm - (accumulatedDist - landmarks[i].dist)) / landmarks[i].dist;
+        accumulatedDist += sortedLandmarks[i].dist;
+        if (i === sortedLandmarks.length - 1) {
+            currentLandmark = sortedLandmarks[i];
+            lapInCurrent = (totalKm - (accumulatedDist - sortedLandmarks[i].dist)) / sortedLandmarks[i].dist;
         }
     }
 
@@ -806,48 +814,94 @@ function initInteraction() {
 
 // 展示勋章墙函数
 // 展示勋章墙函数
+// 展示勋章墙函数
+
+// 展示勋章墙函数
+// 展示勋章墙函数
+// 展示勋章墙函数
+// 展示勋章墙函数
+// 展示勋章墙函数
 function showMedalWall(totalKm) {
-    // 1. 创建全屏遮罩
     const overlay = document.createElement("div");
     overlay.style.cssText = `
         position: fixed; top: 0; left: 0; width: 100%; height: 100%;
         background: rgba(0,0,0,0.85); z-index: 10000;
         display: flex; flex-direction: column; align-items: center; justify-content: center;
         backdrop-filter: blur(5px); animation: fadeIn 0.3s ease;
+        font-family: 'KaiTi','Microsoft YaHei', sans-serif;
     `;
     
-    // 2. 创建标题
     const title = document.createElement("div");
-    title.innerHTML = "<div style='color:#aaa; font-size:12px;'>READING FOOTPRINTS</div><div style='color:white; font-size:20px; font-weight:bold; margin-bottom:30px;'>已征服的足迹</div>";
+    title.innerHTML = "<div style='color:#aaa; font-size:12px;'>READING FOOTPRINTS</div><div style='color:white; font-size:20px; font-weight:bold; margin-bottom:30px;'>却顾来时路</div>";
     title.style.textAlign = "center";
     overlay.appendChild(title);
 
-    // 3. 创建勋章容器 (Flex 布局)
     const container = document.createElement("div");
     container.style.cssText = "display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 90%;";
 
+    const sortedLandmarks = [...landmarks].sort((a, b) => a.dist - b.dist);
+
     let tempDist = 0;
-    landmarks.forEach(m => {
+    sortedLandmarks.forEach(m => {
         const isUnlocked = totalKm >= (tempDist + m.dist);
         tempDist += m.dist;
 
-        // 创建勋章项
         const medal = document.createElement("div");
-        medal.style.cssText = `
-            text-align: center; width: 80px; 
-            filter: ${isUnlocked ? 'none' : 'grayscale(1) opacity(0.3)'};
-            transition: transform 0.3s;
-        `;
+        medal.style.cssText = `text-align: center; width: 80px; filter: ${isUnlocked ? 'none' : 'grayscale(1) opacity(0.3)'}; transition: transform 0.3s;`;
         
-        // 勋章图片圆框
-        // 核心修改点：在 ${isUnlocked ? '已达成' : m.dist + 'km'} 逻辑中，为已达成状态额外换行显示里程
+// --- 核心修改：光晕瘦身 & 换色 ---
+        // A. 金属立体感保持不变：
+        // 1. inset 0 0 10px 4px #FFD700: 原有的黄金内包裹，吃掉黑边
+        // 2. inset 0 2px 2px rgba(255,255,255,0.6): 模拟金属上边缘的高光反射
+        // 3. inset 0 -2px 2px rgba(0,0,0,0.4): 模拟金属下边缘的阴影投射
+
+        // B. 光晕换色与缩半径：
+        // 4. 0 0 10px 4px #FFD700: 爆燃金芯缩小（从15px 6px 缩到 10px 4px）
+        // 5. 0 0 15px 5px rgba(255, 255, 255, 0.5): 冰蓝换成淡淡白光（从30px 10px 缩到 15px 5px）
+        // 6. 0 0 25px 2px rgba(255, 255, 255, 0.2): 冰蓝外余晖换成淡淡白光（从50px 15px 缩到 25px 2px）
+        const activeGlow = `
+            inset 0 0 10px 4px #FFD700,
+            inset 0 2px 2px rgba(255,255,255,0.6),
+            inset 0 -2px 2px rgba(0,0,0,0.4),
+            inset 0 0 1px 1px rgba(100,60,0,0.8),
+            0 0 10px 4px #FFD700, 
+            0 0 15px 5px rgba(255, 255, 255, 0.5), 
+            0 0 25px 2px rgba(255, 255, 255, 0.2)
+        `;
+
+// --- 核心修改：微透薄玻璃蒙版精修（微量模糊与反光） ---
+        const glassReflection = isUnlocked ? `
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%;
+                        /* 1. 关键修改：微量模糊回归 (从0px提升至0.5px)，确保图片清晰但有介质感 */
+                        backdrop-filter: blur(0.2px); 
+                        /* 2. 关键修改：反光渐变稍微增强 (从0.1提升至0.18)，使其扎实一些 */
+                        background: linear-gradient(135deg, rgba(255,255,255,0.88) 0%, rgba(255,255,255,0.06) 40%, rgba(255,255,255,0.0) 60%, rgba(255,255,255,0.1) 100%);
+                        /* 3. 极细精致亮边保持不变，增加厚度感 */
+                        box-shadow: inset 0 0 1px 0.5px rgba(255,255,255,0.3); 
+                        z-index: 2; 
+                        pointer-events: none;">
+            </div>` : '';
+
         medal.innerHTML = `
-            <div style="width: 70px; height: 70px; border-radius: 50%; border: 3px solid ${isUnlocked ? '#007AFF' : '#666'}; 
-                        padding: 3px; margin: 0 auto 8px; background: white; box-shadow: 0 0 15px rgba(0,122,255,0.3);">
-                <img src="${m.img}" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+            <div style="width: 70px; height: 70px; border-radius: 50%; 
+                        padding: 0; margin: 0 auto 8px; 
+                        display: flex; align-items: center; justify-content: center; 
+                        overflow: hidden; position: relative;
+                        /* 金属边框保持不变 */
+                        border: 2.7px solid transparent;
+                        background-image: ${isUnlocked ? 
+                            'linear-gradient(#222, #222), linear-gradient(135deg, #FFE082 0%, #FFD700 45%, #B8860B 55%, #FFE082 100%)' : 
+                            'linear-gradient(#444, #444), linear-gradient(#666, #666)'};
+                        background-origin: border-box;
+                        background-clip: padding-box, border-box;
+                        
+                        box-shadow: ${isUnlocked ? activeGlow : 'none'};
+                        ">
+                ${glassReflection}
+                <img src="${m.img}" style="width: 108%; height: 108%; border-radius: 50%; object-fit: cover; display: block; z-index: 1;">
             </div>
             <div style="color: ${isUnlocked ? 'white' : '#888'}; font-size: 12px; font-weight: bold;">${m.name}</div>
-            <div style="color: ${isUnlocked ? '#007AFF' : '#555'}; font-size: 10px;">
+            <div style="color: ${isUnlocked ? '#FFD700' : '#555'}; font-size: 10px;">
                 ${isUnlocked ? '已达成<br>' + m.dist + 'km' : m.dist + 'km'}
             </div>
         `;
@@ -856,13 +910,7 @@ function showMedalWall(totalKm) {
     });
 
     overlay.appendChild(container);
-
-    // 4. 点击遮罩任何地方关闭
-    overlay.onclick = () => {
-        overlay.style.opacity = "0";
-        setTimeout(() => overlay.remove(), 300);
-    };
-
+    overlay.onclick = () => { overlay.style.opacity = "0"; setTimeout(() => overlay.remove(), 300); };
     document.body.appendChild(overlay);
 }
 
