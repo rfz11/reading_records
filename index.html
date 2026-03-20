@@ -285,23 +285,25 @@ style="text-decoration: none;">🐳</a>·浩瀚<a href="world_reading_map.html" 
 <div style="display: flex; justify-content: center; align-items: center; gap: 10px; margin: 15px auto; flex-wrap: nowrap; padding: 0 5px; font-family: 'Microsoft YaHei', sans-serif; max-width: 100%;">
     
     <div style="text-align: center; flex: 0 0 auto;">
-        <div style="position: relative; width: 160px; height: 160px; border-radius: 50%; border: 6px solid #f0f0f0; box-shadow: 0 4px 10px rgba(0,0,0,0.1); background: #fff; display: flex; align-items: center; justify-content: center; box-sizing: content-box; transform: scale(0.9);">
+        <div id="progressBg" style="position: relative; width: 160px; height: 160px; border-radius: 50%; border: 6px solid #f0f0f0; box-shadow: 0 4px 10px rgba(0,0,0,0.1); background: #fff; display: flex; align-items: center; justify-content: center; box-sizing: content-box; transform: scale(0.9);">
             
             <svg width="160" height="160" viewBox="0 0 160 160" style="transform: rotate(-90deg); position: absolute; top: 0; left: 0; z-index: 3; pointer-events: none;">
+                <circle id="trackCircle" cx="80" cy="80" r="77" fill="none" stroke="transparent" stroke-width="6" />
+                
                 <circle id="progressCircle" cx="80" cy="80" r="77" fill="none" stroke="#409EFF" stroke-width="6" 
                         stroke-dasharray="483.8" stroke-dashoffset="483.8" stroke-linecap="round" 
                         style="transition: stroke-dashoffset 1.5s ease-in-out;" />
             </svg>
 
             <div style="width: 148px; height: 148px; border-radius: 50%; overflow: hidden; z-index: 1;">
-                <img src="./books/金家镇.png" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9; mix-blend-mode: hard-light;" onerror="this.style.display='none';">
+                <img id="landmarkImg" src="./books/金家镇.png" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9; mix-blend-mode: hard-light;" onerror="this.style.display='none';">
             </div>
             
             <div style="position: absolute; top: 80%; left: 50%; transform: translate(-50%, -50%); color: white; text-shadow: 2px 2px 5px rgba(0,0,0,0.9); font-weight: bold; text-align: center; z-index: 4;">
                 <div style="font-size: 18px; line-height: 1.1;"><span id="earthLaps">0.0000</span><span style="font-size: 20px;">圈</span></div>
             </div>
         </div>
-        <div style="font-size: 12px; color: #666; margin-top: -5px;">绕金家镇</div>
+        <div id="landmarkName" style="font-size: 12px; color: #666; margin-top: -5px;">绕金家镇</div>
     </div>
 
     <div style="text-align: center; flex: 0 0 auto;">
@@ -613,30 +615,58 @@ function initMiniMap() {
     }, 400); // 400ms 延时，确保 CSS 的 scale 动画或渲染已完成
 }
 
+
+
 // ===== 核心更新函数 =====
+// ===== 核心更新函数 =====
+/* 一个参照物跑多圈
 function updateEarthProgress(distanceInMeters) {
-    const liPerLap = 7 *2; // 100; //80150; 
+    const liPerLap = 7 * 2; // 14里一圈
     const totalLi = distanceInMeters / 500;  
+    const totalLaps = totalLi / liPerLap; // 计算总圈数（含小数）
     const totalPercent = (totalLi / liPerLap) * 100;
 
     // 更新文本数据
     document.getElementById("earthDistance").innerText = totalLi.toFixed(2);
     document.getElementById("earthPercent").innerText = totalPercent.toFixed(3) + "%"; 
-    document.getElementById("earthLaps").innerText = (totalLi / liPerLap).toFixed(3);
+    document.getElementById("earthLaps").innerText = totalLaps.toFixed(3);
 
     // 更新左侧 SVG 圆环进度 (r=77 对应的周长是 2 * π * 77 ≈ 483.8)
+    
+// 1. 获取两个圆环对象
     const circle = document.getElementById("progressCircle");
+    const track = document.getElementById("trackCircle");
     const circumference = 483.8; 
-    const currentLapPercent = (totalLi % liPerLap / liPerLap);
-    // 距离为0时 offset 为周长（完全不亮），否则按进度计算
+    
+    let currentLapPercent = totalLaps % 1;
+    if (totalLaps > 0 && currentLapPercent === 0) currentLapPercent = 1;
+
+    // 2. 更新活跃进度条颜色（使用标准的科技蓝）
+    circle.style.stroke = "#007AFF"; 
     circle.style.strokeDashoffset = circumference - (currentLapPercent * circumference);
+
+    // 3. 【核心】蓝色系底色梯度
+    if (track) {
+        if (totalLaps >= 3) {
+            // 3圈以上：深一点的湖蓝色，代表深厚积累
+            track.style.stroke = "#bcdbff"; 
+        } else if (totalLaps >= 1) {
+            // 1-3圈：极浅的冰蓝色，代表已起步
+            track.style.stroke = "#e1f0ff"; 
+        } else {
+            // 0-1圈：完全透明（露出网页白底），显得清爽
+            track.style.stroke = "transparent"; 
+        }
+    }
+
+    document.getElementById("earthLaps").innerText = totalLaps.toFixed(3);
 
     // 更新右侧地图
     if (!miniMap) initMiniMap();
     if (footstepCircle) {
         footstepCircle.setRadius(distanceInMeters);
 
-         // 只有当距离足够大时才缩放地图
+        // 只有当距离足够大时才缩放地图
         if (distanceInMeters > 1000) {
             miniMap.fitBounds(footstepCircle.getBounds(), { padding: [10, 10] });
         } else {
@@ -644,11 +674,210 @@ function updateEarthProgress(distanceInMeters) {
         }
     }
 }
+*/
 
-// 确保页面加载后初始化地图
+
+// ===== 1. 定义参照物序列 =====
+const landmarks = [
+    { name: "金家镇", dist: 7, img: "./books/金家镇.png" },
+    { name: "射洪市", dist: 10, img: "./books/射洪市.png" },
+    { name: "天府绿道", dist: 100, img: "./books/天府绿道.jpg" }
+];
+
+// 2. 核心更新函数
+function updateEarthProgress(distanceInMeters) {
+    if (isNaN(distanceInMeters)) distanceInMeters = 0;
+    
+    const totalLi = distanceInMeters / 500; // 里
+    const totalKm = distanceInMeters / 1000; // 公里
+    
+    // 计算当前参照物进度
+    let accumulatedDist = 0;
+    let currentLandmark = landmarks[0];
+    let lapInCurrent = 0;
+
+    for (let i = 0; i < landmarks.length; i++) {
+        if (totalKm < accumulatedDist + landmarks[i].dist) {
+            currentLandmark = landmarks[i];
+            lapInCurrent = (totalKm - accumulatedDist) / landmarks[i].dist;
+            break;
+        }
+        accumulatedDist += landmarks[i].dist;
+        if (i === landmarks.length - 1) {
+            currentLandmark = landmarks[i];
+            lapInCurrent = (totalKm - (accumulatedDist - landmarks[i].dist)) / landmarks[i].dist;
+        }
+    }
+
+    // 更新下方文字（里 | %）
+    // 这里的百分比我们按照“第一个参照物”的进度来作为基础显示，或者按照总进度
+    document.getElementById("earthDistance").innerText = totalLi.toFixed(2);
+    document.getElementById("earthPercent").innerText = (lapInCurrent * 100).toFixed(2) + "%";
+    document.getElementById("earthLaps").innerText = lapInCurrent.toFixed(4);
+
+    // 更新名称和图片
+    const nameEl = document.getElementById("landmarkName");
+    if (nameEl) nameEl.innerText = "绕" + currentLandmark.name;
+    
+    const imgEl = document.getElementById("landmarkImg");
+    if (imgEl && !imgEl.src.includes(currentLandmark.img.replace('./',''))) {
+        imgEl.src = currentLandmark.img;
+    }
+
+    // 更新进度条
+    const circle = document.getElementById("progressCircle");
+    const track = document.getElementById("trackCircle");
+    const circumference = 483.8;
+    
+    if (circle) {
+        let offsetPercent = lapInCurrent % 1;
+        if (lapInCurrent > 0 && offsetPercent === 0) offsetPercent = 1;
+        circle.style.strokeDashoffset = circumference - (offsetPercent * circumference);
+    }
+
+    if (track) {
+        track.style.stroke = (lapInCurrent >= 1) ? "#e1f0ff" : "transparent";
+    }
+
+    // 地图同步
+    if (!miniMap) initMiniMap();
+    if (footstepCircle) {
+        footstepCircle.setRadius(distanceInMeters);
+        if (distanceInMeters > 1000) {
+            miniMap.fitBounds(footstepCircle.getBounds(), { padding: [10, 10] });
+        } else {
+            miniMap.setView(beijingCoords, 2);
+        }
+    }
+}
+
+/* // 3. 气泡与交互 (独立出来)
+function initInteraction() {
+    const bg = document.getElementById("progressBg");
+    if (!bg) return;
+
+    bg.onclick = function(e) {
+        const distVal = parseFloat(document.getElementById("earthDistance").innerText) || 0;
+        const totalKm = (distVal * 500) / 1000;
+        
+        let doneList = [];
+        let tempDist = 0;
+        landmarks.forEach(m => {
+            if (totalKm >= tempDist + m.dist) doneList.push(m.name);
+            tempDist += m.dist;
+        });
+
+        const msg = doneList.length > 0 ? "已征服: " + doneList.join("、") : "还在第一站努力！";
+        
+        // 创建泡泡
+        const bubble = document.createElement("div");
+        bubble.innerText = msg;
+        bubble.style.cssText = `
+            position: absolute; left: ${e.pageX}px; top: ${e.pageY - 20}px;
+            background: #007AFF; color: white; padding: 8px 15px;
+            border-radius: 20px; font-size: 12px; z-index: 10000;
+            transform: translate(-50%, -100%); transition: all 0.8s ease-out;
+            pointer-events: none; box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        `;
+        document.body.appendChild(bubble);
+        
+        setTimeout(() => {
+            bubble.style.top = (e.pageY - 60) + "px";
+            bubble.style.opacity = "0";
+            setTimeout(() => bubble.remove(), 800);
+        }, 10);
+    };
+} */
+
+// ===== 3. 点击圆圈弹出“勋章墙” =====
+function initInteraction() {
+    const bg = document.getElementById("progressBg");
+    if (!bg) return;
+
+    bg.style.cursor = "pointer";
+    bg.onclick = function(e) {
+        // 获取当前真实公里数
+        const distVal = parseFloat(document.getElementById("earthDistance").innerText) || 0;
+        const totalKm = (distVal * 500) / 1000; 
+        
+        showMedalWall(totalKm);
+    };
+}
+
+// 展示勋章墙函数
+// 展示勋章墙函数
+function showMedalWall(totalKm) {
+    // 1. 创建全屏遮罩
+    const overlay = document.createElement("div");
+    overlay.style.cssText = `
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0.85); z-index: 10000;
+        display: flex; flex-direction: column; align-items: center; justify-content: center;
+        backdrop-filter: blur(5px); animation: fadeIn 0.3s ease;
+    `;
+    
+    // 2. 创建标题
+    const title = document.createElement("div");
+    title.innerHTML = "<div style='color:#aaa; font-size:12px;'>READING FOOTPRINTS</div><div style='color:white; font-size:20px; font-weight:bold; margin-bottom:30px;'>已征服的足迹</div>";
+    title.style.textAlign = "center";
+    overlay.appendChild(title);
+
+    // 3. 创建勋章容器 (Flex 布局)
+    const container = document.createElement("div");
+    container.style.cssText = "display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 90%;";
+
+    let tempDist = 0;
+    landmarks.forEach(m => {
+        const isUnlocked = totalKm >= (tempDist + m.dist);
+        tempDist += m.dist;
+
+        // 创建勋章项
+        const medal = document.createElement("div");
+        medal.style.cssText = `
+            text-align: center; width: 80px; 
+            filter: ${isUnlocked ? 'none' : 'grayscale(1) opacity(0.3)'};
+            transition: transform 0.3s;
+        `;
+        
+        // 勋章图片圆框
+        // 核心修改点：在 ${isUnlocked ? '已达成' : m.dist + 'km'} 逻辑中，为已达成状态额外换行显示里程
+        medal.innerHTML = `
+            <div style="width: 70px; height: 70px; border-radius: 50%; border: 3px solid ${isUnlocked ? '#007AFF' : '#666'}; 
+                        padding: 3px; margin: 0 auto 8px; background: white; box-shadow: 0 0 15px rgba(0,122,255,0.3);">
+                <img src="${m.img}" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+            </div>
+            <div style="color: ${isUnlocked ? 'white' : '#888'}; font-size: 12px; font-weight: bold;">${m.name}</div>
+            <div style="color: ${isUnlocked ? '#007AFF' : '#555'}; font-size: 10px;">
+                ${isUnlocked ? '已达成<br>' + m.dist + 'km' : m.dist + 'km'}
+            </div>
+        `;
+        
+        container.appendChild(medal);
+    });
+
+    overlay.appendChild(container);
+
+    // 4. 点击遮罩任何地方关闭
+    overlay.onclick = () => {
+        overlay.style.opacity = "0";
+        setTimeout(() => overlay.remove(), 300);
+    };
+
+    document.body.appendChild(overlay);
+}
+
+// 增加一个简单的淡入动画样式
+const style = document.createElement('style');
+style.innerHTML = `
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+`;
+document.head.appendChild(style);
+
+// ===== 4. 初始化渲染 =====
 window.onload = function() {
     initMiniMap();
-    renderNews(); // 你的渲染函数
+    initInteraction(); // 绑定点击事件
+    renderNews(); 
 };
 
 
@@ -672,7 +901,22 @@ function renderNews() {
         const count = newsData.length - index;
         // 原来的 height 变量更名为 distance (单位: 米)
         // 20260320 发现bug 多乘了   const distance = count * 0.25 * totalPage / 2 ; 
-         const distance = 0.25 * totalPage / 2 ; 
+        // 这样算出来非常短 const distance = 0.25 * totalPage / 2 ; 
+        // 换一个新的算法 关注 把每一行字 的 距离 ， 总距离 = 行数 * 单行距离 * 页数
+
+        /* ① 每页行数
+        普通小说（32 开）：约 25～30 行/页
+        
+        社科/学术书（16 开）：约 35～40 行/页
+        
+        取平均：30 行/页
+        
+        ② 每行长度
+        32 开书芯宽度约 13 cm，每行文字约占 10～12 cm
+        
+        取平均：0.11 米/行 */
+        
+        const distance = 30 * 0.13 * totalPage ; 
 
         // 提取第一条（距离最远）的数据更新地球进度
         if (isFirstMatched) {
