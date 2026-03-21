@@ -224,6 +224,9 @@ ul, ol {
                     
 </div> -->
 
+
+<h2 align="center">书香门第</h2>
+
 <h3 align="center">涓滴<a href="https://www.wjx.top/vm/OMT25NM.aspx#" 
 class="reading-link" style="text-decoration: none;">💧</a>·流衍<a href="reading_board.html" 
 class="reading-link" style="text-decoration: none;">🌊</a>·涵泳<a href="bookshelf.html" class="reading-link" // 🚣🏞️
@@ -241,6 +244,12 @@ style="text-decoration: none;">🐳</a>·浩瀚<a href="world_reading_map.html" 
 <div id="flower-cards" class="flower-cards">
     <!-- 动态花品卡片生成 -->
 </div>
+
+
+
+
+<input id="searchInput" placeholder="输入姓名筛选，如：清一" style="margin-bottom:10px; padding:5px;">
+<h2 align="center">🏮 书山有路 🏮</h2>
 
 
  <!-- <div style="display: flex; justify-content: center; align-items: center; gap: 30px; margin: 25px 0; flex-wrap: wrap; font-family: 'Microsoft YaHei', sans-serif;">
@@ -287,12 +296,31 @@ style="text-decoration: none;">🐳</a>·浩瀚<a href="world_reading_map.html" 
     <div style="text-align: center; flex: 0 0 auto;">
         <div id="progressBg" style="position: relative; width: 160px; height: 160px; border-radius: 50%; border: 6px solid #f0f0f0; box-shadow: 0 4px 10px rgba(0,0,0,0.1); background: #fff; display: flex; align-items: center; justify-content: center; box-sizing: content-box; transform: scale(0.9);">
             
-            <svg width="160" height="160" viewBox="0 0 160 160" style="transform: rotate(-90deg); position: absolute; top: 0; left: 0; z-index: 3; pointer-events: none;">
+            <!-- <svg width="160" height="160" viewBox="0 0 160 160" style="transform: rotate(-90deg); position: absolute; top: 0; left: 0; z-index: 3; pointer-events: none;">
                 <circle id="trackCircle" cx="80" cy="80" r="77" fill="none" stroke="transparent" stroke-width="6" />
                 
                 <circle id="progressCircle" cx="80" cy="80" r="77" fill="none" stroke="#409EFF" stroke-width="6" 
                         stroke-dasharray="483.8" stroke-dashoffset="483.8" stroke-linecap="round" 
                         style="transition: stroke-dashoffset 1.5s ease-in-out;" />
+            </svg> -->
+            <svg width="160" height="160" viewBox="0 0 160 160" style="transform: rotate(-90deg); position: absolute; top: 0; left: 0; z-index: 3; pointer-events: none;">
+                
+                <defs>
+                    <path id="textPathDown" d="M 18, 80 A 62,62 0 0,0 142, 80" />
+                </defs>
+            
+                <circle id="trackCircle" cx="80" cy="80" r="77" fill="none" stroke="transparent" stroke-width="6" />
+                
+                <circle id="progressCircle" cx="80" cy="80" r="77" fill="none" stroke="#409EFF" stroke-width="6" 
+                        stroke-dasharray="483.8" stroke-dashoffset="483.8" stroke-linecap="round" 
+                        style="transition: stroke-dashoffset 1.5s ease-in-out;" />
+            
+                <text fill="#FFD700" font-size="12" font-weight="bold" dy="3"
+                      style="transform: rotate(90deg); transform-origin: center; pointer-events: none;">
+                    <textPath xlink:href="#textPathDown" startOffset="50%" text-anchor="middle">
+                        <tspan id="curvedPagesText" style="font-family: 'Microsoft YaHei', sans-serif; letter-spacing: 2.5px;">还剩 0 页</tspan>
+                    </textPath>
+                </text>
             </svg>
 
             <div style="width: 148px; height: 148px; border-radius: 50%; overflow: hidden; z-index: 1;">
@@ -300,7 +328,9 @@ style="text-decoration: none;">🐳</a>·浩瀚<a href="world_reading_map.html" 
             </div>
             
             <div style="position: absolute; top: 80%; left: 50%; transform: translate(-50%, -50%); color: white; text-shadow: 2px 2px 5px rgba(0,0,0,0.9); font-weight: bold; text-align: center; z-index: 4;">
-                <div style="font-size: 18px; line-height: 1.1;"><span id="earthLaps">0.0000</span><span style="font-size: 20px;">圈</span></div>
+                <div style="font-size: 18px; line-height: 1.1;"><span id="earthLaps">0.0000</span>
+                <!-- <span style="font-size: 20px;">圈</span> --> 
+                </div>
             </div>
         </div>
         <div id="landmarkName" style="font-size: 12px; color: #666; margin-top: -5px;">绕金家镇</div>
@@ -338,12 +368,37 @@ style="text-decoration: none;">🐳</a>·浩瀚<a href="world_reading_map.html" 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-<input id="searchInput" placeholder="输入姓名筛选，如：清一" style="margin-bottom:10px; padding:5px;">
-<h2 align="center">🏮 书山有路 🏮</h2>
+
+
+
+
 <div id="news-container" class="news-container">
     <!-- 动态新闻生成 -->
 </div>
 
+
+
+<h3>【功能说明】</h3>
+<ul>
+    <li><a href="https://www.wjx.top/vm/OMT25NM.aspx#" class="reading-link" style="text-decoration: none;">涓滴💧<a>|
+    每日之功，微末而坚韧（水之微）
+<br>涓滴之功，始于足下。每日读书，如一滴水珠，微小却不可轻看。它记录每一次翻开书页的瞬间，每一次与智者对话的开始。水滴石穿，非一日之功；学问渐深，亦从涓滴而起。这里是您每日读书的见证，是万里书山的第一步。</li>
+    <li><a href="reading_board.html" class="reading-link" style="text-decoration: none;">流衍🌊<a>|
+    家风绵延，代代相传（水之流）<br>家风绵延，如水流传。一家人的读书记录，汇聚于此。如同江河奔涌，源远流长。父母的朗朗书声，孩子的稚嫩提问，都在这里留下印记。流衍，是书香的代代相传，是耕读家风的生生不息。这一页，记录的是家，传承的是文脉。</li>
+    <li><a href="bookshelf.html" class="reading-link" style="text-decoration: none;">涵泳🐳<a>|
+    沉浸书中，所读成藏（水之浸）<br>沉潜涵泳，如鲸入海。读书之乐，在于涵泳——如鱼游于水，如鲸潜于渊。这是您读过的每一本书，是深思后的收获，是沉浸中的成长。涵泳不是浮光掠影，而是反复玩味，直至融会贯通。每一本读完的书，都是一次深潜，一次心灵的远航。</li>
+    <li><a href="world_reading_map.html" class="reading-link" style="text-decoration: none;">浩瀚🌏<a>|眼界开阔，学至万里（水之广）<br>
+    眼界开阔，浩瀚无垠。书读万卷，行至万里。地图上每一个标记，都是阅读留下的足迹。从江南水乡到西北大漠，从东方古国到异域远洋——书页翻过，世界便在脚下。浩瀚，是知识的广度，是视野的边界，也是您与家人读遍天下的壮阔版图。</li>
+</ul>
+
+
+<h3>【杂谈】</h3>
+<ul>
+    <li> 前前后后做了一周，其实包含了很多小心思，有非常多的细节，一个图标的配色可能就调整了不下百次；每一个emoji的选取也废了不少功夫。大致做到老少咸宜，实用与趣味并行。
+    <br> 关于花品：花品制度 选取了植物的生长，从涓滴（💧）→破土（🌱）→ 培护（🌿）→ 花开（🌸）→ 出尘（🪷）→ 加冕（🏵️）→ 涅槃（🐦‍🔥）
+    <br> 关于五行：从【水】到【木】再到【火】，【土】在哪儿呢？在万里路。那么【金】呢？一个是 书山有路，那就是有矿了，二就是勋章选用金属质感，也提供了金，此外书中自有黄金屋，自然也是金了。
+    <br> 其他代写</li>
+</ul>
 
 
 <h3 align="center">🌸 耕读花品 🏵️</h3>
@@ -400,7 +455,7 @@ style="text-decoration: none;">🐳</a>·浩瀚<a href="world_reading_map.html" 
     <tr>
         <td></td>
         <td><b>备注</b>：</td>
-        <td>抱朴×5&ensp;善下×10&ensp;凤书×10</td>
+        <td>抱朴×3&ensp;善下×9&ensp;凤书×9</td>
         <td></td>
         <td></td>
     </tr>
@@ -411,7 +466,7 @@ style="text-decoration: none;">🐳</a>·浩瀚<a href="world_reading_map.html" 
     <li>轮流担任主持人，负责保管押金，期末统计，发放超过押金（500）的奖励，征收不足的罚款（少于500的人需要补缴），收齐后转给下任主持人；</li>
     <li>当前押金总额：3500元；</li>
     <li>主持人顺序：【致虚】>【清一】>【西翁】>【抱朴】>【锦安】>【盈生】；</li>
-    <li>当前主持人【致虚】。</li>
+    <s><li>当前主持人【致虚】。</li></s>
 </ul>
 
 <h3>【积分制度】</h3>
@@ -679,10 +734,12 @@ function updateEarthProgress(distanceInMeters) {
 
 // ===== 1. 定义参照物序列 =====
 const landmarks = [
-    { name: "金家镇", dist: 7, img: "./books/金家镇.png" },
-    { name: "射洪市", dist: 34.3, img: "./books/射洪市.png" },
-    { name: "绵阳市", dist: 108.0, img: "./books/绵阳市.png" },
-    { name: "绵阳市一环", dist: 24.8, img: "./books/绵阳市规划.png" },
+    { name: "环金家镇", dist: 7, img: "./books/金家镇.png" },
+    { name: "金家→射洪", dist: 18.5, img: "./books/金家射洪.png" },
+    { name: "环射洪市", dist: 34.3, img: "./books/射洪市.png" },
+     { name: "射洪→绵阳", dist: 108, img: "./books/射洪绵阳.png" },
+    //{ name: "绵阳市", dist: 108.0, img: "./books/绵阳市.png" },
+    // { name: "绵阳市一环", dist: 24.8, img: "./books/绵阳市规划.png" },
     { name: "川西大环线", dist: 2547.4, img: "./books/川西大环线.jpg" },
     { name: "天府绿道", dist: 100, img: "./books/天府绿道.jpg" },
     { name: "环中国", dist: 28000, img: "./books/环中国.png" }
@@ -698,34 +755,143 @@ function updateEarthProgress(distanceInMeters) {
     const totalLi = distanceInMeters / 500; // 里
     const totalKm = distanceInMeters / 1000; // 公里
     
+// --- 逻辑配置：true 为接力累加模式，false 为独立达标模式 ---
+    const isAccumulated = false; 
+
     // 计算当前参照物进度
     let accumulatedDist = 0;
-    let currentLandmark = sortedLandmarks[0]; // 使用排序后的
+    let currentLandmark = sortedLandmarks[0];
     let lapInCurrent = 0;
 
-    // 修改为遍历 sortedLandmarks
     for (let i = 0; i < sortedLandmarks.length; i++) {
-        if (totalKm < accumulatedDist + sortedLandmarks[i].dist) {
+        // 如果是不累加模式，检查点就是目标本身的距离；如果是累加模式，则是之前的总和 + 目标距离
+        let checkPoint = isAccumulated ? (accumulatedDist + sortedLandmarks[i].dist) : sortedLandmarks[i].dist;
+
+        if (totalKm < checkPoint) {
             currentLandmark = sortedLandmarks[i];
-            lapInCurrent = (totalKm - accumulatedDist) / sortedLandmarks[i].dist;
+            // 计算进度：独立模式下直接用总里程比目标里程；累加模式下减去前序距离
+            lapInCurrent = isAccumulated ? (totalKm - accumulatedDist) / sortedLandmarks[i].dist : totalKm / sortedLandmarks[i].dist;
             break;
         }
-        accumulatedDist += sortedLandmarks[i].dist;
+
+        // 仅在累加模式下更新累加器
+        if (isAccumulated) accumulatedDist += sortedLandmarks[i].dist;
+
         if (i === sortedLandmarks.length - 1) {
             currentLandmark = sortedLandmarks[i];
-            lapInCurrent = (totalKm - (accumulatedDist - sortedLandmarks[i].dist)) / sortedLandmarks[i].dist;
+            lapInCurrent = isAccumulated ? (totalKm - (accumulatedDist - sortedLandmarks[i].dist)) / sortedLandmarks[i].dist : totalKm / sortedLandmarks[i].dist;
         }
+    }
+
+
+// --- 1. 计算当前目标的终点公里数 ---
+    // 如果是接力模式，终点是 (之前累积 + 当前目标)；如果是独立模式，终点就是 (当前目标)
+    const goalKm = isAccumulated ? (accumulatedDist + currentLandmark.dist) : currentLandmark.dist;
+
+    
+    // 计算剩余公里数
+    let remainingKm = goalKm - totalKm;
+    if (remainingKm < 0) remainingKm = 0; 
+
+    // --- 2. 换算为剩余页数 ---
+    // 公式: 1页 = 30 * 0.13m = 3.9m = 0.0039km
+    const kmPerPage = 0.0039;
+    let remainingPages = Math.ceil(remainingKm / kmPerPage);
+
+    // --- 3. 更新界面显示 ---
+    
+    // 总距离（里）保持显示在上方
+    const distEl = document.getElementById("earthDistance");
+    if (distEl) distEl.innerText = totalLi.toFixed(2);
+    
+    /* // 百分比显示
+// --- 1. 计算百分比 (保持更新) ---
+    const percentEl = document.getElementById("earthPercent");
+    if (percentEl) {
+        // 使用 lapInCurrent (0-1之间的浮点数) 乘以 100
+        let displayPercent = (lapInCurrent * 100).toFixed(1);
+        
+        // 如果已经达到或超过 100%，锁定在 100%
+        if (lapInCurrent >= 1) displayPercent = "100.0";
+        
+        percentEl.innerText = displayPercent + "%";
+    }
+
+     // 重点：圆圈中心显示“还剩多少页”
+    const lapsEl = document.getElementById("earthLaps");
+    if (lapsEl) {
+        // 使用更直观的文案，如果字数太多可以缩短为 "还剩 123 页"
+        lapsEl.innerText = "还剩 " + remainingPages + " 页";
+        // 适当调大一点字号，让页数更醒目
+        lapsEl.style.fontSize = "16px";
+        lapsEl.style.fontWeight = "bold";
+    } */
+    
+    // 更新弧形页数
+    const curvedEl = document.getElementById("curvedPagesText");
+    if (curvedEl) {
+        // 这里的 remainingPages 是你之前算好的 Math.ceil(remainingKm / 0.0039)
+        curvedEl.textContent = "还剩 " + remainingPages + " 页";
+    }
+
+
+    /* // --- 2. 修改圆圈内的显示文字 ---
+    // 找到原本显示 earthLaps (圈数) 的地方
+    const lapsEl = document.getElementById("earthLaps");
+    if (lapsEl) {
+        // 将 "1.2345 圈" 改为 "还剩 5.20 KM"
+        lapsEl.innerText = "还剩 " + remainingKm.toFixed(2) + " KM";
+        // 建议微调样式：如果字太挤，可以加一句：lapsEl.style.fontSize = "14px";
+    }
+
+
+    // (可选) 如果你想把百分比也改掉，可以修改这里
+    const percentEl = document.getElementById("earthPercent");
+    if (percentEl) {
+        // 依然保留百分比显示，或者改为显示目标名称
+        percentEl.innerText = (lapInCurrent * 100).toFixed(1) + "%";
+    } */
+    
+    const lapsEl = document.getElementById("earthLaps");
+        if (lapsEl) lapsEl.style.display = "none";
+
+// === 统一 UI 更新区 ===
+    
+    // 1. 顶部：总里程 (里)
+    if (document.getElementById("earthDistance")) {
+        document.getElementById("earthDistance").innerText = totalLi.toFixed(2);
+    }
+
+    // 2. 下方文字栏：百分比 (恢复更新)
+    if (document.getElementById("earthPercent")) {
+        document.getElementById("earthPercent").innerText = (lapInCurrent * 100).toFixed(1) + "%";
+    }
+
+    // 3. 圆圈内侧：弧形剩余页数
+    if (document.getElementById("curvedPagesText")) {
+        document.getElementById("curvedPagesText").textContent = "还剩 " + remainingPages + " 页";
+    }
+
+    // 4. 底部文字：当前目标名称
+    if (document.getElementById("landmarkName")) {
+        document.getElementById("landmarkName").innerText = "绕" + currentLandmark.name;
+    }
+    
+    // 5. 隐藏旧的 laps 元素 (防止 0.000 残留)
+    if (document.getElementById("earthLaps")) {
+        document.getElementById("earthLaps").style.display = "none";
     }
 
     // 更新下方文字（里 | %）
     // 这里的百分比我们按照“第一个参照物”的进度来作为基础显示，或者按照总进度
-    document.getElementById("earthDistance").innerText = totalLi.toFixed(2);
-    document.getElementById("earthPercent").innerText = (lapInCurrent * 100).toFixed(2) + "%";
-    document.getElementById("earthLaps").innerText = lapInCurrent.toFixed(4);
+    // document.getElementById("earthDistance").innerText = totalLi.toFixed(2);
+    // document.getElementById("earthPercent").innerText = (lapInCurrent * 100).toFixed(2) + "%";
+    // document.getElementById("earthLaps").innerText = lapInCurrent.toFixed(4);
 
     // 更新名称和图片
     const nameEl = document.getElementById("landmarkName");
-    if (nameEl) nameEl.innerText = "绕" + currentLandmark.name;
+    // if (nameEl) nameEl.innerText = "绕" + currentLandmark.name;
+    if (nameEl) nameEl.innerText = currentLandmark.name;
     
     const imgEl = document.getElementById("landmarkImg");
     if (imgEl && !imgEl.src.includes(currentLandmark.img.replace('./',''))) {
@@ -828,7 +994,7 @@ function showMedalWall(totalKm) {
         background: rgba(0,0,0,0.85); z-index: 10000;
         display: flex; flex-direction: column; align-items: center; justify-content: center;
         backdrop-filter: blur(5px); animation: fadeIn 0.3s ease;
-        font-family: 'KaiTi','Microsoft YaHei', sans-serif;
+        font-family: 'SongTi','KaiTi','Microsoft YaHei', sans-serif;
     `;
     
     const title = document.createElement("div");
