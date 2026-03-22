@@ -510,6 +510,7 @@ style="text-decoration: none;">🐳</a>·浩瀚<a href="world_reading_map.html" 
 <script>
 // ===== 新闻数据 =====
 const newsData = [
+    { date: "2026-03-22", name: "致虚", bookname: "『测试888』", money: "0.00", page: "788", level: "进阶【🌸🌿🌿】" },
     { date: "2026-03-22", name: "致虚", bookname: "<i>&ensp;test999</i>", money: "0.00", page: "999999", level: "进阶【🌸🌿🌱🌱】" },
     { date: "2026-03-22", name: "致虚", bookname: "<i>&ensp;test888</i>", money: "0.00", page: "99999", level: "进阶【🌸🌿🌱】" },
     { date: "2026-03-22", name: "致虚", bookname: "<i>&ensp;test 666</i>", money: "0.00", page: "7829", level: "进阶【🌸🌿】" },
@@ -547,7 +548,7 @@ const newsData = [
 
 // ===== 花品数据 =====
 const flowerData = [
-    { name: "致虚🏔️", level: "芳菲🌸", icons: "🌸🌿🌱🌱" },
+    { name: "致虚🏔️", level: "芳菲🌸", icons: "🌸🌿🌿" },
     { name: "凤书🐦‍🔥", level: "芳菲🌸", icons: "🌸" },
     { name: "抱朴🌲", level: "芳菲🌸", icons: "🌸" },
     { name: "清一🎋", level: "育秀🌿", icons: "🌿🌿" },
@@ -772,7 +773,7 @@ const landmarks = [
     { name: "环金家镇", dist: 7, img: "./books/金家镇.webp" },
     { name: "金家→射洪", dist: 18.5, img: "./books/金家射洪.webp" },
     { name: "环射洪市", dist: 34.3, img: "./books/射洪市.webp" },
-     { name: "射洪→绵阳", dist: 108, img: "./books/射洪绵阳.webp" },
+    { name: "射洪→绵阳", dist: 108, img: "./books/射洪绵阳.webp" },
     { name: "绵阳→上海", dist: 2011.3, img: "./books/绵阳上海2011.3.webp" },
     { name: "绵阳→长沙", dist: 1230, img: "./books/绵阳长沙1230.webp" },
     { name: "绵阳→西安", dist: 720.1, img: "./books/绵阳西安720.1.webp" },
@@ -780,9 +781,9 @@ const landmarks = [
     { name: "绵阳→喀什", dist: 3970.8, img: "./books/绵阳喀什3970.8.webp" },
     { name: "绵阳→成都", dist: 145, img: "./books/绵阳成都145.webp" },
     //{ name: "绵阳市", dist: 108.0, img: "./books/绵阳市.webp" },
-    // { name: "绵阳市一环", dist: 24.8, img: "./books/绵阳市规划.webp" },
-    { name: "川西大环线", dist: 2547.4, img: "./books/川西大环线.webp" },
+    //{ name: "绵阳市一环", dist: 24.8, img: "./books/绵阳市规划.webp" },
     //{ name: "天府绿道", dist: 100, img: "./books/天府绿道.webp" },
+    { name: "川西大环线", dist: 2547.4, img: "./books/川西大环线.webp" },
     { name: "环中国", dist: 28000, img: "./books/环中国.webp" }
 ];
 
@@ -1043,15 +1044,25 @@ function showMedalWall(totalKm) {
     title.style.textAlign = "center";
     overlay.appendChild(title);
 
-    const container = document.createElement("div");
-    container.style.cssText = "display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 90%;";
+const container = document.createElement("div");
+    container.style.cssText = "display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 90%; overflow-y: auto; max-height: 70vh; padding: 20px;";
 
+    // --- 核心修正 1: 保持排序逻辑，确保勋章墙按里程从小到大展示 ---
     const sortedLandmarks = [...landmarks].sort((a, b) => a.dist - b.dist);
 
-    let tempDist = 0;
+    // --- 核心修正 2: 引入模式开关，与主页逻辑保持绝对一致 ---
+    const isAccumulated = false; // 你主页目前是 false (独立模式)
+
+    let tempAccumulated = 0; // 累加器
+
     sortedLandmarks.forEach(m => {
-        const isUnlocked = totalKm >= (tempDist + m.dist);
-        tempDist += m.dist;
+        // --- 核心修正 3: 判定逻辑同步 ---
+        // 如果是累加模式，判定点是 (之前总和 + 当前距离)；如果是独立模式，直接对比 m.dist
+        let checkPoint = isAccumulated ? (tempAccumulated + m.dist) : m.dist;
+        const isUnlocked = totalKm >= checkPoint;
+
+        // 只有在累加模式下才更新累加器
+        if (isAccumulated) tempAccumulated += m.dist;
 
         const medal = document.createElement("div");
         medal.style.cssText = `text-align: center; width: 80px; filter: ${isUnlocked ? 'none' : 'grayscale(1) opacity(0.3)'}; transition: transform 0.3s;`;

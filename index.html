@@ -1,218 +1,190 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<!-- <meta http-equiv="refresh" content="0; url=https://wj.qq.com/s2/26058833/8s0i/"> -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>📖 好好学习 天天向上</title>
+<title>📖 开发日志</title>
 <style>
-@font-face {
-            font-family: 'YanTi';
-            src: url('./fonts/YanTiSmall.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
+/* 核心重置 */
+#notebook-container .rendered_html *,
+.rendered_html * {
+    box-sizing: border-box !important;
 }
 
 @font-face {
-            font-family: 'KangXi';
-            src: url('./fonts/KangXiSmall.otf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
+    font-family: 'YanTi';
+    src: url('./fonts/YanTiSmall.ttf') format('truetype');
+    font-weight: normal; font-style: normal; font-display: swap;
 }
 
-@font-face {
-            font-family: 'ZhuanTi';
-            src: url('./fonts/ZhuanTiSmall.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-}
-    
-body {
-    font-family: "YanTi", "ZhuanTi","Microsoft YaHei", Arial, sans-serif;
+/* 全局正文：使用 YanTi */
+body, .log-body {
+    font-family: 'YanTi', -apple-system, BlinkMacSystemFont, sans-serif !important;
     line-height: 1.8;
-    background-color: #fdf6f0;
-    color: #333;
-    padding: 20px;
+    background-color: #fdfaf7;
+    color: #444;
 }
+
+/* 针对所有标题的统一设置 */
+h1, h2, h3 {
+    font-family: 'YanTi', "Microsoft YaHei", sans-serif !important; /* 强制使用燕体 */
+    text-align: center;      /* 居中 */
+    color: #b03060;          /* 你的指定颜色 */
+    margin-bottom: 10px;     /* 下外边距 */
+    font-weight: normal;     /* 艺术字体通常不需要额外加粗 */
+}
+
+/* 如果想让 h1 更大一点 */
 h1 {
-    text-align: center;
-    color: #b03060;
-    margin-bottom: 30px;
-}
-h2, h3 {
-    color: #d6336c;
-    margin-top: 25px;
-}
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 15px 0;
-    background-color: #fff7f0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-th, td {
-    border: 1px solid #f1c0c0;
-    padding: 8px 12px;
-    text-align: center;
-}
-th {
-    background-color: #ffe6f0;
-    font-weight: bold;
-}
-td:first-child {
-    font-weight: bold;
-}
-ul, ol {
-    margin: 10px 0 10px 20px;
-}
-.update {
-    font-size: 0.95em;
-    color: #555;
-    margin-bottom: 15px;
-}
-.news-container {
-    margin-bottom: 25px;
-}
-.news {
-    background-color: #fff0f5;
-    border-left: 4px solid #d6336c;
-    padding: 12px 15px;
-    margin: 10px 0;
-    border-radius: 6px;
-}
-.news-date {
-    font-weight: bold;
-    color: #b03060;
-    /*margin-bottom: 5px; */
-    margin-right: 8px;   /* 和内容隔开 */
-    display: inline;     /* 关键！让它不换行 */
+    font-size: 2.5em; 
+    margin-top: 10px;
 }
 
-
-
-.flower-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 15px;
+/* 如果想让 h2 稍微小一点 */
+h2 {
+    font-size: 1.7em;
 }
 
-.card {
-    flex: 1 1 120px;
-    background-color: #fff7f0;
-    border-left: 5px solid #d6336c;
-    border-radius: 8px;
-    padding: 10px 12px; /* 10px */
-    text-align: center;
-    font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
+.log-body {
+    padding: 30px 15px;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 15px;
 }
 
-.card:hover {
-    transform: scale(1.05);
-}
-.card[data-level="无"] {
-    border-color: #4caf50;
-    background-color: #ffffff;
-}
-.card[data-level="初芽🌱"] {
-    border-color: #4caf50;
-    background-color: #f0fff0;
-}
-.card[data-level="育秀🌿"] {
-    border-color: #2e7d32;
-    background-color: #e0f7fa;
-}
-.card[data-level="芳菲🌸"] {
-    border-color: #d6336c;
-    background-color: #ffe6f0;
-}
-.card[data-level="青莲🪷"] {
-    border-color: #9b59b6;
-    background-color: #f3e8ff;
-}
-.card[data-level="簪花🏵️"] {
-    border-color: #8b0000;
-    background-color: #ffd6d6;
-}
-.card[data-level="涅槃🐦‍🔥"] {
-    border-color: #e67e22;  /* 火焰橙 */
-    background-color: #fff1e0;
-}
-/* 增加触摸反馈：手指按下去时的效果 */
-.card:active {
-    transform: scale(0.95);
-    background-color: #f0f0f0 !important;
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+/* 核心修改：开发日志部分使用系统字体并缩小 */
+.timeline-container, 
+#todo-list {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    font-size: 0.8em !important;
 }
 
+/* 标题样式 */
+h1, h2, h3, .section-title {
+    font-family: 'YanTi', serif !important;
+    text-align: center !important;
+    color: #8b4513;
+}
 
-.badge {
-    color: #e74c3c;
-    border: 1.5px solid #e74c3c;
-    padding: 0 3px;
-    font-family: 'ZhuanTi';
-            /* font-size: 20px; */
-    margin-right: 4px;
-    font-weight: bold;
+.section-title {
+    position: relative !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    font-size: 1.0em !important;
+    margin: 20px 0 5px !important;
+    font-weight: bold !important;
+    display: block !important;
 }
-   /* 确保导航栏占满整行且不换行 */
-    .nav-container {{
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-        left: 0;
-        right: 0;
-        white-space: nowrap;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none; /* Firefox隐藏滚动条 */
-    }}
-    
-    .nav-container::-webkit-scrollbar {{
-        display: none; /* Chrome/Safari隐藏滚动条 */
-    }}
-    
-    .nav-container a {{
-        display: inline-block;
-    }}
-    
-    /* 手机端适配 */
-    @media (max-width: 768px) {{
-        .nav-container a {{
-            margin: 0 8px !important;
-            font-size: 16px !important;
-            padding: 4px 8px !important;
-        }}
-    }}
-    
-    @media (max-width: 480px) {{
-        .nav-container a {{
-            margin: 0 5px !important;
-            font-size: 14px !important;
-            padding: 3px 6px !important;
-        }}
-    }}
-#searchInput {
-    display: none;
-}
+
+/* 时间轴样式保持漂亮版 */
+.timeline-container { position: relative !important; padding: 10px 0 !important; }
+.timeline-item { display: flex !important; position: relative !important; margin-bottom: 0 !important; }
+.timeline-left { position: relative !important; width: 60px !important; flex-shrink: 0 !important; display: flex !important; justify-content: center !important; }
+.timeline-dot { width: 16px !important; height: 16px !important; background: #fff !important; border: 3px solid #6c5ce7 !important; border-radius: 50% !important; z-index: 2 !important; margin-top: 25px !important; box-shadow: 0 0 10px rgba(108, 92, 231, 0.3) !important; }
+.timeline-line { position: absolute !important; left: 50% !important; top: 40px !important; width: 2px !important; height: 100% !important; background: #eee !important; transform: translateX(-50%) !important; z-index: 1 !important; }
+.timeline-item:last-child .timeline-line { display: none !important; }
+.timeline-right { flex: 1 !important; padding-bottom: 30px !important; }
+.timeline-card { background: #ffffff !important; border-radius: 12px !important; padding: 20px !important; box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important; border: 1px solid #f0f0f0 !important; transition: all 0.3s ease !important; margin-left: 10px !important; }
+.timeline-card:hover { transform: translateY(-5px) !important; box-shadow: 0 8px 25px rgba(0,0,0,0.1) !important; }
+.timeline-date { display: inline-block !important; background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%) !important; color: white !important; padding: 3px 15px !important; border-radius: 20px !important; font-weight: bold !important; margin-bottom: 15px !important; font-size: 0.9em !important;}
+.timeline-list { margin: 0 !important; padding: 0 !important; list-style: none !important; }
+.timeline-list li { margin-bottom: 10px !important; display: flex !important; align-items: center !important; font-size: 0.8em !important; /* 调整日志详情文字大小 */}
+.timeline-list li s { color: #b2bec3 !important; text-decoration: line-through !important; }
+.list-icon { color: #00b894 !important; font-weight: bold !important; margin-right: 10px !important; }
+
+/* 待办列表样式 */
+#todo-list { display: grid !important; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important; gap: 15px !important; padding: 0 !important; list-style: none !important; }
+#todo-list li { background: #fff !important; padding: 15px 20px !important; border-radius: 10px !important; border-left: 5px solid #fab1a0 !important; box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important; display: flex !important; align-items: center !important; transition: all 0.3s ease !important; }
+#todo-list li:hover { transform: translateX(5px) !important; box-shadow: 0 5px 15px rgba(0,0,0,0.08) !important; }
+.todo-icon { margin-right: 12px !important; font-size: 0.8em !important; }
+
+@media (max-width: 600px) { .timeline-left { width: 40px !important; } #todo-list { grid-template-columns: 1fr !important; } }
 </style>
 </head>
 <body>
 
-
-<h1 align="center"><a href="https://wj.qq.com/s2/26058833/8s0i/">点击记录</a></h1>
-
-<h2 align="center">🪷🪷🪷 书香门第 🪷🪷🪷</h2> 
-
-<h3 align="center">涓滴<a href="laishilu.html"    //https://www.wjx.top/vm/OMT25NM.aspx#
-class="reading-link" style="text-decoration: none;">💧</a>·流衍<a href="reading_board.html" 
-class="reading-link" style="text-decoration: none;">🌊</a>·涵泳<a href="bookshelf.html" class="reading-link" // 🚣🏞️
-style="text-decoration: none;">🐳</a>·浩瀚<a href="world_reading_map.html" class="reading-link" style="text-decoration: none;">🌏</a></h3>
+<h1 align="center" style="font-family: 'YanTi'"><a href="https://wj.qq.com/s2/26058833/8s0i/" style="text-decoration: none;">记录·时光·生活</a></h1>
 
 
+<h3 align="center">❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁<br>❁涓滴<a href="laishilu.html"    //https://www.wjx.top/vm/OMT25NM.aspx#
+class="reading-link" style="text-decoration: none;">💧</a>✧流衍<a href="reading_board.html" 
+class="reading-link" style="text-decoration: none;">🌊</a>✧涵泳<a href="bookshelf.html" class="reading-link" // 🚣🏞️
+style="text-decoration: none;">🐳</a>✧浩瀚<a href="world_reading_map.html" class="reading-link" style="text-decoration: none;">🌏</a>❁
+<br>❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁</h3>
 
+
+<!-- <h2 align="center">🪷🪷🪷🪷🪷🪷🪷🪷🪷</h2> -->
+
+
+<div class="log-body">
+    <div class="section-title">📋 蓝图与待办</div> 
+    <ul id="todo-list">
+    <li><span class="todo-icon">⏳</span> 1.阅读热力图，阅读后点亮当日小方块，热力值按照打卡开始时间-结束时间，有读书笔记的日子加小图标，读完的日子加小金</li>
+<li><span class="todo-icon">⏳</span> 2.部分字体不显示，需要更新康熙字体子集</li>
+    </ul>
+    
+    <div class="section-title">🔖 开发迭代里程碑</div> 
+    <div class="timeline-container">
+    
+            <div class="timeline-item">
+                <div class="timeline-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-line"></div>
+                </div>
+                <div class="timeline-right">
+                    <div class="timeline-card">
+                        <div class="timeline-date">2026-03-22</div>
+                        <ul class="timeline-list">
+            
+<li><span class="list-icon">✓</span> 修复总里程极大时部分勋章不点亮问题</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="timeline-item">
+                <div class="timeline-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-line"></div>
+                </div>
+                <div class="timeline-right">
+                    <div class="timeline-card">
+                        <div class="timeline-date">2026-03-21</div>
+                        <ul class="timeline-list">
+            
+<li><span class="list-icon">✓</span> 将books_backup中的图片压缩优化然后粘贴至books文件中，降低图片内存</li>
+<li><span class="list-icon">✓</span> 使用字体子集，降低内存：http://font.ssjjss.com/font-subset/；https://cloudconvert.com/ttf-to-woff2</li>
+<li><span class="list-icon">✓</span> 使用腾讯问卷，优化流程</li>
+<li><span class="list-icon">✓</span> 优化UI，简化打卡流程</li>
+<li><span class="list-icon">✓</span> 分离打卡 和统计页面，进一步降低加载过程</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="timeline-item">
+                <div class="timeline-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-line"></div>
+                </div>
+                <div class="timeline-right">
+                    <div class="timeline-card">
+                        <div class="timeline-date">2026-03-20</div>
+                        <ul class="timeline-list">
+            
+<li><span class="list-icon">✓</span> 增加全家走了多少路功能，添加勋章</li>
+<li><span class="list-icon">✓</span> 增加全家视野半径</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+    </div>
+</div>
 
 </body>
 </html>
