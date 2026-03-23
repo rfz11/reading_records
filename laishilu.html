@@ -305,7 +305,8 @@ style="text-decoration: none;">🐳</a>·浩瀚<a href="world_reading_map.html" 
             </svg> -->
 <svg width="160" height="160" viewBox="0 0 160 160" style="transform: rotate(-90deg); position: absolute; top: 0; left: 0; z-index: 3; pointer-events: none;">
     <defs>
-        <path id="textPathDown" d="M 17.5, 80 A 62.5,62.5 0 0,0 142.5, 80" />
+        <!-- <path id="textPathDown" d="M 17.5, 80 A 62.5,62.5 0 0,0 142.5, 80" /> -->
+        <path id="textPathDown" d="M 18.5, 80 A 61.5,61.5 0 0,0 141.5, 80" />
 
         <linearGradient id="metalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" style="stop-color: #FFFFFF; stop-opacity: 1" /> <stop offset="30%" style="stop-color: #FFD700; stop-opacity: 1" /> 
@@ -976,11 +977,7 @@ function updateEarthProgress(distanceInMeters) {
         }
     }
 
-    //如果上述微调后手机依然不显示，请在 updateEarthProgress 函数末尾强制重置一次 startOffset，这能触发手机浏览器的重绘：
-    const curvedPath = document.querySelector("#curvedPagesText").parentNode;
-    if (curvedPath) {
-        curvedPath.setAttribute("startOffset", "50.1%"); // 微小变动触发重绘
-}
+
     
 }
 
