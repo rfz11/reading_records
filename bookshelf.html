@@ -431,6 +431,16 @@
         <div class="recent-books">
     
         <div class="recent-card">
+            <img class="recent-cover" src="./books/人间小满.webp" alt="人间小满" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
+            <div class="recent-info">
+                <div class="recent-bookname">人间小满</div>
+                <div class="recent-author">姑苏阿焦 / 焦佃毅</div>
+                <div class="recent-readers">致虚🏔️</div>
+                <div class="recent-note">「岁月静好的小书。终是放慢了脚步，抬头看见了月亮，亦如少年时那般明亮，小时候我们词不达意，长大后我们言不由衷。如今月光里的纯粹令人心驰神往，也许走了一圈，又回到了最初的地方。年轻时觉得人海里能耀眼最得劲儿，无所事事了此半生，\n才觉着卸下面子和伪装最省心，有些事随遇而安，有些人无须成为羁绊，有些事不必当真。知世故而不世故，历圆滑而弥天真，\n善自嘲而不嘲人，处江湖而远江湖。忙是治疗一切的良药，不做白日梦、不胡思乱想，不等着天上掉馅儿饼。」</div>
+            </div>
+        </div>
+        
+        <div class="recent-card">
             <img class="recent-cover" src="./books/喷嚏先生.webp" alt="喷嚏先生" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
             <div class="recent-info">
                 <div class="recent-bookname">喷嚏先生</div>
@@ -450,16 +460,6 @@
             </div>
         </div>
         
-        <div class="recent-card">
-            <img class="recent-cover" src="./books/酷帅先生.webp" alt="酷帅先生" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
-            <div class="recent-info">
-                <div class="recent-bookname">酷帅先生</div>
-                <div class="recent-author">（英）罗杰·哈格里维斯</div>
-                <div class="recent-readers">盈生🐤</div>
-                <div class="recent-note">「『酷帅先生』一卷读罢，满室生香。」</div>
-            </div>
-        </div>
-        
         </div>
     </div>
     
@@ -468,11 +468,28 @@
         <div class="category">
             <div class="category-header">
                 <div class="category-title">📚 文学</div>
-                <div class="category-count">共 26 本</div>
+                <div class="category-count">共 27 本</div>
             </div>
             <div class="scroll-container">
                 <div class="book-grid">
     
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/人间小满.webp" alt="人间小满" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">人间小满</div>
+                                    <div class="book-author">姑苏阿焦 / 焦佃毅</div>
+                                    <div class="book-readers">致虚🏔️</div>
+                                    <div class="book-meta">
+                                        <span>312页</span>
+                                        <span>¥58</span>
+                                        <span>📅 2026-04-06</span>
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「岁月静好的小书。终是放慢了脚步，抬头看见了月亮，亦如少年时那般明亮，小时候我们词不达意，长大后我们言不由衷。如今月光里的纯粹令人心驰神往，也许走了一圈，又回到了最初的地方。年轻时觉得人海里能耀眼最得劲儿，无所事事了此半生，\n才觉着卸下面子和伪装最省心，有些事随遇而安，有些人无须成为羁绊，有些事不必当真。知世故而不世故，历圆滑而弥天真，\n善自嘲而不嘲人，处江湖而远江湖。忙是治疗一切的良药，不做白日梦、不胡思乱想，不等着天上掉馅儿饼。」
+                                    </div>
+                                </div>
+                            </div>
+                
                             <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/喷嚏先生.webp" alt="喷嚏先生" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
@@ -1320,7 +1337,7 @@
     </div>
     
     <div class="stats">
-        📊 总计 49 册 · 累计 10,807 页 · 投资 ¥2271 元
+        📊 总计 50 册 · 累计 11,119 页 · 投资 ¥2329 元
     </div>
     
     <script>
