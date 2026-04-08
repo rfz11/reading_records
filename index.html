@@ -105,9 +105,10 @@ h1, h2, h3, .section-title {
     margin: 10px auto;
     font-family: "STKaiti", "KaiTi", "Microsoft YaHei", serif;
       display: grid;
-  grid-template-columns: repeat(2, 1fr);  /* 每行两个，等宽 */
+  grid-template-columns: repeat(3, 1fr);  /* 每行两个，等宽 */
   gap: 5px;  /* 卡片间距 */
   }
+  
   .link-card {
     display: block;
     text-align: center;
@@ -119,6 +120,7 @@ h1, h2, h3, .section-title {
     border: 1px solid transparent;
   }
 
+    .reading-section > *:nth-child(1) { display: none; }
   /* 第一行：沉稳水系 */
   .card-1 { color: #2c3e50; background: linear-gradient(to right, #fdfbfb 0%, #ebedee 100%); }
   .card-1:hover { transform: scale(1.02); border-color: #95a5a6; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
@@ -474,11 +476,13 @@ style="text-decoration: none;">🐳</a>✧浩瀚<a href="world_reading_map.html"
             
 </div>
 
-
+ 
 <div class="reading-section">
-  <a href="achieve_all.html" class="link-card card-3">
-    <h2 style="margin:0; font-size: 1.0em;">📚一本，一本📖</h2>
+    
+  <a href="achieve_all.html" class="link-card card-1">
+    <h2 style="margin:0; font-size: 1.0em;">📖一本，一本📚</h2>
   </a>
+  
   <a href="geo_heat_map.html" class="link-card card-3">
     <h2 style="margin:0; font-size: 1.0em;">🗺️在哪儿读书📍</h2>
   </a>
@@ -494,13 +498,14 @@ style="text-decoration: none;">🐳</a>✧浩瀚<a href="world_reading_map.html"
   <a  href="achievements_2.html" class="link-card card-3">
     <h2 style="margin:0; font-size: 1.0em;">🏍️舅舅装甲库<span class="emoji-span">🛩️</span></h2>
   </a>
-  <!-- <a  href="achieve_dongpo.html" class="link-card card-3">
-    <h2 style="margin:0; font-size: 1.0em;">🥩舅舅与东坡<span class="emoji-span">🍵</span></h2>
+ <a  href="achieve_dongpo.html" class="link-card card-3">
+    <h2 style="margin:0; font-size: 1.0em;">🥩舅舅，东坡<span class="emoji-span">🍵</span></h2>
   </a>
   <a  href="achieve_zhixu.html" class="link-card card-3">
     <h2 style="margin:0; font-size: 1.0em;">🐊舅舅准备看<span class="emoji-span">🦉</span></h2> 
-  </a>-->
+  </a>
 </div>
+
 
 
 <div class="log-body">
