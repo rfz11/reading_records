@@ -431,6 +431,16 @@
         <div class="recent-books">
     
         <div class="recent-card">
+            <img class="recent-cover" src="./books/公主小姐.webp" alt="公主小姐" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
+            <div class="recent-info">
+                <div class="recent-bookname">公主小姐</div>
+                <div class="recent-author">[英]罗杰.哈格里维斯</div>
+                <div class="recent-readers">盈生🐤</div>
+                <div class="recent-note">「公主小姐，因为她是公主，因为所以呢，把东西都放在了不是煮的地方，还把煮的东西弄得烧焦了，然后呢，公主小姐就把莽撞先生的床铺了，但是铺的有一点不对。」</div>
+            </div>
+        </div>
+        
+        <div class="recent-card">
             <img class="recent-cover" src="./books/我和琉璃的山居四季.webp" alt="我和琉璃的山居四季" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
             <div class="recent-info">
                 <div class="recent-bookname">我和琉璃的山居四季</div>
@@ -450,16 +460,6 @@
             </div>
         </div>
         
-        <div class="recent-card">
-            <img class="recent-cover" src="./books/我和琉璃的山居四季.webp" alt="我和琉璃的山居四季" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
-            <div class="recent-info">
-                <div class="recent-bookname">我和琉璃的山居四季</div>
-                <div class="recent-author">拾落</div>
-                <div class="recent-readers">致虚🏔️ 清一🎋</div>
-                <div class="recent-note">「和看过的电影小森林类似的剧情。摘抄：自食其力，尽我所能创造一些美的事物，更专注于想做的事，连接更多的人。当我动了搬进山里的念头，并且真真正正做到后，才知道人的活法可以有这么多种。城市、山间、草原甚至荒漠，都有人在生活——人在哪里都可以活着，关键看自己想要什么样的生活方式。」</div>
-            </div>
-        </div>
-        
         </div>
     </div>
     
@@ -468,11 +468,28 @@
         <div class="category">
             <div class="category-header">
                 <div class="category-title">📚 文学</div>
-                <div class="category-count">共 31 本</div>
+                <div class="category-count">共 32 本</div>
             </div>
             <div class="scroll-container">
                 <div class="book-grid">
     
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/公主小姐.webp" alt="公主小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">公主小姐</div>
+                                    <div class="book-author">[英]罗杰.哈格里维斯</div>
+                                    <div class="book-readers">盈生🐤</div>
+                                    <div class="book-meta">
+                                        <span>33页</span>
+                                        <span>📅 2026-04-09</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「公主小姐，因为她是公主，因为所以呢，把东西都放在了不是煮的地方，还把煮的东西弄得烧焦了，然后呢，公主小姐就把莽撞先生的床铺了，但是铺的有一点不对。」
+                                    </div>
+                                </div>
+                            </div>
+                
                             <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/1984（锦安）.webp" alt="1984（锦安）" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
@@ -695,23 +712,6 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/忙碌先生.webp" alt="忙碌先生" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">忙碌先生</div>
-                                    <div class="book-author">[英]罗杰.哈格里维斯</div>
-                                    <div class="book-readers">盈生🐤</div>
-                                    <div class="book-meta">
-                                        <span>35页</span>
-                                        <span>📅 2026-03-29</span>
-                                        
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「我觉得忙碌先生太忙了，因为呢，我看到忙碌先生的时候，我觉得我自己说话，跑得超级无敌快。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/闪光小姐.webp" alt="闪光小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">闪光小姐</div>
@@ -724,6 +724,23 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「我听了这本书感觉身体开始发亮了，但是呢，闪光小姐变得没有闪光了。我觉得听了这本书我觉得自己变得闪光，因为闪光小姐的脚指头都亮光了，我都感觉我自己的指甲都开始一闪一闪的了。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/忙碌先生.webp" alt="忙碌先生" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">忙碌先生</div>
+                                    <div class="book-author">[英]罗杰.哈格里维斯</div>
+                                    <div class="book-readers">盈生🐤</div>
+                                    <div class="book-meta">
+                                        <span>35页</span>
+                                        <span>📅 2026-03-29</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「我觉得忙碌先生太忙了，因为呢，我看到忙碌先生的时候，我觉得我自己说话，跑得超级无敌快。」
                                     </div>
                                 </div>
                             </div>
@@ -1422,7 +1439,7 @@
     </div>
     
     <div class="stats">
-        📊 总计 55 册 · 累计 11,795 页 · 投资 ¥2410 元
+        📊 总计 56 册 · 累计 11,828 页 · 投资 ¥2410 元
     </div>
     
     <script>
