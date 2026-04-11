@@ -431,6 +431,16 @@
         <div class="recent-books">
     
         <div class="recent-card">
+            <img class="recent-cover" src="./books/职场AI效率提升一本通.webp" alt="职场AI效率提升一本通" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
+            <div class="recent-info">
+                <div class="recent-bookname">职场AI效率提升一本通</div>
+                <div class="recent-author">王林，何平，郭龙</div>
+                <div class="recent-readers">西翁🦁</div>
+                <div class="recent-note">「虽然基本都是自己使用过的功能，但还是了解了一些别人用过的比较先进的方法，比如如何创建个人智能体，如何用Excel结合VBA提高办公效率，读了一本书还是有一点用。」</div>
+            </div>
+        </div>
+        
+        <div class="recent-card">
             <img class="recent-cover" src="./books/在峡江的转弯处.webp" alt="在峡江的转弯处" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
             <div class="recent-info">
                 <div class="recent-bookname">在峡江的转弯处</div>
@@ -447,16 +457,6 @@
                 <div class="recent-author">陈磊·半小时漫画团队 </div>
                 <div class="recent-readers">致虚🏔️</div>
                 <div class="recent-note">「西藏青海云南贵州。」</div>
-            </div>
-        </div>
-        
-        <div class="recent-card">
-            <img class="recent-cover" src="./books/半小时漫画中国地理3：江南篇.webp" alt="半小时漫画中国地理3：江南篇" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
-            <div class="recent-info">
-                <div class="recent-bookname">半小时漫画中国地理3：江南篇</div>
-                <div class="recent-author">陈磊·半小时漫画团队</div>
-                <div class="recent-readers">致虚🏔️</div>
-                <div class="recent-note">「江西安徽江苏浙江上海，港口，大厦。」</div>
             </div>
         </div>
         
@@ -1427,11 +1427,28 @@
         <div class="category">
             <div class="category-header">
                 <div class="category-title">🔬 自然科学</div>
-                <div class="category-count">共 7 本</div>
+                <div class="category-count">共 8 本</div>
             </div>
             <div class="scroll-container">
                 <div class="book-grid">
     
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/职场AI效率提升一本通.webp" alt="职场AI效率提升一本通" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">职场AI效率提升一本通</div>
+                                    <div class="book-author">王林，何平，郭龙</div>
+                                    <div class="book-readers">西翁🦁</div>
+                                    <div class="book-meta">
+                                        <span>262页</span>
+                                        <span>¥69</span>
+                                        <span>📅 2026-04-11</span>
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「虽然基本都是自己使用过的功能，但还是了解了一些别人用过的比较先进的方法，比如如何创建个人智能体，如何用Excel结合VBA提高办公效率，读了一本书还是有一点用。」
+                                    </div>
+                                </div>
+                            </div>
+                
                             <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/装修施工完全手册.webp" alt="装修施工完全手册" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
@@ -1558,7 +1575,7 @@
     </div>
     
     <div class="stats">
-        📊 总计 63 册 · 累计 13,199 页 · 投资 ¥2666 元
+        📊 总计 64 册 · 累计 13,461 页 · 投资 ¥2735 元
     </div>
     
     <script>
