@@ -70,13 +70,13 @@
     <div class="gallery-container">
         <div class="hero-section">
             <div class="hero-label" id="new-tag">最新解锁 ✨</div>
-            <model-viewer id="main-viewer" src="model/penguin.glb" 
+            <model-viewer id="main-viewer" src="model/shuba_duck.glb" 
                 autoplay animation-name="*" auto-rotate camera-controls 
                 shadow-intensity="1" shadow-softness="1" environment-image="neutral"
                 camera-target="0m 0.5m 0m" field-of-view="20deg">
             </model-viewer>
             <div class="hero-info-display">
-                <div class="hero-name" id="hero-name">企鹅🐧</div>
+                <div class="hero-name" id="hero-name">跳个舞吧🦆</div>
                 <div class="hero-date" id="hero-date">解锁时间：2026-04-12</div>
             </div>
         </div>
@@ -144,9 +144,9 @@
         <div class="m-date">2026-04-10</div>
     </div>
     
-    <div class="card" onclick="changeHero('model/penguin.glb', '企鹅🐧', '2', '2026-04-12')">
-        <model-viewer class="thumb-viewer" src="model/penguin.glb" loading="lazy"></model-viewer>
-        <div class="m-name">企鹅🐧</div>
+    <div class="card" onclick="changeHero('model/shuba_duck.glb', '跳个舞吧🦆', '2', '2026-04-12')">
+        <model-viewer class="thumb-viewer" src="model/shuba_duck.glb" loading="lazy"></model-viewer>
+        <div class="m-name">跳个舞吧🦆</div>
         <div class="m-points">已消耗 2 分</div>
         <div class="m-date">2026-04-12</div>
     </div>
@@ -266,7 +266,7 @@
     <div class="card" style="opacity: 0.7;">
         <div class="locked-box">🔒</div>
         <div class="m-name">未解锁</div>
-        <div class="m-points">还需 3 分</div>
+        <div class="m-points">还需 2 分</div>
         <div class="p-bar-bg"><div class="p-bar-fill" style="width: 0.0%"></div></div>
     </div>
     
@@ -315,7 +315,7 @@
     </div>
 
 <script>
-const LATEST_NAME = "企鹅🐧";
+const LATEST_NAME = "跳个舞吧🦆";
 // 修改后的 JS 函数
 function changeHero(file, name, points, date) {
     const viewer = document.getElementById('main-viewer');
@@ -334,7 +334,7 @@ function changeHero(file, name, points, date) {
 }
 
 window.onload = () => {
-    const initialName = "企鹅🐧";
+    const initialName = "跳个舞吧🦆";
     if (initialName === LATEST_NAME && initialName !== "暂无") {
         document.getElementById('new-tag').style.display = 'block';
     }
