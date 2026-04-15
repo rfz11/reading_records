@@ -76,7 +76,7 @@
                 camera-target="0m 0.5m 0m" field-of-view="20deg">
             </model-viewer>
             <div class="hero-info-display">
-                <div class="hero-name" id="hero-name">仙<br>鹤</div>
+                <div class="hero-name" id="hero-name">生日快乐<br>花鸟仙🐦</div>
                 <div class="hero-date" id="hero-date">解锁时间：2026-04-15</div>
             </div>
         </div>
@@ -158,9 +158,9 @@
         <div class="m-date">2026-04-13</div>
     </div>
     
-    <div class="card" onclick="changeHero('model/bird.glb', '仙<br>鹤', '2', '2026-04-15')">
+    <div class="card" onclick="changeHero('model/bird.glb', '生日快乐<br>花鸟仙🐦', '2', '2026-04-15')">
         <model-viewer class="thumb-viewer" src="model/bird.glb" loading="lazy"></model-viewer>
-        <div class="m-name">仙<br>鹤</div>
+        <div class="m-name">生日快乐<br>花鸟仙🐦</div>
         <div class="m-points">已消耗 2 分</div>
         <div class="m-date">2026-04-15</div>
     </div>
@@ -315,7 +315,7 @@
     </div>
 
 <script>
-const LATEST_NAME = "仙<br>鹤";
+const LATEST_NAME = "生日快乐<br>花鸟仙🐦";
 // 修改后的 JS 函数
 function changeHero(file, name, points, date) {
     const viewer = document.getElementById('main-viewer');
@@ -334,7 +334,7 @@ function changeHero(file, name, points, date) {
 }
 
 window.onload = () => {
-    const initialName = "仙<br>鹤";
+    const initialName = "生日快乐<br>花鸟仙🐦";
     if (initialName === LATEST_NAME && initialName !== "暂无") {
         document.getElementById('new-tag').style.display = 'block';
     }
