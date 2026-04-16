@@ -338,7 +338,7 @@ function changeHero(file, name, points, date) {
     const newTag = document.getElementById('new-tag');
     
     viewer.setAttribute('src', file);
-    nameLabel.innerHTML = name;
+    nameLabel.innerHTML = name; // Text-->HTML
     dateLabel.innerText = "解锁时间：" + date;
     
     // 2. 只有名字完全匹配时，才显示“最新解锁”
