@@ -431,6 +431,16 @@
         <div class="recent-books">
     
         <div class="recent-card">
+            <img class="recent-cover" src="./books/建筑构法.webp" alt="建筑构法" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
+            <div class="recent-info">
+                <div class="recent-bookname">建筑构法</div>
+                <div class="recent-author">[日]大野隆司</div>
+                <div class="recent-readers">西翁🦁</div>
+                <div class="recent-note">「很专业的应力计算等，做一个大概的了解。」</div>
+            </div>
+        </div>
+        
+        <div class="recent-card">
             <img class="recent-cover" src="./books/一本书读懂建设工程.webp" alt="一本书读懂建设工程" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
             <div class="recent-info">
                 <div class="recent-bookname">一本书读懂建设工程</div>
@@ -447,16 +457,6 @@
                 <div class="recent-author">[英]罗杰.哈格里维斯</div>
                 <div class="recent-readers">盈生🐤</div>
                 <div class="recent-note">「在我的生日里我读完了颠倒小姐，但是嘎嘎嘎，我觉得的有一点点，有一点点上下上下上下跳来跳去的。」</div>
-            </div>
-        </div>
-        
-        <div class="recent-card">
-            <img class="recent-cover" src="./books/霸道小姐.webp" alt="霸道小姐" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
-            <div class="recent-info">
-                <div class="recent-bookname">霸道小姐</div>
-                <div class="recent-author">[英]罗杰.哈格里维斯</div>
-                <div class="recent-readers">盈生🐤</div>
-                <div class="recent-note">「我觉得霸道小姐太霸道了，因为霸道小姐实在是太太太太太太太大声了。」</div>
             </div>
         </div>
         
@@ -1699,11 +1699,28 @@
         <div class="category">
             <div class="category-header">
                 <div class="category-title">🔬 自然科学</div>
-                <div class="category-count">共 11 本</div>
+                <div class="category-count">共 12 本</div>
             </div>
             <div class="scroll-container">
                 <div class="book-grid">
     
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/建筑构法.webp" alt="建筑构法" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">建筑构法</div>
+                                    <div class="book-author">[日]大野隆司</div>
+                                    <div class="book-readers">西翁🦁</div>
+                                    <div class="book-meta">
+                                        <span>240页</span>
+                                        <span>¥68</span>
+                                        <span>📅 2026-04-17</span>
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「很专业的应力计算等，做一个大概的了解。」
+                                    </div>
+                                </div>
+                            </div>
+                
                             <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/一本书读懂建设工程.webp" alt="一本书读懂建设工程" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
@@ -1898,7 +1915,7 @@
     </div>
     
     <div class="stats">
-        📊 总计 83 册 · 累计 15,652 页 · 投资 ¥3112 元
+        📊 总计 84 册 · 累计 15,892 页 · 投资 ¥3180 元
     </div>
     
     <script>
