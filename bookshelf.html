@@ -431,6 +431,16 @@
         <div class="recent-books">
     
         <div class="recent-card">
+            <img class="recent-cover" src="./books/古怪小姐.webp" alt="古怪小姐" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
+            <div class="recent-info">
+                <div class="recent-bookname">古怪小姐</div>
+                <div class="recent-author">[英]罗杰.哈格里维斯</div>
+                <div class="recent-readers">盈生🐤</div>
+                <div class="recent-note">「我就是觉得古怪小姐太太太太太太菜太太会有想法了，因为呢，我觉得古怪小姐这样想一想那样想一想后面就是有一次他赢得了荒唐杯。」</div>
+            </div>
+        </div>
+        
+        <div class="recent-card">
             <img class="recent-cover" src="./books/建筑构法.webp" alt="建筑构法" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
             <div class="recent-info">
                 <div class="recent-bookname">建筑构法</div>
@@ -450,16 +460,6 @@
             </div>
         </div>
         
-        <div class="recent-card">
-            <img class="recent-cover" src="./books/颠倒小姐.webp" alt="颠倒小姐" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
-            <div class="recent-info">
-                <div class="recent-bookname">颠倒小姐</div>
-                <div class="recent-author">[英]罗杰.哈格里维斯</div>
-                <div class="recent-readers">盈生🐤</div>
-                <div class="recent-note">「在我的生日里我读完了颠倒小姐，但是嘎嘎嘎，我觉得的有一点点，有一点点上下上下上下跳来跳去的。」</div>
-            </div>
-        </div>
-        
         </div>
     </div>
     
@@ -468,11 +468,28 @@
         <div class="category">
             <div class="category-header">
                 <div class="category-title">📚 文学</div>
-                <div class="category-count">共 46 本</div>
+                <div class="category-count">共 47 本</div>
             </div>
             <div class="scroll-container">
                 <div class="book-grid">
     
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/古怪小姐.webp" alt="古怪小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">古怪小姐</div>
+                                    <div class="book-author">[英]罗杰.哈格里维斯</div>
+                                    <div class="book-readers">盈生🐤</div>
+                                    <div class="book-meta">
+                                        <span>36页</span>
+                                        <span>📅 2026-04-19</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「我就是觉得古怪小姐太太太太太太菜太太会有想法了，因为呢，我觉得古怪小姐这样想一想那样想一想后面就是有一次他赢得了荒唐杯。」
+                                    </div>
+                                </div>
+                            </div>
+                
                             <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/颠倒小姐.webp" alt="颠倒小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
@@ -559,6 +576,23 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/话匣子先生.webp" alt="话匣子先生" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">话匣子先生</div>
+                                    <div class="book-author">[英]罗杰.哈格里维斯</div>
+                                    <div class="book-readers">盈生🐤</div>
+                                    <div class="book-meta">
+                                        <span>35页</span>
+                                        <span>📅 2026-04-13</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「我觉得话匣子先生有一点点太会说话了，因为他之前带的绿色帽子会让他变得开开心心地说话，但他戴的橙色帽子就不会让他说话了，橙色帽子就会让他说不出来话，而且还会变大。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/木心文学创作中的“文本再生”现象研究.webp" alt="木心文学创作中的“文本再生”现象研究" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">木心文学创作中的“文本再生”现象研究</div>
@@ -605,23 +639,6 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「阅读两三小时，写作十一二小时。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/话匣子先生.webp" alt="话匣子先生" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">话匣子先生</div>
-                                    <div class="book-author">[英]罗杰.哈格里维斯</div>
-                                    <div class="book-readers">盈生🐤</div>
-                                    <div class="book-meta">
-                                        <span>35页</span>
-                                        <span>📅 2026-04-13</span>
-                                        
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「我觉得话匣子先生有一点点太会说话了，因为他之前带的绿色帽子会让他变得开开心心地说话，但他戴的橙色帽子就不会让他说话了，橙色帽子就会让他说不出来话，而且还会变大。」
                                     </div>
                                 </div>
                             </div>
@@ -1915,7 +1932,7 @@
     </div>
     
     <div class="stats">
-        📊 总计 84 册 · 累计 15,892 页 · 投资 ¥3180 元
+        📊 总计 85 册 · 累计 15,928 页 · 投资 ¥3180 元
     </div>
     
     <script>
