@@ -431,6 +431,16 @@
         <div class="recent-books">
     
         <div class="recent-card">
+            <img class="recent-cover" src="./books/置身事内.webp" alt="置身事内" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
+            <div class="recent-info">
+                <div class="recent-bookname">置身事内</div>
+                <div class="recent-author">兰小欢</div>
+                <div class="recent-readers">抱朴🌲</div>
+                <div class="recent-note">「本书介绍了中国经济发展的三大模式，一：城市化过程中“重土地，轻人”二：招商引资竞争“重规模，重扩张”，三：经济结构上“重投资，重生产，轻消共”和美国的发展经济模式的对比。」</div>
+            </div>
+        </div>
+        
+        <div class="recent-card">
             <img class="recent-cover" src="./books/好奇小姐.webp" alt="好奇小姐" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
             <div class="recent-info">
                 <div class="recent-bookname">好奇小姐</div>
@@ -447,16 +457,6 @@
                 <div class="recent-author">苏敏</div>
                 <div class="recent-readers">致虚🏔️ 清一🎋</div>
                 <div class="recent-note">「不给自己的人生设限，在干好自己的本职工作之后，攒一些底气（物质基础）的情况下去探索一下自己的人生边界。」</div>
-            </div>
-        </div>
-        
-        <div class="recent-card">
-            <img class="recent-cover" src="./books/半小时漫画中国史（番外篇）.webp" alt="半小时漫画中国史（番外篇）" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
-            <div class="recent-info">
-                <div class="recent-bookname">半小时漫画中国史（番外篇）</div>
-                <div class="recent-author">陈磊</div>
-                <div class="recent-readers">清一🎋</div>
-                <div class="recent-note">「——虽然在我们眼中《南京条约》很屈辱，但在当时看来，只是大清在海边小败几场而已。太阳照常升起，历史继续向前。）——当时的人还是要面对当下的日子。——记上一本书5\n——24节气：春雨惊春清谷天，夏满芒夏暑相连。秋处露秋寒霜降，冬雪雪冬小大寒。」</div>
             </div>
         </div>
         
@@ -1415,11 +1415,28 @@
         <div class="category">
             <div class="category-header">
                 <div class="category-title">🏛️ 社科</div>
-                <div class="category-count">共 32 本</div>
+                <div class="category-count">共 33 本</div>
             </div>
             <div class="scroll-container">
                 <div class="book-grid">
     
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/置身事内.webp" alt="置身事内" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">置身事内</div>
+                                    <div class="book-author">兰小欢</div>
+                                    <div class="book-readers">抱朴🌲</div>
+                                    <div class="book-meta">
+                                        <span>311页</span>
+                                        <span>¥65</span>
+                                        <span>📅 2026-04-26</span>
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「本书介绍了中国经济发展的三大模式，一：城市化过程中“重土地，轻人”二：招商引资竞争“重规模，重扩张”，三：经济结构上“重投资，重生产，轻消共”和美国的发展经济模式的对比。」
+                                    </div>
+                                </div>
+                            </div>
+                
                             <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/半小时漫画中国史（番外篇）.webp" alt="半小时漫画中国史（番外篇）" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
@@ -2187,7 +2204,7 @@
     </div>
     
     <div class="stats">
-        📊 总计 101 册 · 累计 18,492 页 · 投资 ¥3382 元
+        📊 总计 102 册 · 累计 18,803 页 · 投资 ¥3447 元
     </div>
     
     <script>
