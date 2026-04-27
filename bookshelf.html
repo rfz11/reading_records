@@ -431,6 +431,16 @@
         <div class="recent-books">
     
         <div class="recent-card">
+            <img class="recent-cover" src="./books/没人先生.webp" alt="没人先生" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
+            <div class="recent-info">
+                <div class="recent-bookname">没人先生</div>
+                <div class="recent-author">[英]罗杰.哈格里维斯</div>
+                <div class="recent-readers">盈生🐤</div>
+                <div class="recent-note">「没人先生透明的就像一个透明的小玩具，有的时候透明了都看不到，有的时候在白色地方，它就是白色，在蓝色地方，它就是蓝色，在黑色地方，它就是黑色，在任何颜色里面的地方，它都是任何颜色。在彩色的地方，它就是彩色的，不只是这些让它透明，还有更多的让它透明呢。但是我觉得他还是挺聪明的，因为呢，他说没人先生不喝没东西，但是他最后还是喝了东西，他又大声地说了一遍，没人先生不喝没东西，然后呢，他还是喝了，他就变成黄色了。\n\n。」</div>
+            </div>
+        </div>
+        
+        <div class="recent-card">
             <img class="recent-cover" src="./books/聚焦生存-漂泊在都市边缘的女孩.webp" alt="聚焦生存-漂泊在都市边缘的女孩" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
             <div class="recent-info">
                 <div class="recent-bookname">聚焦生存-漂泊在都市边缘的女孩</div>
@@ -450,16 +460,6 @@
             </div>
         </div>
         
-        <div class="recent-card">
-            <img class="recent-cover" src="./books/好奇小姐.webp" alt="好奇小姐" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
-            <div class="recent-info">
-                <div class="recent-bookname">好奇小姐</div>
-                <div class="recent-author">(英）罗杰·哈格里维斯</div>
-                <div class="recent-readers">盈生🐤</div>
-                <div class="recent-note">「好奇小姐好奇的都快要飞到天上了，他太太太好奇了做什么事都要问为什么？要干嘛干嘛，为什么天是蓝色的？为什么什么什么什么什么？他问的太多太多太多了，真的是受不了了，所以他从图书馆出来的时候，发现他自己已经在大街上，然后他跑到了一个地方，但大家都不知道那个地方是哪里所以呢讲述故事人的那个人也不知道好奇小姐跑到哪里去了，所以呢好奇小应该是跑到了一个很神秘的地方。」</div>
-            </div>
-        </div>
-        
         </div>
     </div>
     
@@ -468,11 +468,28 @@
         <div class="category">
             <div class="category-header">
                 <div class="category-title">📚 文学</div>
-                <div class="category-count">共 56 本</div>
+                <div class="category-count">共 57 本</div>
             </div>
             <div class="scroll-container">
                 <div class="book-grid">
     
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/没人先生.webp" alt="没人先生" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">没人先生</div>
+                                    <div class="book-author">[英]罗杰.哈格里维斯</div>
+                                    <div class="book-readers">盈生🐤</div>
+                                    <div class="book-meta">
+                                        <span>36页</span>
+                                        <span>📅 2026-04-27</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「没人先生透明的就像一个透明的小玩具，有的时候透明了都看不到，有的时候在白色地方，它就是白色，在蓝色地方，它就是蓝色，在黑色地方，它就是黑色，在任何颜色里面的地方，它都是任何颜色。在彩色的地方，它就是彩色的，不只是这些让它透明，还有更多的让它透明呢。但是我觉得他还是挺聪明的，因为呢，他说没人先生不喝没东西，但是他最后还是喝了东西，他又大声地说了一遍，没人先生不喝没东西，然后呢，他还是喝了，他就变成黄色了。\n\n。」
+                                    </div>
+                                </div>
+                            </div>
+                
                             <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/聚焦生存-漂泊在都市边缘的女孩.webp" alt="聚焦生存-漂泊在都市边缘的女孩" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
@@ -2221,7 +2238,7 @@
     </div>
     
     <div class="stats">
-        📊 总计 103 册 · 累计 19,144 页 · 投资 ¥3472 元
+        📊 总计 104 册 · 累计 19,180 页 · 投资 ¥3472 元
     </div>
     
     <script>
