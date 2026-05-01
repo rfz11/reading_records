@@ -431,6 +431,16 @@
         <div class="recent-books">
     
         <div class="recent-card">
+            <img class="recent-cover" src="./books/另类人生拍摄手记.webp" alt="另类人生拍摄手记" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
+            <div class="recent-info">
+                <div class="recent-bookname">另类人生拍摄手记</div>
+                <div class="recent-author">赵铁林</div>
+                <div class="recent-readers">致虚🏔️</div>
+                <div class="recent-note">「悲天悯人。」</div>
+            </div>
+        </div>
+        
+        <div class="recent-card">
             <img class="recent-cover" src="./books/半小时漫画世界史.webp" alt="半小时漫画世界史" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
             <div class="recent-info">
                 <div class="recent-bookname">半小时漫画世界史</div>
@@ -450,16 +460,6 @@
             </div>
         </div>
         
-        <div class="recent-card">
-            <img class="recent-cover" src="./books/白日梦先生.webp" alt="白日梦先生" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
-            <div class="recent-info">
-                <div class="recent-bookname">白日梦先生</div>
-                <div class="recent-author">[英]罗杰.哈格里维斯</div>
-                <div class="recent-readers">盈生🐤</div>
-                <div class="recent-note">「白日梦先生真是太会想办法了，吹哨就来带大鸟了，有这么神奇吗？真是太神奇了。」</div>
-            </div>
-        </div>
-        
         </div>
     </div>
     
@@ -468,11 +468,28 @@
         <div class="category">
             <div class="category-header">
                 <div class="category-title">📚 文学</div>
-                <div class="category-count">共 59 本</div>
+                <div class="category-count">共 60 本</div>
             </div>
             <div class="scroll-container">
                 <div class="book-grid">
     
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/另类人生拍摄手记.webp" alt="另类人生拍摄手记" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">另类人生拍摄手记</div>
+                                    <div class="book-author">赵铁林</div>
+                                    <div class="book-readers">致虚🏔️</div>
+                                    <div class="book-meta">
+                                        <span>226页</span>
+                                        <span>¥38</span>
+                                        <span>📅 2026-05-01</span>
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「悲天悯人。」
+                                    </div>
+                                </div>
+                            </div>
+                
                             <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/白日梦先生.webp" alt="白日梦先生" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
@@ -644,23 +661,6 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/我们仨.webp" alt="我们仨" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">我们仨</div>
-                                    <div class="book-author">杨绛</div>
-                                    <div class="book-readers">致虚🏔️ 凤书🐦‍🔥</div>
-                                    <div class="book-meta">
-                                        <span>227页</span>
-                                        <span>¥28</span>
-                                        <span>📅 2026-04-21</span>
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「牛津，法国，西南联大，上海，清华。平淡随和。做好手头的事儿。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/慢吞吞先生.webp" alt="慢吞吞先生" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">慢吞吞先生</div>
@@ -673,6 +673,23 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「慢吞吞先生很说话，写笔记或者是做什么开游艇或者是走上坡走，下坡走下坡走，上坡都非常非常非常非常的慢，因为呢，他呀，说话写笔记都是很很很很很狠慢，如果你看到他在写笔记，但是呢，你会发现他写了很久都写不完，而且你会看到他就在椅子上做围巾，等他做完围巾的时候，他已经没法卖围巾了，他从冬天做到夏天。他最后找到了适合自己的工作，那个工作就是压路机司机。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/我们仨.webp" alt="我们仨" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">我们仨</div>
+                                    <div class="book-author">杨绛</div>
+                                    <div class="book-readers">致虚🏔️ 凤书🐦‍🔥</div>
+                                    <div class="book-meta">
+                                        <span>227页</span>
+                                        <span>¥28</span>
+                                        <span>📅 2026-04-21</span>
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「牛津，法国，西南联大，上海，清华。平淡随和。做好手头的事儿。」
                                     </div>
                                 </div>
                             </div>
@@ -695,23 +712,6 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/霸道小姐.webp" alt="霸道小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">霸道小姐</div>
-                                    <div class="book-author">[英]罗杰.哈格里维斯</div>
-                                    <div class="book-readers">盈生🐤</div>
-                                    <div class="book-meta">
-                                        <span>35页</span>
-                                        <span>📅 2026-04-16</span>
-                                        
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「我觉得霸道小姐太霸道了，因为霸道小姐实在是太太太太太太太大声了。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/颠倒小姐.webp" alt="颠倒小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">颠倒小姐</div>
@@ -724,6 +724,23 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「在我的生日里我读完了颠倒小姐，但是嘎嘎嘎，我觉得的有一点点，有一点点上下上下上下跳来跳去的。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/霸道小姐.webp" alt="霸道小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">霸道小姐</div>
+                                    <div class="book-author">[英]罗杰.哈格里维斯</div>
+                                    <div class="book-readers">盈生🐤</div>
+                                    <div class="book-meta">
+                                        <span>35页</span>
+                                        <span>📅 2026-04-16</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「我觉得霸道小姐太霸道了，因为霸道小姐实在是太太太太太太太大声了。」
                                     </div>
                                 </div>
                             </div>
@@ -2343,7 +2360,7 @@
     </div>
     
     <div class="stats">
-        📊 总计 111 册 · 累计 20,751 页 · 投资 ¥3606 元
+        📊 总计 112 册 · 累计 20,977 页 · 投资 ¥3645 元
     </div>
     
     <script>
