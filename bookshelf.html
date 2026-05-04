@@ -431,6 +431,16 @@
         <div class="recent-books">
     
         <div class="recent-card">
+            <img class="recent-cover" src="./books/成长日记1.webp" alt="成长日记1" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
+            <div class="recent-info">
+                <div class="recent-bookname">成长日记1</div>
+                <div class="recent-author">[日]克亚树</div>
+                <div class="recent-readers">致虚🏔️</div>
+                <div class="recent-note">「有点意思。」</div>
+            </div>
+        </div>
+        
+        <div class="recent-card">
             <img class="recent-cover" src="./books/双胞胎小姐.webp" alt="双胞胎小姐" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
             <div class="recent-info">
                 <div class="recent-bookname">双胞胎小姐</div>
@@ -450,16 +460,6 @@
             </div>
         </div>
         
-        <div class="recent-card">
-            <img class="recent-cover" src="./books/梭罗 再见瓦尔登湖.webp" alt="梭罗 再见瓦尔登湖" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
-            <div class="recent-info">
-                <div class="recent-bookname">梭罗 再见瓦尔登湖</div>
-                <div class="recent-author">[法] 勒罗伊 (编) / [法] 达恩 (绘)</div>
-                <div class="recent-readers">致虚🏔️</div>
-                <div class="recent-note">「简略勾勒梭罗的一生。」</div>
-            </div>
-        </div>
-        
         </div>
     </div>
     
@@ -468,11 +468,28 @@
         <div class="category">
             <div class="category-header">
                 <div class="category-title">📚 文学</div>
-                <div class="category-count">共 66 本</div>
+                <div class="category-count">共 67 本</div>
             </div>
             <div class="scroll-container">
                 <div class="book-grid">
     
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/成长日记1.webp" alt="成长日记1" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">成长日记1</div>
+                                    <div class="book-author">[日]克亚树</div>
+                                    <div class="book-readers">致虚🏔️</div>
+                                    <div class="book-meta">
+                                        <span>174页</span>
+                                        <span>📅 2026-05-04</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「有点意思。」
+                                    </div>
+                                </div>
+                            </div>
+                
                             <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/双胞胎小姐.webp" alt="双胞胎小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
@@ -695,23 +712,6 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/年过五十，我决定离家出走.webp" alt="年过五十，我决定离家出走" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">年过五十，我决定离家出走</div>
-                                    <div class="book-author">苏敏，卓夕琳</div>
-                                    <div class="book-readers">致虚🏔️ 清一🎋</div>
-                                    <div class="book-meta">
-                                        <span>240页</span>
-                                        <span>¥56</span>
-                                        <span>📅 2026-04-22</span>
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「自尊自爱，探索边界。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/笨拙先生.webp" alt="笨拙先生" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">笨拙先生</div>
@@ -724,6 +724,23 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「笨着先生实在是太搞笑了，他做什么事都很笨，因为呢，他买鸡蛋摔倒了，洗澡摔进了洗衣蓝里面，他也是最最最最最最最最笨的人，而且他很特别，他关灯的时候竟然摔到了地上，准确的说应该是从床上摔到了地上。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/年过五十，我决定离家出走.webp" alt="年过五十，我决定离家出走" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">年过五十，我决定离家出走</div>
+                                    <div class="book-author">苏敏，卓夕琳</div>
+                                    <div class="book-readers">致虚🏔️ 清一🎋</div>
+                                    <div class="book-meta">
+                                        <span>240页</span>
+                                        <span>¥56</span>
+                                        <span>📅 2026-04-22</span>
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「自尊自爱，探索边界。」
                                     </div>
                                 </div>
                             </div>
@@ -831,23 +848,6 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/木心〈诗经演〉中的修缮式书写.webp" alt="木心〈诗经演〉中的修缮式书写" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">木心〈诗经演〉中的修缮式书写</div>
-                                    <div class="book-author">袁亚琴</div>
-                                    <div class="book-readers">致虚🏔️</div>
-                                    <div class="book-meta">
-                                        <span>65页</span>
-                                        <span>📅 2026-04-15</span>
-                                        
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「修缮式书写，区别抄袭。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/生日小姐.webp" alt="生日小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">生日小姐</div>
@@ -860,6 +860,23 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「生日小姐太喜欢送礼物了，生日小姐送错误先生的是雪橇🛷，但是生日小姐说的是自行车🚲，因为错误先生听了其他话就能知道这是雪橇了。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/木心〈诗经演〉中的修缮式书写.webp" alt="木心〈诗经演〉中的修缮式书写" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">木心〈诗经演〉中的修缮式书写</div>
+                                    <div class="book-author">袁亚琴</div>
+                                    <div class="book-readers">致虚🏔️</div>
+                                    <div class="book-meta">
+                                        <span>65页</span>
+                                        <span>📅 2026-04-15</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「修缮式书写，区别抄袭。」
                                     </div>
                                 </div>
                             </div>
@@ -2462,7 +2479,7 @@
     </div>
     
     <div class="stats">
-        📊 总计 118 册 · 累计 22,561 页 · 投资 ¥3795 元
+        📊 总计 119 册 · 累计 22,735 页 · 投资 ¥3795 元
     </div>
     
     <script>
