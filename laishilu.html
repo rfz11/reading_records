@@ -521,13 +521,13 @@ style="text-decoration: none;">🐳</a>·浩瀚<a href="world_reading_map.html" 
 <script>
 // ===== 新闻数据 =====
 const newsData = [
-    { date: "2026-05-05", name: "盈生", bookname: "『粗鲁先生』[英]罗杰.哈格里维斯", money: "0.00", page: "36", level: "进阶【🪷🌸🌱】" },
+    { date: "2026-05-06", name: "盈生", bookname: "『小小先生』[英]罗杰.哈格里维斯", money: "0.00", page: "36", level: "进阶【🪷🌸🌱🌱】" },
     { date: "2026-05-05", name: "抱朴", bookname: "『年过五十，我决定离家出走』卓夕琳", money: "56.00", page: "223", level: "进阶【🌸🌸🌿🌿】" },
-    { date: "2026-05-04", name: "致虚", bookname: "<i>&ensp;Futari-1</i> [日]Katsuaki", money: "0.00", page: "174", level: "进阶【🪷🌸🌿🌿🌱】" },
+    { date: "2026-05-05", name: "盈生", bookname: "『粗鲁先生』[英]罗杰.哈格里维斯", money: "0.00", page: "36", level: "进阶【🪷🌸🌱】" },
     { date: "2026-05-04", name: "盈生", bookname: "『双胞胎小姐』[英]罗杰·哈格里维斯", money: "0.00", page: "36", level: "进阶【🪷🌸】" },
     { date: "2026-05-03", name: "致虚", bookname: "『瓦尔登湖（2020劉泗翰 湖濱散記）』[美]梭罗", money: "82.00", page: "384", level: "进阶【🪷🌸🌿🌿】" },
-    { date: "2026-05-02", name: "抱朴", bookname: "『在峡江的转弯处』陈行甲", money: "48.00", page: "290", level: "进阶【🌸🌸🌿】" },
     { date: "2026-05-02", name: "致虚", bookname: "『梭罗 再见瓦尔登湖』[法] 勒罗伊 (编) / [法] 达恩 (绘)", money: "68.00", page: "92", level: "进阶【🪷🌸🌿🌱🌱】" },
+    { date: "2026-05-02", name: "抱朴", bookname: "『在峡江的转弯处』陈行甲", money: "48.00", page: "290", level: "进阶【🌸🌸🌿】" },
     { date: "2026-05-01", name: "锦安", bookname: "『福尔摩斯探案全集第三册』[英]亚瑟·柯南·道尔", money: "0.00", page: "352", level: "<span class='badge'>晋品【育秀🌿🌿】</span>" },
     { date: "2026-05-01", name: "致虚", bookname: "『另类人生拍摄手记』赵铁林", money: "38.50", page: "226", level: "进阶【🪷🌸🌿🌱】" },
     { date: "2026-04-30", name: "锦安", bookname: "『半小时漫画世界史』陈磊", money: "39.90", page: "282", level: "进阶【🌿🌱🌱】" },
@@ -552,10 +552,10 @@ const newsData = [
     { date: "2026-04-23", name: "盈生", bookname: "『乐观先生』[英]罗杰.哈格里维斯", money: "0.00", page: "36", level: "进阶【🪷🌱】" },
     { date: "2026-04-23", name: "清一", bookname: "『半小时漫画中国史4』陈磊", money: "0.00", page: "336", level: "进阶【🌸🌿🌿🌱】" },
     { date: "2026-04-22", name: "锦安", bookname: "『福尔摩斯探案全集第二册』[英]亚瑟·柯南·道尔", money: "0.00", page: "424", level: "进阶【🌿🌱】" },
-    { date: "2026-04-22", name: "清一", bookname: "『半小时漫画中国史2』陈磊", money: "0.00", page: "256", level: "进阶【🌸🌿🌱🌱】" },
+    { date: "2026-04-22", name: "清一", bookname: "『半小时漫画中国史1』二混子", money: "0.00", page: "232", level: "进阶【🌸🌿🌱🌱】" },
     { date: "2026-04-22", name: "致虚", bookname: "『年过五十，我决定离家出走』苏敏，卓夕琳", money: "56.00", page: "240", level: "进阶【🪷🌸🌱🌱】" },
     { date: "2026-04-22", name: "清一", bookname: "『半小时漫画中国史3』陈磊", money: "0.00", page: "256", level: "进阶【🌸🌿🌱】" },
-    { date: "2026-04-22", name: "清一", bookname: "『半小时漫画中国史1』二混子", money: "0.00", page: "232", level: "进阶【🌸🌿🌿】" },
+    { date: "2026-04-22", name: "清一", bookname: "『半小时漫画中国史2』陈磊", money: "0.00", page: "256", level: "进阶【🌸🌿🌿】" },
     { date: "2026-04-22", name: "盈生", bookname: "『笨拙先生』[英]罗杰.哈格里维斯", money: "0.00", page: "36", level: "<span class='badge'>晋品【青莲🪷】</span>" },
     { date: "2026-04-21", name: "致虚", bookname: "『我们仨』杨绛", money: "28.00", page: "227", level: "进阶【🪷🌸🌱】" },
     { date: "2026-04-21", name: "盈生", bookname: "『慢吞吞先生』[英]罗杰.哈格里维斯", money: "0.00", page: "36", level: "进阶【🌸🌸🌿🌿🌱🌱】" },
@@ -663,8 +663,8 @@ const newsData = [
 
 // ===== 花品数据 =====
 const flowerData = [
-    { name: "致虚🏔️", level: "青莲🪷", icons: "🪷🌸🌿🌿🌱" },
-    { name: "盈生🐤", level: "青莲🪷", icons: "🪷🌸🌱" },
+    { name: "致虚🏔️", level: "青莲🪷", icons: "🪷🌸🌿🌿" },
+    { name: "盈生🐤", level: "青莲🪷", icons: "🪷🌸🌱🌱" },
     { name: "凤书🐦‍🔥", level: "青莲🪷", icons: "🪷🌸" },
     { name: "抱朴🌲", level: "芳菲🌸", icons: "🌸🌸🌿🌿" },
     { name: "清一🎋", level: "芳菲🌸", icons: "🌸🌸🌿" },
