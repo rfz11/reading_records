@@ -431,6 +431,16 @@
         <div class="recent-books">
     
         <div class="recent-card">
+            <img class="recent-cover" src="./books/失落的一角.webp" alt="失落的一角" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
+            <div class="recent-info">
+                <div class="recent-bookname">失落的一角</div>
+                <div class="recent-author">[美]谢尔・希尔弗斯坦</div>
+                <div class="recent-readers">致虚🏔️</div>
+                <div class="recent-note">「找寻自我。」</div>
+            </div>
+        </div>
+        
+        <div class="recent-card">
             <img class="recent-cover" src="./books/小小先生.webp" alt="小小先生" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
             <div class="recent-info">
                 <div class="recent-bookname">小小先生</div>
@@ -450,16 +460,6 @@
             </div>
         </div>
         
-        <div class="recent-card">
-            <img class="recent-cover" src="./books/年过五十，我决定离家出走.webp" alt="年过五十，我决定离家出走" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
-            <div class="recent-info">
-                <div class="recent-bookname">年过五十，我决定离家出走</div>
-                <div class="recent-author">卓夕琳</div>
-                <div class="recent-readers">致虚🏔️ 清一🎋 抱朴🌲</div>
-                <div class="recent-note">「文中主人公苏敏是个婚姻不辛的女人，老公多年对她的冷漠，而她为了这个家付出了不少的努力，也得不到老公一丝热情，最终勇敢的夸出了家门，出去给自己解脱出来，精彩的生活。」</div>
-            </div>
-        </div>
-        
         </div>
     </div>
     
@@ -468,11 +468,28 @@
         <div class="category">
             <div class="category-header">
                 <div class="category-title">📚 文学</div>
-                <div class="category-count">共 68 本</div>
+                <div class="category-count">共 69 本</div>
             </div>
             <div class="scroll-container">
                 <div class="book-grid">
     
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/失落的一角.webp" alt="失落的一角" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">失落的一角</div>
+                                    <div class="book-author">[美]谢尔・希尔弗斯坦</div>
+                                    <div class="book-readers">致虚🏔️</div>
+                                    <div class="book-meta">
+                                        <span>100页</span>
+                                        <span>¥20</span>
+                                        <span>📅 2026-05-06</span>
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「找寻自我。」
+                                    </div>
+                                </div>
+                            </div>
+                
                             <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/小小先生.webp" alt="小小先生" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
@@ -2496,7 +2513,7 @@
     </div>
     
     <div class="stats">
-        📊 总计 120 册 · 累计 22,633 页 · 投资 ¥3795 元
+        📊 总计 121 册 · 累计 22,733 页 · 投资 ¥3815 元
     </div>
     
     <script>
