@@ -431,6 +431,16 @@
         <div class="recent-books">
     
         <div class="recent-card">
+            <img class="recent-cover" src="./books/福尔摩斯探案全集第四册.webp" alt="福尔摩斯探案全集第四册" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
+            <div class="recent-info">
+                <div class="recent-bookname">福尔摩斯探案全集第四册</div>
+                <div class="recent-author">未知作者</div>
+                <div class="recent-readers">锦安💰</div>
+                <div class="recent-note">「1.哔哩哔哩上有有声书，配音很好。\n2.书里的个别推理的巧合感略强。\n3.侦探要当好必须练长跑！\n4.配得好的有声书感觉比自己看原著更有感觉。」</div>
+            </div>
+        </div>
+        
+        <div class="recent-card">
             <img class="recent-cover" src="./books/颠倒先生.webp" alt="颠倒先生" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
             <div class="recent-info">
                 <div class="recent-bookname">颠倒先生</div>
@@ -450,16 +460,6 @@
             </div>
         </div>
         
-        <div class="recent-card">
-            <img class="recent-cover" src="./books/失落的一角.webp" alt="失落的一角" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
-            <div class="recent-info">
-                <div class="recent-bookname">失落的一角</div>
-                <div class="recent-author">[美]谢尔・希尔弗斯坦</div>
-                <div class="recent-readers">致虚🏔️</div>
-                <div class="recent-note">「找寻自我。」</div>
-            </div>
-        </div>
-        
         </div>
     </div>
     
@@ -468,11 +468,28 @@
         <div class="category">
             <div class="category-header">
                 <div class="category-title">📚 文学</div>
-                <div class="category-count">共 71 本</div>
+                <div class="category-count">共 72 本</div>
             </div>
             <div class="scroll-container">
                 <div class="book-grid">
     
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/福尔摩斯探案全集第四册.webp" alt="福尔摩斯探案全集第四册" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">福尔摩斯探案全集第四册</div>
+                                    <div class="book-author">未知作者</div>
+                                    <div class="book-readers">锦安💰</div>
+                                    <div class="book-meta">
+                                        <span>300页</span>
+                                        <span>📅 2026-05-08</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「1.哔哩哔哩上有有声书，配音很好。\n2.书里的个别推理的巧合感略强。\n3.侦探要当好必须练长跑！\n4.配得好的有声书感觉比自己看原著更有感觉。」
+                                    </div>
+                                </div>
+                            </div>
+                
                             <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/颠倒先生.webp" alt="颠倒先生" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
@@ -712,18 +729,18 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/忙碌小姐.webp" alt="忙碌小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <img class="book-cover" src="./books/平静先生.webp" alt="平静先生" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
-                                    <div class="book-title">忙碌小姐</div>
+                                    <div class="book-title">平静先生</div>
                                     <div class="book-author">[英]罗杰.哈格里维斯</div>
                                     <div class="book-readers">盈生🐤</div>
                                     <div class="book-meta">
-                                        <span>36页</span>
+                                        <span>35页</span>
                                         <span>📅 2026-04-23</span>
                                         
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「忙碌小姐忙的实在是像一个火箭，因为呢，她实在是太快了，做什么事都很快，而且她凌晨3:00起床，且她起床的第一件事就是打扫卫生。」
+                                        「平静先生很平静，因为呢，他吹的小调，我都有点想吹了，简直太好听了，肯定没想到吧，很好听哟，你们要不要听一下呀？。」
                                     </div>
                                 </div>
                             </div>
@@ -746,18 +763,18 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/平静先生.webp" alt="平静先生" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <img class="book-cover" src="./books/忙碌小姐.webp" alt="忙碌小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
-                                    <div class="book-title">平静先生</div>
+                                    <div class="book-title">忙碌小姐</div>
                                     <div class="book-author">[英]罗杰.哈格里维斯</div>
                                     <div class="book-readers">盈生🐤</div>
                                     <div class="book-meta">
-                                        <span>35页</span>
+                                        <span>36页</span>
                                         <span>📅 2026-04-23</span>
                                         
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「平静先生很平静，因为呢，他吹的小调，我都有点想吹了，简直太好听了，肯定没想到吧，很好听哟，你们要不要听一下呀？。」
+                                        「忙碌小姐忙的实在是像一个火箭，因为呢，她实在是太快了，做什么事都很快，而且她凌晨3:00起床，且她起床的第一件事就是打扫卫生。」
                                     </div>
                                 </div>
                             </div>
@@ -882,23 +899,6 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/霸道小姐.webp" alt="霸道小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">霸道小姐</div>
-                                    <div class="book-author">[英]罗杰.哈格里维斯</div>
-                                    <div class="book-readers">盈生🐤</div>
-                                    <div class="book-meta">
-                                        <span>35页</span>
-                                        <span>📅 2026-04-16</span>
-                                        
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「我觉得霸道小姐太霸道了，因为霸道小姐实在是太太太太太太太大声了。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/颠倒小姐.webp" alt="颠倒小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">颠倒小姐</div>
@@ -911,6 +911,23 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「在我的生日里我读完了颠倒小姐，但是嘎嘎嘎，我觉得的有一点点，有一点点上下上下上下跳来跳去的。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/霸道小姐.webp" alt="霸道小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">霸道小姐</div>
+                                    <div class="book-author">[英]罗杰.哈格里维斯</div>
+                                    <div class="book-readers">盈生🐤</div>
+                                    <div class="book-meta">
+                                        <span>35页</span>
+                                        <span>📅 2026-04-16</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「我觉得霸道小姐太霸道了，因为霸道小姐实在是太太太太太太太大声了。」
                                     </div>
                                 </div>
                             </div>
@@ -967,6 +984,23 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/木心文学创作中的“文本再生”现象研究.webp" alt="木心文学创作中的“文本再生”现象研究" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">木心文学创作中的“文本再生”现象研究</div>
+                                    <div class="book-author">卢虹贝</div>
+                                    <div class="book-readers">致虚🏔️</div>
+                                    <div class="book-meta">
+                                        <span>154页</span>
+                                        <span>📅 2026-04-13</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「文本再生。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/木心小说论.webp" alt="木心小说论" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">木心小说论</div>
@@ -979,23 +1013,6 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「讨论木心《豹变》。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/〈文学回忆录〉补遗.webp" alt="〈文学回忆录〉补遗" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">〈文学回忆录〉补遗</div>
-                                    <div class="book-author">木心</div>
-                                    <div class="book-readers">致虚🏔️</div>
-                                    <div class="book-meta">
-                                        <span>220页</span>
-                                        <span>¥39</span>
-                                        <span>📅 2026-04-13</span>
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「阅读两三小时，写作十一二小时。」
                                     </div>
                                 </div>
                             </div>
@@ -1018,23 +1035,6 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/木心文学创作中的“文本再生”现象研究.webp" alt="木心文学创作中的“文本再生”现象研究" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">木心文学创作中的“文本再生”现象研究</div>
-                                    <div class="book-author">卢虹贝</div>
-                                    <div class="book-readers">致虚🏔️</div>
-                                    <div class="book-meta">
-                                        <span>154页</span>
-                                        <span>📅 2026-04-13</span>
-                                        
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「文本再生。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/福尔摩斯探案全集第一册.webp" alt="福尔摩斯探案全集第一册" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">福尔摩斯探案全集第一册</div>
@@ -1047,6 +1047,23 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「下次再说」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/〈文学回忆录〉补遗.webp" alt="〈文学回忆录〉补遗" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">〈文学回忆录〉补遗</div>
+                                    <div class="book-author">木心</div>
+                                    <div class="book-readers">致虚🏔️</div>
+                                    <div class="book-meta">
+                                        <span>220页</span>
+                                        <span>¥39</span>
+                                        <span>📅 2026-04-13</span>
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「阅读两三小时，写作十一二小时。」
                                     </div>
                                 </div>
                             </div>
@@ -1154,6 +1171,23 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/魔法小姐.webp" alt="魔法小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">魔法小姐</div>
+                                    <div class="book-author">[英]罗杰.哈格里维斯</div>
+                                    <div class="book-readers">盈生🐤</div>
+                                    <div class="book-meta">
+                                        <span>32页</span>
+                                        <span>📅 2026-04-08</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「魔法小姐，为什么说话都可以边听她的，但是呢，我觉得魔法小姐还是有一点奇怪，因为呢魔法小姐对什么说就会作用，难道对人说也会有作用吗？。我觉得魔法小姐的魔法可以改一下，可以指着什么东西，然后再说一句话，然后才会提出要求，嗯，就是照办。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/1984（锦安）.webp" alt="1984（锦安）" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">1984（锦安）</div>
@@ -1183,23 +1217,6 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「和看过的电影小森林类似的剧情。摘抄：自食其力，尽我所能创造一些美的事物，更专注于想做的事，连接更多的人。当我动了搬进山里的念头，并且真真正正做到后，才知道人的活法可以有这么多种。城市、山间、草原甚至荒漠，都有人在生活——人在哪里都可以活着，关键看自己想要什么样的生活方式。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/魔法小姐.webp" alt="魔法小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">魔法小姐</div>
-                                    <div class="book-author">[英]罗杰.哈格里维斯</div>
-                                    <div class="book-readers">盈生🐤</div>
-                                    <div class="book-meta">
-                                        <span>32页</span>
-                                        <span>📅 2026-04-08</span>
-                                        
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「魔法小姐，为什么说话都可以边听她的，但是呢，我觉得魔法小姐还是有一点奇怪，因为呢魔法小姐对什么说就会作用，难道对人说也会有作用吗？。我觉得魔法小姐的魔法可以改一下，可以指着什么东西，然后再说一句话，然后才会提出要求，嗯，就是照办。」
                                     </div>
                                 </div>
                             </div>
@@ -2496,7 +2513,7 @@
     </div>
     
     <div class="stats">
-        📊 总计 120 册 · 累计 23,383 页 · 投资 ¥3345 元
+        📊 总计 121 册 · 累计 23,683 页 · 投资 ¥3345 元
     </div>
     
     <script>
