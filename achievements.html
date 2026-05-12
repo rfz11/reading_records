@@ -70,13 +70,13 @@
     <div class="gallery-container">
         <div class="hero-section">
             <div class="hero-label" id="new-tag">最新解锁 ✨</div>
-            <model-viewer id="main-viewer" src="model/crane_kung_fu_panda_chi_master.glb" 
+            <model-viewer id="main-viewer" src="model/white_eagle_animation_fast_fly.glb" 
                 autoplay animation-name="*" auto-rotate camera-controls 
                 shadow-intensity="1" shadow-softness="1" environment-image="neutral"
                 camera-target="0m 0.5m 0m" field-of-view="20deg">
             </model-viewer>
             <div class="hero-info-display">
-                <div class="hero-name" id="hero-name">功夫鹤</div>
+                <div class="hero-name" id="hero-name">白鹰🦅</div>
                 <div class="hero-date" id="hero-date">解锁时间：2026-05-11</div>
             </div>
         </div>
@@ -228,18 +228,11 @@
         <div class="m-date">2026-05-08</div>
     </div>
     
-    <div class="card" onclick="changeHero('model/crane_kung_fu_panda_chi_master.glb', '功夫鹤', '2', '2026-05-11')">
-        <model-viewer class="thumb-viewer" src="model/crane_kung_fu_panda_chi_master.glb" loading="lazy"></model-viewer>
-        <div class="m-name">功夫鹤</div>
+    <div class="card" onclick="changeHero('model/white_eagle_animation_fast_fly.glb', '白鹰🦅', '2', '2026-05-11')">
+        <model-viewer class="thumb-viewer" src="model/white_eagle_animation_fast_fly.glb" loading="lazy"></model-viewer>
+        <div class="m-name">白鹰🦅</div>
         <div class="m-points">已消耗 2 分</div>
         <div class="m-date">2026-05-11</div>
-    </div>
-    
-    <div class="card" style="opacity: 0.7;">
-        <div class="locked-box">🔒</div>
-        <div class="m-name">未解锁</div>
-        <div class="m-points">还需 1 分</div>
-        <div class="p-bar-bg"><div class="p-bar-fill" style="width: 50.0%"></div></div>
     </div>
     
     <div class="card" style="opacity: 0.7;">
@@ -322,7 +315,7 @@
     </div>
 
 <script>
-const LATEST_NAME = "功夫鹤";
+const LATEST_NAME = "白鹰🦅";
 // 修改后的 JS 函数
 function changeHero(file, name, points, date) {
     const viewer = document.getElementById('main-viewer');
@@ -341,7 +334,7 @@ function changeHero(file, name, points, date) {
 }
 
 window.onload = () => {
-    const initialName = "功夫鹤";
+    const initialName = "白鹰🦅";
     if (initialName === LATEST_NAME && initialName !== "暂无") {
         document.getElementById('new-tag').style.display = 'block';
     }
