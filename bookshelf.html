@@ -431,6 +431,16 @@
         <div class="recent-books">
     
         <div class="recent-card">
+            <img class="recent-cover" src="./books/看不见的人-看不见的城市.webp" alt="看不见的人-看不见的城市" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
+            <div class="recent-info">
+                <div class="recent-bookname">看不见的人-看不见的城市</div>
+                <div class="recent-author">赵铁林</div>
+                <div class="recent-readers">致虚🏔️</div>
+                <div class="recent-note">「小时候看过。印象颇深。基本就是另类人生的再版。」</div>
+            </div>
+        </div>
+        
+        <div class="recent-card">
             <img class="recent-cover" src="./books/瓦尔登湖 潘庆舲 2014上海译文.webp" alt="瓦尔登湖 潘庆舲 2014上海译文" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
             <div class="recent-info">
                 <div class="recent-bookname">瓦尔登湖 潘庆舲 2014上海译文</div>
@@ -450,16 +460,6 @@
             </div>
         </div>
         
-        <div class="recent-card">
-            <img class="recent-cover" src="./books/伙婚与走婚 金沙江奇俗.webp" alt="伙婚与走婚 金沙江奇俗" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
-            <div class="recent-info">
-                <div class="recent-bookname">伙婚与走婚 金沙江奇俗</div>
-                <div class="recent-author">宋兆麟</div>
-                <div class="recent-readers">致虚🏔️</div>
-                <div class="recent-note">「俄亚村。大开眼界。」</div>
-            </div>
-        </div>
-        
         </div>
     </div>
     
@@ -468,11 +468,28 @@
         <div class="category">
             <div class="category-header">
                 <div class="category-title">📚 文学</div>
-                <div class="category-count">共 85 本</div>
+                <div class="category-count">共 86 本</div>
             </div>
             <div class="scroll-container">
                 <div class="book-grid">
     
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/看不见的人-看不见的城市.webp" alt="看不见的人-看不见的城市" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">看不见的人-看不见的城市</div>
+                                    <div class="book-author">赵铁林</div>
+                                    <div class="book-readers">致虚🏔️</div>
+                                    <div class="book-meta">
+                                        <span>510页</span>
+                                        <span>¥48</span>
+                                        <span>📅 2026-05-17</span>
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「小时候看过。印象颇深。基本就是另类人生的再版。」
+                                    </div>
+                                </div>
+                            </div>
+                
                             <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/瓦尔登湖 潘庆舲 2014上海译文.webp" alt="瓦尔登湖 潘庆舲 2014上海译文" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
@@ -627,6 +644,23 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/恩惠的太阳.webp" alt="恩惠的太阳" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">恩惠的太阳</div>
+                                    <div class="book-author">吴泰石 / 白峰 / 李相奎</div>
+                                    <div class="book-readers">致虚🏔️</div>
+                                    <div class="book-meta">
+                                        <span>800页</span>
+                                        <span>📅 2026-05-09</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「恩情还不完，走马观花。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/阳光小姐.webp" alt="阳光小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">阳光小姐</div>
@@ -656,23 +690,6 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「您的基本需求及时是可以很少的，而且大多数的奢侈品啊，以及那些什么说可以让自己生活更舒适的东西，但不是那种必不可少的物品，反而可能一定程度上会阻碍我们人类的崇高向上的追求。所以有的时候可以试着保持物质上的简单一点，少一点，把多一点的时间和精力去追求一些精神上的追求。真的需要那么多东西吗？可能精神不够富足的时候就需要这些物质的东西拿去填吧。为了自己的天平要平衡的话，以后就逐步逐步增加自己精神上的富足怎么样？。梭罗太牛了，年纪轻轻就在不断地思考，有完备的独立思考能力和行动。在他隐居在瓦尔登湖旁边的时候，他就在思考人类的分工不断地细化。他在想这个分工到什么时候才算结束呢？最终要到达什么目的呢？其实他当时就提到了说如果这样分工下去的话，别人也是能够替代我们思考的，但是如果别人替我们思考到排除掉了自我思考程度的话，那其实就是不可取的了，我就想到其实我们现在的AI并不就是有点像这样子的感觉吗？\n后面他又提到说年轻人的话，如果不去尝试实践生活的话，就怎么可能更好地学习生活呢？其实他认为这种学习生活就有点像是数学一样，就要去锻炼我们的头了，然后他就提到了我们学一些科学艺术呀，但只是教这些理论知识，但并不会去实践学习，比如说我们学习化学却不会告诉这个小朋友面包是怎么做错的学习，发现海王星这些新型，但是却不去看看自己是不是像一个只会追着就是行星跑得无奈的卫星学习各种知识，但是我们却没有实践，比如说学得去采矿时冶炼之后呢，但是自己却不会去学着做一把大刀。我当时就想就像我大学的时候学智能与空调，但是实际上我根本连空调就是实际长什么样子，里面的构造都不太了解，特别是智能的大型激素，这些没有食物的概念，包括自己毕业之后，如果别人让我推荐选一个什么空调，多大的房间选什么的空调，然后要买多少匹的，自己一点概念都没有，太缺乏实操了。当目不识丁的也许还鄙视一切的商人通过魄力和勤奋挣到了垂涎已久的闲暇和舒适生活进入了上层圈子之后呢，他可能会意识到自己文化的残缺以及财富的空虚无用，因此他会不遗余力地让他的子女获得知识文化，而且他也感觉到了自己在这方面的不足，在这样的情况下，让他就会成为一个家族的缔造。\n任何人可能都会不怕麻烦的去捡地上的¥100，但是呢，书籍中里头是有黄金的，而这些是古代大智者给我们留下的财富，而我们却在离开了学校之后就不再去读书了，这样子的话我们的阅读水平、谈吐和思想就会处在一个非常低级的水平上，因此我们还是应该要终身阅读。\n梭罗对于食物种植的认知，觉得好像只需要种一点点的食物，然后就可以很好地生存，我其实不太认可，如果他个人的年轻的时候的生存是可以的，但是其实确实没有任何应对风险的能力的，而且如果他是一个有家人有子女的话，那这样的方式其实也不是可取的，但是作为他当时做实验来说确实是一个不错的体验。我觉得我可能过不了这种隐居的生活，因为想到自己每天要做那么多事，然后种菜呀，弄房子呀，我就做不了，特别是我害怕种菜的那些虫虫什么之类的，我可以跟别人一起，我可以负责打扫卫生和做饭这些或者做一些手工，但我还挺想去体验一下劈柴这些活的。——太阳只不过是一颗晨星，也不过是万千恒星中的一颗。把目光朝向内息，你就会慢慢发现，心中千万个地区尚未被发现，到这些地方去旅行，成为内心宇宙志的专家。读万卷书，行万里路，这个路不一定是真实的地理旅游，也可以尝试着纵深向内心深处探索。之前在查鲁迅的时候，有一句话比较打动我，说什么时候开始读书都不晚，以前或许读不懂这些书，读书其实就是到了坐下来和自己对对话的时候了。\n——夕阳反射在救济院的窗子上，和反射在富人的宅窗上同样命令，门前的雪在春天也同时融化。所以好好对自己的生活，爱挑剔的人即使在天堂也能找出毛病来，所以修心修身。\n——卖掉衣服，保留你的思想。灵魂所需的必需品，一件也不需要用钱去买。良田万顷不过一日三餐,广厦万间只睡卧榻三尺。多一点思考，少一点欲念，多一点沉淀，少一点浮躁。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/恩惠的太阳.webp" alt="恩惠的太阳" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">恩惠的太阳</div>
-                                    <div class="book-author">吴泰石 / 白峰 / 李相奎</div>
-                                    <div class="book-readers">致虚🏔️</div>
-                                    <div class="book-meta">
-                                        <span>800页</span>
-                                        <span>📅 2026-05-09</span>
-                                        
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「恩情还不完，走马观花。」
                                     </div>
                                 </div>
                             </div>
@@ -950,6 +967,23 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/忙碌小姐.webp" alt="忙碌小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">忙碌小姐</div>
+                                    <div class="book-author">[英]罗杰.哈格里维斯</div>
+                                    <div class="book-readers">盈生🐤</div>
+                                    <div class="book-meta">
+                                        <span>36页</span>
+                                        <span>📅 2026-04-23</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「忙碌小姐忙的实在是像一个火箭，因为呢，她实在是太快了，做什么事都很快，而且她凌晨3:00起床，且她起床的第一件事就是打扫卫生。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/平静先生.webp" alt="平静先生" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">平静先生</div>
@@ -979,23 +1013,6 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「乐观先生好玩极了，他做什么事都会笑笑的，他很好玩，因为有一次一个人让他摘下帽子，但是他总是不摘，他只是有三根头发就这么不想摘下帽子，真是太笑人了。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/忙碌小姐.webp" alt="忙碌小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">忙碌小姐</div>
-                                    <div class="book-author">[英]罗杰.哈格里维斯</div>
-                                    <div class="book-readers">盈生🐤</div>
-                                    <div class="book-meta">
-                                        <span>36页</span>
-                                        <span>📅 2026-04-23</span>
-                                        
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「忙碌小姐忙的实在是像一个火箭，因为呢，她实在是太快了，做什么事都很快，而且她凌晨3:00起床，且她起床的第一件事就是打扫卫生。」
                                     </div>
                                 </div>
                             </div>
@@ -1120,23 +1137,6 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/霸道小姐.webp" alt="霸道小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">霸道小姐</div>
-                                    <div class="book-author">[英]罗杰.哈格里维斯</div>
-                                    <div class="book-readers">盈生🐤</div>
-                                    <div class="book-meta">
-                                        <span>35页</span>
-                                        <span>📅 2026-04-16</span>
-                                        
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「我觉得霸道小姐太霸道了，因为霸道小姐实在是太太太太太太太大声了。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/颠倒小姐.webp" alt="颠倒小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">颠倒小姐</div>
@@ -1154,18 +1154,18 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/生日小姐.webp" alt="生日小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <img class="book-cover" src="./books/霸道小姐.webp" alt="霸道小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
-                                    <div class="book-title">生日小姐</div>
+                                    <div class="book-title">霸道小姐</div>
                                     <div class="book-author">[英]罗杰.哈格里维斯</div>
                                     <div class="book-readers">盈生🐤</div>
                                     <div class="book-meta">
-                                        <span>36页</span>
-                                        <span>📅 2026-04-15</span>
+                                        <span>35页</span>
+                                        <span>📅 2026-04-16</span>
                                         
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「生日小姐太喜欢送礼物了，生日小姐送错误先生的是雪橇🛷，但是生日小姐说的是自行车🚲，因为错误先生听了其他话就能知道这是雪橇了。」
+                                        「我觉得霸道小姐太霸道了，因为霸道小姐实在是太太太太太太太大声了。」
                                     </div>
                                 </div>
                             </div>
@@ -1183,6 +1183,23 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「修缮式书写，区别抄袭。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/生日小姐.webp" alt="生日小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">生日小姐</div>
+                                    <div class="book-author">[英]罗杰.哈格里维斯</div>
+                                    <div class="book-readers">盈生🐤</div>
+                                    <div class="book-meta">
+                                        <span>36页</span>
+                                        <span>📅 2026-04-15</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「生日小姐太喜欢送礼物了，生日小姐送错误先生的是雪橇🛷，但是生日小姐说的是自行车🚲，因为错误先生听了其他话就能知道这是雪橇了。」
                                     </div>
                                 </div>
                             </div>
@@ -1324,23 +1341,6 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/潜规则.webp" alt="潜规则" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">潜规则</div>
-                                    <div class="book-author">吴思</div>
-                                    <div class="book-readers">抱朴🌲</div>
-                                    <div class="book-meta">
-                                        <span>247页</span>
-                                        <span>¥58</span>
-                                        <span>📅 2026-04-10</span>
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「明朝未年，官场买官卖官，腐败到了顶峰，清官难做，明未兵匪之乱很严重，老百姓喜欢土匪，极端恨兵，因兵比匪恶。读完这本书，作者讲诉了古时的官场买官卖官，当官的欺上瞒下，以及公职人员对老百姓的压榨。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/强壮先生.webp" alt="强壮先生" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">强壮先生</div>
@@ -1353,6 +1353,23 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「我觉得强壮先生太强壮了，因为强壮先生吃鸡蛋的时候觉得好好吃呀，我就觉得我也想吃一个鸡蛋来尝尝味的但是我还没有吃到鸡蛋因为那是一本书不是真正的鸡蛋。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/潜规则.webp" alt="潜规则" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">潜规则</div>
+                                    <div class="book-author">吴思</div>
+                                    <div class="book-readers">抱朴🌲</div>
+                                    <div class="book-meta">
+                                        <span>247页</span>
+                                        <span>¥58</span>
+                                        <span>📅 2026-04-10</span>
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「明朝未年，官场买官卖官，腐败到了顶峰，清官难做，明未兵匪之乱很严重，老百姓喜欢土匪，极端恨兵，因兵比匪恶。读完这本书，作者讲诉了古时的官场买官卖官，当官的欺上瞒下，以及公职人员对老百姓的压榨。」
                                     </div>
                                 </div>
                             </div>
@@ -1460,23 +1477,6 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/人间小满.webp" alt="人间小满" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">人间小满</div>
-                                    <div class="book-author">姑苏阿焦 / 焦佃毅</div>
-                                    <div class="book-readers">致虚🏔️</div>
-                                    <div class="book-meta">
-                                        <span>312页</span>
-                                        <span>¥58</span>
-                                        <span>📅 2026-04-06</span>
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「岁月静好的小书。终是放慢了脚步，抬头看见了月亮，亦如少年时那般明亮，小时候我们词不达意，长大后我们言不由衷。如今月光里的纯粹令人心驰神往，也许走了一圈，又回到了最初的地方。年轻时觉得人海里能耀眼最得劲儿，无所事事了此半生，\n才觉着卸下面子和伪装最省心，有些事随遇而安，有些人无须成为羁绊，有些事不必当真。知世故而不世故，历圆滑而弥天真，\n善自嘲而不嘲人，处江湖而远江湖。忙是治疗一切的良药，不做白日梦、不胡思乱想，不等着天上掉馅儿饼。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/喷嚏先生.webp" alt="喷嚏先生" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">喷嚏先生</div>
@@ -1494,18 +1494,18 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/平如美棠，我俩的故事.webp" alt="平如美棠，我俩的故事" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <img class="book-cover" src="./books/人间小满.webp" alt="人间小满" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
-                                    <div class="book-title">平如美棠，我俩的故事</div>
-                                    <div class="book-author">饶平如</div>
-                                    <div class="book-readers">致虚🏔️ 凤书🐦‍🔥 清一🎋</div>
+                                    <div class="book-title">人间小满</div>
+                                    <div class="book-author">姑苏阿焦 / 焦佃毅</div>
+                                    <div class="book-readers">致虚🏔️</div>
                                     <div class="book-meta">
-                                        <span>346页</span>
-                                        <span>¥40</span>
-                                        <span>📅 2026-04-05</span>
+                                        <span>312页</span>
+                                        <span>¥58</span>
+                                        <span>📅 2026-04-06</span>
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「有理无情。江西南城。一少年时，二从军行，三点绛唇。四携手游。五十字街头。六问归期。七君竟归去。寒来暑往。」
+                                        「岁月静好的小书。终是放慢了脚步，抬头看见了月亮，亦如少年时那般明亮，小时候我们词不达意，长大后我们言不由衷。如今月光里的纯粹令人心驰神往，也许走了一圈，又回到了最初的地方。年轻时觉得人海里能耀眼最得劲儿，无所事事了此半生，\n才觉着卸下面子和伪装最省心，有些事随遇而安，有些人无须成为羁绊，有些事不必当真。知世故而不世故，历圆滑而弥天真，\n善自嘲而不嘲人，处江湖而远江湖。忙是治疗一切的良药，不做白日梦、不胡思乱想，不等着天上掉馅儿饼。」
                                     </div>
                                 </div>
                             </div>
@@ -1523,6 +1523,23 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「下次再说」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/平如美棠，我俩的故事.webp" alt="平如美棠，我俩的故事" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">平如美棠，我俩的故事</div>
+                                    <div class="book-author">饶平如</div>
+                                    <div class="book-readers">致虚🏔️ 凤书🐦‍🔥 清一🎋</div>
+                                    <div class="book-meta">
+                                        <span>346页</span>
+                                        <span>¥40</span>
+                                        <span>📅 2026-04-05</span>
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「有理无情。江西南城。一少年时，二从军行，三点绛唇。四携手游。五十字街头。六问归期。七君竟归去。寒来暑往。」
                                     </div>
                                 </div>
                             </div>
@@ -2836,7 +2853,7 @@
     </div>
     
     <div class="stats">
-        📊 总计 142 册 · 累计 28,521 页 · 投资 ¥3629 元
+        📊 总计 143 册 · 累计 29,031 页 · 投资 ¥3677 元
     </div>
     
     <script>
