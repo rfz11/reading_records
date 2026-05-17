@@ -47,21 +47,21 @@
 <body>
     <h2 class="header-title">致虚<a href="index.html" style="text-decoration: none;">🏔️</a> 舅舅的装甲库</h2>
     <div class="balance-tag">
-        <span style="color: #ffd700; margin-right: 15px;">🪙总积分：44 分 </span>
-        <span style="color: #00ff88;">💎 当前余额：8 分 ✈</span>
+        <span style="color: #ffd700; margin-right: 15px;">🪙总积分：45 分 </span>
+        <span style="color: #00ff88;">💎 当前余额：0 分 ✈</span>
     </div>
     
     <div class="gallery-container">
         <div class="hero-section">
             <div class="hero-label" id="new-tag">最新解锁 ✨</div>
-            <model-viewer id="main-viewer" src="model/jiujiu/futuristic_racing_car_-_molnia.glb" 
+            <model-viewer id="main-viewer" src="model/jiujiu/chernovan_nemesis.glb" 
                 autoplay animation-name="*" auto-rotate camera-controls 
                 shadow-intensity="1" shadow-softness="1" environment-image="neutral"
                 camera-target="0m 0.5m 0m" field-of-view="20deg">
             </model-viewer>
             <div class="hero-info-display">
-                <div class="hero-name" id="hero-name">飞行车</div>
-                <div class="hero-date" id="hero-date">解锁时间：2026-05-03</div>
+                <div class="hero-name" id="hero-name">切尔诺万复仇女神</div>
+                <div class="hero-date" id="hero-date">解锁时间：2026-05-17</div>
             </div>
         </div>
         <div class="grid">
@@ -121,24 +121,24 @@
         <div class="m-date">2026-05-03</div>
     </div>
     
-    <div class="card" style="opacity: 0.7;">
-        <div class="locked-box">🔒</div>
-        <div class="m-name">未解锁</div>
-        <div class="m-points">还需 1 分</div>
-        <div class="p-bar-bg"><div class="p-bar-fill" style="width: 88.88888888888889%"></div></div>
+    <div class="card" onclick="changeHero('model/jiujiu/chernovan_nemesis.glb', '切尔诺万复仇女神', '9', '2026-05-17')">
+        <model-viewer class="thumb-viewer" src="model/jiujiu/chernovan_nemesis.glb" loading="lazy"></model-viewer>
+        <div class="m-name">切尔诺万复仇女神</div>
+        <div class="m-points">已消耗 9 分</div>
+        <div class="m-date">2026-05-17</div>
     </div>
     
     <div class="card" style="opacity: 0.7;">
         <div class="locked-box">🔒</div>
         <div class="m-name">未解锁</div>
-        <div class="m-points">还需 2 分</div>
-        <div class="p-bar-bg"><div class="p-bar-fill" style="width: 80.0%"></div></div>
+        <div class="m-points">还需 10 分</div>
+        <div class="p-bar-bg"><div class="p-bar-fill" style="width: 0.0%"></div></div>
     </div>
     </div>
     </div>
 
 <script>
-const LATEST_NAME = "飞行车";
+const LATEST_NAME = "切尔诺万复仇女神";
 // 修改后的 JS 函数
 function changeHero(file, name, points, date) {
     const viewer = document.getElementById('main-viewer');
@@ -157,7 +157,7 @@ function changeHero(file, name, points, date) {
 }
 
 window.onload = () => {
-    const initialName = "飞行车";
+    const initialName = "切尔诺万复仇女神";
     if (initialName === LATEST_NAME && initialName !== "暂无") {
         document.getElementById('new-tag').style.display = 'block';
     }
