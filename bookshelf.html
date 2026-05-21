@@ -431,6 +431,16 @@
         <div class="recent-books">
     
         <div class="recent-card">
+            <img class="recent-cover" src="./books/法庭上的柳叶刀.webp" alt="法庭上的柳叶刀" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
+            <div class="recent-info">
+                <div class="recent-bookname">法庭上的柳叶刀</div>
+                <div class="recent-author">何兵</div>
+                <div class="recent-readers">西翁🦁</div>
+                <div class="recent-note">「逻辑严密、论据充分的辩护词，提供律师视角的思维模式，也知道了从不同的方面去看待一个问题，锻炼辩证思维。」</div>
+            </div>
+        </div>
+        
+        <div class="recent-card">
             <img class="recent-cover" src="./books/急匆匆小姐.webp" alt="急匆匆小姐" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
             <div class="recent-info">
                 <div class="recent-bookname">急匆匆小姐</div>
@@ -447,16 +457,6 @@
                 <div class="recent-author">陈磊</div>
                 <div class="recent-readers">清一🎋 西翁🦁</div>
                 <div class="recent-note">「对地理有直观的认识。」</div>
-            </div>
-        </div>
-        
-        <div class="recent-card">
-            <img class="recent-cover" src="./books/匆忙先生.webp" alt="匆忙先生" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
-            <div class="recent-info">
-                <div class="recent-bookname">匆忙先生</div>
-                <div class="recent-author">[英]罗杰哈.格里维斯</div>
-                <div class="recent-readers">盈生🐤</div>
-                <div class="recent-note">「匆忙先生太忙了，他忙得我都想冲出我的家门了，他做了很多工作要挣钱，因为呢，他没钱可以度假，所以他就要去找工作赚钱了。他做了很多工作有公交l还有几牛奶还有端饭当服务员，但他总是做不好这些事，他总是匆匆忙忙的，因为客人和还有坐公交车的人根本就没有坐上去吃饭的人，根本就没有吃到饭，因为匆忙先生太匆忙了，实在停不下来，不然我都要跑了。这么多跑跑跑跑跑跑跑的事情，我简直想冲出我的家门了，但现在是睡觉时间不能冲出家门。但他最后找出了一份工作，实在适合他的工作，当邮递员，他比其他员送信的时间少了一半，他在同样的时间里面比其他人送信多两倍。最后他真的度假了。\n。」</div>
             </div>
         </div>
         
@@ -1976,11 +1976,28 @@
         <div class="category">
             <div class="category-header">
                 <div class="category-title">🏛️ 社科</div>
-                <div class="category-count">共 37 本</div>
+                <div class="category-count">共 38 本</div>
             </div>
             <div class="scroll-container">
                 <div class="book-grid">
     
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/法庭上的柳叶刀.webp" alt="法庭上的柳叶刀" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">法庭上的柳叶刀</div>
+                                    <div class="book-author">何兵</div>
+                                    <div class="book-readers">西翁🦁</div>
+                                    <div class="book-meta">
+                                        <span>322页</span>
+                                        <span>¥128</span>
+                                        <span>📅 2026-05-20</span>
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「逻辑严密、论据充分的辩护词，提供律师视角的思维模式，也知道了从不同的方面去看待一个问题，锻炼辩证思维。」
+                                    </div>
+                                </div>
+                            </div>
+                
                             <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/富爸爸财务自由之路.webp" alt="富爸爸财务自由之路" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
@@ -2067,23 +2084,6 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/半小时漫画世界史.webp" alt="半小时漫画世界史" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">半小时漫画世界史</div>
-                                    <div class="book-author">陈磊</div>
-                                    <div class="book-readers">清一🎋 锦安💰 西翁🦁</div>
-                                    <div class="book-meta">
-                                        <span>256页</span>
-                                        <span>📅 2026-04-28</span>
-                                        
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「看这个就跟之前看的《大战略》这本书上提到的希波战争和薛西斯串联起来了。加油。历史滚滚向前，人们苦苦挣扎。——不管你愿不愿意承认，历史上没有一场仗是因为爱和正义打起来的，所有的流血都是因为钱。\n历史上大多数的“正义”，通常都并存着非常直接的利益冲突，所以大家在理解历史、理解世界的过程中，要正确认识人性的作用，不要贬低也不要拔高。当然，我们没必要因此对世界失望，即便利益是每场战争的重大影响因素，人性的真善美总能在大方向上掌控全局。\n——日本，一个曾经在18世纪被美国打趴下的国家，但是他们不仅不怨恨，反而追着美国屁股学习，明治维新，然后坐上了一战二战的东风，跻身世界强国。所以被打倒没关系，重要的是还能站起来，继续前进，谁知道又会是怎样的一翻风景呢。\n。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/少有人走的路.webp" alt="少有人走的路" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">少有人走的路</div>
@@ -2099,6 +2099,23 @@
 书中打破了我对生活的固有认知，原来人生本就充满苦难，逃避痛苦、贪图安逸是人的本能，也是大多数人选择的轻松道路。而自律、直面问题、学会延迟满足，敢于正视内心的脆弱与不足，才是那条孤独却能让人蜕变的路。
 我们大部分人都喜欢舒服安逸，谁都不想主动给自己找难题。过往遇到困难时，我总习惯性逃避、敷衍了事，不愿正视自己的缺点。这本书让我明白了一个道理，心智成熟从来不是与生俱来的，而是在一次次自我约束、自我反省中慢慢修炼而来。真正的强大，不是无所不能，而是即便迷茫痛苦，也依然愿意直面问题、主动改变。 
 往后告诫自己要告别惰性与逃避，学会自律自省，勇敢面对生活中的难题，踏踏实实走好属于自己的成长之路。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/半小时漫画世界史.webp" alt="半小时漫画世界史" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">半小时漫画世界史</div>
+                                    <div class="book-author">陈磊</div>
+                                    <div class="book-readers">清一🎋 锦安💰 西翁🦁</div>
+                                    <div class="book-meta">
+                                        <span>256页</span>
+                                        <span>📅 2026-04-28</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「看这个就跟之前看的《大战略》这本书上提到的希波战争和薛西斯串联起来了。加油。历史滚滚向前，人们苦苦挣扎。——不管你愿不愿意承认，历史上没有一场仗是因为爱和正义打起来的，所有的流血都是因为钱。\n历史上大多数的“正义”，通常都并存着非常直接的利益冲突，所以大家在理解历史、理解世界的过程中，要正确认识人性的作用，不要贬低也不要拔高。当然，我们没必要因此对世界失望，即便利益是每场战争的重大影响因素，人性的真善美总能在大方向上掌控全局。\n——日本，一个曾经在18世纪被美国打趴下的国家，但是他们不仅不怨恨，反而追着美国屁股学习，明治维新，然后坐上了一战二战的东风，跻身世界强国。所以被打倒没关系，重要的是还能站起来，继续前进，谁知道又会是怎样的一翻风景呢。\n。」
                                     </div>
                                 </div>
                             </div>
@@ -2121,23 +2138,6 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/半小时漫画中国史5.webp" alt="半小时漫画中国史5" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">半小时漫画中国史5</div>
-                                    <div class="book-author">陈磊</div>
-                                    <div class="book-readers">清一🎋</div>
-                                    <div class="book-meta">
-                                        <span>336页</span>
-                                        <span>📅 2026-04-24</span>
-                                        
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「英国工业革命后，生产力极大提高，产出了很多产品需要对外销售，但国内人口优先，消费能力有限，到中国海外贸易结果清朝闭关锁国，仅留下广州一个小口岸，且外国商品并没有太大吸引力，反倒是我们的瓷器，茶叶，丝绸远销海外，导致英国贸易你查，最后用鸦片+枪炮打开国门，逐步打破了封建小农经济，带来了资本主义经济。\n——那些年和大清一样弱的国家，凭啥成了列强？工业革命后，封建社会生产关系不适应资本主义经济发展需要的时候，一些国家或主动或被动地进行改革。日本通过明治维新，全盘西化，德国通过容克地主改革，对容克地主进行资本主义改造（如一起投资建厂），俄国通过亚历山大二世改革废除了农奴制，将本国改造成了资本主义国家，在一段时间内成为了世界强国。当然可能改革不彻底，也有自己的局限性。但是在时代改革的大潮来临之际，确实是让他们在短时间内强起来站起来\n——我们在经历了鸦片战争后，经历了三次自救：洋务运动（师夷长技以制夷）——戊戌变法的百日维新——预备立宪（1、君主立宪，但内阁里大半都是皇亲国戚；2、革命派，建立全新共和国，1911年10月10日武昌起义，辛亥革命，近300年的大清正式灭亡），从单纯的技术学习，到根本的社会革命，表面上看这是大清一次一次的自救，实际上这是中国人一点一点的觉醒，中国一步一步地从封建蒙昧迈向现代文明。\n——工业革命后，日本也被西方列强用武力打开国门，但是他们自动选择了革命，实现了国家的快速强大，甚至后面还来侵略中国。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/半小时漫画中国史（番外篇）.webp" alt="半小时漫画中国史（番外篇）" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">半小时漫画中国史（番外篇）</div>
@@ -2150,6 +2150,23 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「——虽然在我们眼中《南京条约》很屈辱，但在当时看来，只是大清在海边小败几场而已。太阳照常升起，历史继续向前。）——当时的人还是要面对当下的日子。——记上一本书5\n——24节气：春雨惊春清谷天，夏满芒夏暑相连。秋处露秋寒霜降，冬雪雪冬小大寒。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/半小时漫画中国史5.webp" alt="半小时漫画中国史5" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">半小时漫画中国史5</div>
+                                    <div class="book-author">陈磊</div>
+                                    <div class="book-readers">清一🎋</div>
+                                    <div class="book-meta">
+                                        <span>336页</span>
+                                        <span>📅 2026-04-24</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「英国工业革命后，生产力极大提高，产出了很多产品需要对外销售，但国内人口优先，消费能力有限，到中国海外贸易结果清朝闭关锁国，仅留下广州一个小口岸，且外国商品并没有太大吸引力，反倒是我们的瓷器，茶叶，丝绸远销海外，导致英国贸易你查，最后用鸦片+枪炮打开国门，逐步打破了封建小农经济，带来了资本主义经济。\n——那些年和大清一样弱的国家，凭啥成了列强？工业革命后，封建社会生产关系不适应资本主义经济发展需要的时候，一些国家或主动或被动地进行改革。日本通过明治维新，全盘西化，德国通过容克地主改革，对容克地主进行资本主义改造（如一起投资建厂），俄国通过亚历山大二世改革废除了农奴制，将本国改造成了资本主义国家，在一段时间内成为了世界强国。当然可能改革不彻底，也有自己的局限性。但是在时代改革的大潮来临之际，确实是让他们在短时间内强起来站起来\n——我们在经历了鸦片战争后，经历了三次自救：洋务运动（师夷长技以制夷）——戊戌变法的百日维新——预备立宪（1、君主立宪，但内阁里大半都是皇亲国戚；2、革命派，建立全新共和国，1911年10月10日武昌起义，辛亥革命，近300年的大清正式灭亡），从单纯的技术学习，到根本的社会革命，表面上看这是大清一次一次的自救，实际上这是中国人一点一点的觉醒，中国一步一步地从封建蒙昧迈向现代文明。\n——工业革命后，日本也被西方列强用武力打开国门，但是他们自动选择了革命，实现了国家的快速强大，甚至后面还来侵略中国。」
                                     </div>
                                 </div>
                             </div>
@@ -2240,23 +2257,6 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/艾未春秋.webp" alt="艾未春秋" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">艾未春秋</div>
-                                    <div class="book-author">一剑浣</div>
-                                    <div class="book-readers">致虚🏔️</div>
-                                    <div class="book-meta">
-                                        <span>100页</span>
-                                        <span>📅 2026-04-20</span>
-                                        
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「下次再说」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/农民自杀研究.webp" alt="农民自杀研究" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">农民自杀研究</div>
@@ -2269,6 +2269,23 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「四种理想型型，12种经验型。团结型社会。分裂型社会。分散型社会，老年男性自杀。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/艾未春秋.webp" alt="艾未春秋" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">艾未春秋</div>
+                                    <div class="book-author">一剑浣</div>
+                                    <div class="book-readers">致虚🏔️</div>
+                                    <div class="book-meta">
+                                        <span>100页</span>
+                                        <span>📅 2026-04-20</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「下次再说」
                                     </div>
                                 </div>
                             </div>
@@ -2308,6 +2325,23 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/现代无人机鉴赏（珍藏版）.webp" alt="现代无人机鉴赏（珍藏版）" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">现代无人机鉴赏（珍藏版）</div>
+                                    <div class="book-author">《深度文化》编委会</div>
+                                    <div class="book-readers">西翁🦁</div>
+                                    <div class="book-meta">
+                                        <span>298页</span>
+                                        <span>¥70</span>
+                                        <span>📅 2026-04-12</span>
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「看看图片。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/手机断舍离.webp" alt="手机断舍离" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">手机断舍离</div>
@@ -2337,23 +2371,6 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「地球与地图。陆地与海洋。天气与气候。居民与聚落。发展与合作。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/现代无人机鉴赏（珍藏版）.webp" alt="现代无人机鉴赏（珍藏版）" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">现代无人机鉴赏（珍藏版）</div>
-                                    <div class="book-author">《深度文化》编委会</div>
-                                    <div class="book-readers">西翁🦁</div>
-                                    <div class="book-meta">
-                                        <span>298页</span>
-                                        <span>¥70</span>
-                                        <span>📅 2026-04-12</span>
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「看看图片。」
                                     </div>
                                 </div>
                             </div>
@@ -2938,7 +2955,7 @@
     </div>
     
     <div class="stats">
-        📊 总计 149 册 · 累计 29,915 页 · 投资 ¥3677 元
+        📊 总计 150 册 · 累计 30,237 页 · 投资 ¥3805 元
     </div>
     
     <script>
