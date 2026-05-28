@@ -431,6 +431,16 @@
         <div class="recent-books">
     
         <div class="recent-card">
+            <img class="recent-cover" src="./books/2官封弼马温.webp" alt="2官封弼马温" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
+            <div class="recent-info">
+                <div class="recent-bookname">2官封弼马温</div>
+                <div class="recent-author">吴承恩</div>
+                <div class="recent-readers">盈生🐤</div>
+                <div class="recent-note">「Thank you。」</div>
+            </div>
+        </div>
+        
+        <div class="recent-card">
             <img class="recent-cover" src="./books/粮食、运河与白银.webp" alt="粮食、运河与白银" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
             <div class="recent-info">
                 <div class="recent-bookname">粮食、运河与白银</div>
@@ -450,16 +460,6 @@
             </div>
         </div>
         
-        <div class="recent-card">
-            <img class="recent-cover" src="./books/半小时漫画世界名著2.webp" alt="半小时漫画世界名著2" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
-            <div class="recent-info">
-                <div class="recent-bookname">半小时漫画世界名著2</div>
-                <div class="recent-author">陈磊</div>
-                <div class="recent-readers">清一🎋</div>
-                <div class="recent-note">「世界那么大，名著也何其多，我就要慢慢通过看名著来增加自己的阅历和遨游世界吧。看一个名著的话可以了解一个作者了解一个作者生活的背景，然后了解一个国家，就慢慢发散，还挺有意思的。」</div>
-            </div>
-        </div>
-        
         </div>
     </div>
     
@@ -468,11 +468,28 @@
         <div class="category">
             <div class="category-header">
                 <div class="category-title">📚 文学</div>
-                <div class="category-count">共 96 本</div>
+                <div class="category-count">共 97 本</div>
             </div>
             <div class="scroll-container">
                 <div class="book-grid">
     
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/2官封弼马温.webp" alt="2官封弼马温" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">2官封弼马温</div>
+                                    <div class="book-author">吴承恩</div>
+                                    <div class="book-readers">盈生🐤</div>
+                                    <div class="book-meta">
+                                        <span>23页</span>
+                                        <span>📅 2026-05-28</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「Thank you。」
+                                    </div>
+                                </div>
+                            </div>
+                
                             <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/健忘先生.webp" alt="健忘先生" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
@@ -3125,7 +3142,7 @@
     </div>
     
     <div class="stats">
-        📊 总计 161 册 · 累计 31,762 页 · 投资 ¥3924 元
+        📊 总计 162 册 · 累计 31,785 页 · 投资 ¥3924 元
     </div>
     
     <script>
