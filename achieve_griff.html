@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<script type="module" src="./model-viewer.min.js"></script>
+<style>
+    body { background: #121212; color: white; font-family: 'PingFang SC', sans-serif; margin: 0; padding: 10px; overflow: hidden; /* 防止整个页面跟着滑动 */ }
+    .header-title { text-align: center; color: #ffd700; padding: 10px 0 5px 0; font-size: 1.3rem; font-weight: bold; }
+    .balance-tag { text-align: center; color: #00ff88; font-size: 0.9rem; margin-bottom: 15px; font-weight: bold; }
+    
+    .gallery-container { max-width: 800px; margin: auto; }
+    
+    .hero-section { 
+        width: 100%; height: 350px; background-color: #e0f7fa; 
+        background-image: radial-gradient(circle at center, #ffffff 0%, #b2ebf2 100%);
+        border-radius: 25px; margin-bottom: 20px; position: relative; overflow: hidden; border: 4px solid #fff;
+    }
+    
+    .hero-label { 
+        position: absolute; top: 12px; left: 12px; background: #ff4757; color: #fff; 
+        padding: 5px 12px; border-radius: 20px; font-weight: bold; font-size: 11px; z-index: 10;
+        animation: glow 1.5s infinite; display: none; 
+    }
+    @keyframes glow { 0% { opacity: 0.8; } 50% { opacity: 1; } 100% { opacity: 0.8; } }
+    
+    #main-viewer { width: 100%; height: 100%; outline: none; }
+    .hero-info-display { position: absolute; bottom: 10px; width: 100%; text-align: center; color: #006064; pointer-events: none; }
+    .hero-name { font-weight: bold; font-size: 16px; }
+    .hero-date { font-size: 10px; opacity: 0.8; }
+
+    /* ======= 唯一修改的地方：给网格加上固定高度和滚动条 ======= */
+    .grid { 
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 8px; 
+        padding: 5px; 
+        max-height: 380px; /* 固定高度，可根据手机屏幕自行微调 */
+        overflow-y: auto; /* 允许纵向滑动 */
+        -webkit-overflow-scrolling: touch; /* 让手机端滑动更丝滑 */
+    }
+    
+    /* 选做：美化一下滚动条，让它在暗色背景下不突兀 */
+    .grid::-webkit-scrollbar { width: 6px; }
+    .grid::-webkit-scrollbar-track { background: rgba(0,0,0,0.1); border-radius: 4px; }
+    .grid::-webkit-scrollbar-thumb { background: #555; border-radius: 4px; }
+    /* ========================================================== */
+
+    .card { background: #252525; border-radius: 12px; padding: 8px 5px; text-align: center; border: 1px solid #333; position: relative; }
+    .thumb-viewer { width: 100%; height: 70px; border-radius: 8px; pointer-events: none; --poster-color: transparent; }
+    .locked-box { width: 100%; height: 70px; background-color: #333; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; color: #555; }
+    
+    .m-name { font-weight: bold; margin-top: 5px; color: #eee; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .m-points { color: #ffd700; font-size: 10px; font-weight: bold; }
+    .m-date { color: #666; font-size: 9px; margin-top: 2px; }
+    
+    .p-bar-bg { width: 80%; background: #444; height: 4px; border-radius: 2px; margin: 6px auto; overflow: hidden; }
+    .p-bar-fill { background: linear-gradient(90deg, #00ff88, #00bd68); height: 100%; transition: width 0.5s; }
+
+    model-viewer::part(poster) { display: none; }
+</style>
+</head>
+<body>
+    <h2 class="header-title">盈生<a href="index.html" style="text-decoration: none;">🐤</a> 的狮鹫宝宝养成</h2>
+    <div class="balance-tag">
+        <span style="color: #ffd700; margin-right: 15px;">🪙总积分：58 分 🦤</span>
+        <span style="color: #00ff88;">💎 当前余额：35 分 🦜</span>
+    </div>
+    
+    <div class="gallery-container">
+        <div class="hero-section">
+            <div class="hero-label" id="new-tag">最新解锁 ✨</div>
+            <model-viewer id="main-viewer" src="model/fourseasonsgriffons_winter.glb" 
+                autoplay animation-name="*" auto-rotate camera-controls 
+                shadow-intensity="1" shadow-softness="1" environment-image="neutral"
+                camera-target="0m 0.5m 0m" field-of-view="20deg">
+            </model-viewer>
+            <div class="hero-info-display">
+                <div class="hero-name" id="hero-name">冬</div>
+                <div class="hero-date" id="hero-date">解锁时间：2026-04-16</div>
+            </div>
+        </div>
+        <div class="grid">
+    <div class="card" onclick="changeHero('model/mstyyokame.glb', '狮鹫幼崽', '1', '2026-03-16')">
+        <model-viewer class="thumb-viewer" src="model/mstyyokame.glb" loading="lazy"></model-viewer>
+        <div class="m-name">狮鹫幼崽</div>
+        <div class="m-points">已消耗 1 分</div>
+        <div class="m-date">2026-03-16</div>
+    </div>
+    
+    <div class="card" onclick="changeHero('model/littlegriffons_hollandicus00.glb', '小狮鹫', '3', '2026-03-24')">
+        <model-viewer class="thumb-viewer" src="model/littlegriffons_hollandicus00.glb" loading="lazy"></model-viewer>
+        <div class="m-name">小狮鹫</div>
+        <div class="m-points">已消耗 3 分</div>
+        <div class="m-date">2026-03-24</div>
+    </div>
+    
+    <div class="card" onclick="changeHero('model/raychell.glb', '狮鹫少女', '3', '2026-03-29')">
+        <model-viewer class="thumb-viewer" src="model/raychell.glb" loading="lazy"></model-viewer>
+        <div class="m-name">狮鹫少女</div>
+        <div class="m-points">已消耗 3 分</div>
+        <div class="m-date">2026-03-29</div>
+    </div>
+    
+    <div class="card" onclick="changeHero('model/fourseasonsgriffons_spring.glb', '春', '4', '2026-04-05')">
+        <model-viewer class="thumb-viewer" src="model/fourseasonsgriffons_spring.glb" loading="lazy"></model-viewer>
+        <div class="m-name">春</div>
+        <div class="m-points">已消耗 4 分</div>
+        <div class="m-date">2026-04-05</div>
+    </div>
+    
+    <div class="card" onclick="changeHero('model/fourseasonsgriffons_summer.glb', '夏', '4', '2026-04-09')">
+        <model-viewer class="thumb-viewer" src="model/fourseasonsgriffons_summer.glb" loading="lazy"></model-viewer>
+        <div class="m-name">夏</div>
+        <div class="m-points">已消耗 4 分</div>
+        <div class="m-date">2026-04-09</div>
+    </div>
+    
+    <div class="card" onclick="changeHero('model/fourseasonsgriffons_autumn.glb', '秋', '4', '2026-04-13')">
+        <model-viewer class="thumb-viewer" src="model/fourseasonsgriffons_autumn.glb" loading="lazy"></model-viewer>
+        <div class="m-name">秋</div>
+        <div class="m-points">已消耗 4 分</div>
+        <div class="m-date">2026-04-13</div>
+    </div>
+    
+    <div class="card" onclick="changeHero('model/fourseasonsgriffons_winter.glb', '冬', '4', '2026-04-16')">
+        <model-viewer class="thumb-viewer" src="model/fourseasonsgriffons_winter.glb" loading="lazy"></model-viewer>
+        <div class="m-name">冬</div>
+        <div class="m-points">已消耗 4 分</div>
+        <div class="m-date">2026-04-16</div>
+    </div>
+    </div>
+    </div>
+
+<script>
+const LATEST_NAME = "冬";
+// 修改后的 JS 函数
+function changeHero(file, name, points, date) {
+    const viewer = document.getElementById('main-viewer');
+    const nameLabel = document.getElementById('hero-name');
+    const dateLabel = document.getElementById('hero-date');
+    const newTag = document.getElementById('new-tag');
+    
+    viewer.setAttribute('src', file);
+    nameLabel.innerHTML = name; // Text-->HTML
+    dateLabel.innerText = "解锁时间：" + date;
+    
+    // 2. 只有名字完全匹配时，才显示“最新解锁”
+    newTag.style.display = (name === LATEST_NAME) ? 'block' : 'none';
+    
+    viewer.fieldOfView = "20deg";
+}
+
+window.onload = () => {
+    const initialName = "冬";
+    if (initialName === LATEST_NAME && initialName !== "暂无") {
+        document.getElementById('new-tag').style.display = 'block';
+    }
+};
+</script>
+</body>
+</html>
