@@ -431,6 +431,16 @@
         <div class="recent-books">
     
         <div class="recent-card">
+            <img class="recent-cover" src="./books/粮食、运河与白银.webp" alt="粮食、运河与白银" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
+            <div class="recent-info">
+                <div class="recent-bookname">粮食、运河与白银</div>
+                <div class="recent-author">波音</div>
+                <div class="recent-readers">抱朴🌲</div>
+                <div class="recent-note">「读完此书，大楖了解中国上下几千年我们的先人们，从最早的农耕文明到货币的旦生，及以物易物，到货币交易，在到全球的贸易，杨广用举世无双的大运河连通中国南北，把南方人和北方人的文化，思维也被连成一片，一统的国度有了认同感。」</div>
+            </div>
+        </div>
+        
+        <div class="recent-card">
             <img class="recent-cover" src="./books/健忘先生.webp" alt="健忘先生" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
             <div class="recent-info">
                 <div class="recent-bookname">健忘先生</div>
@@ -447,16 +457,6 @@
                 <div class="recent-author">陈磊</div>
                 <div class="recent-readers">清一🎋</div>
                 <div class="recent-note">「世界那么大，名著也何其多，我就要慢慢通过看名著来增加自己的阅历和遨游世界吧。看一个名著的话可以了解一个作者了解一个作者生活的背景，然后了解一个国家，就慢慢发散，还挺有意思的。」</div>
-            </div>
-        </div>
-        
-        <div class="recent-card">
-            <img class="recent-cover" src="./books/百事通小姐.webp" alt="百事通小姐" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
-            <div class="recent-info">
-                <div class="recent-bookname">百事通小姐</div>
-                <div class="recent-author">[英]罗杰.哈格里维斯</div>
-                <div class="recent-readers">盈生🐤</div>
-                <div class="recent-note">「百事通小姐非常聪明。」</div>
             </div>
         </div>
         
@@ -2112,11 +2112,28 @@
         <div class="category">
             <div class="category-header">
                 <div class="category-title">🏛️ 社科</div>
-                <div class="category-count">共 38 本</div>
+                <div class="category-count">共 39 本</div>
             </div>
             <div class="scroll-container">
                 <div class="book-grid">
     
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/粮食、运河与白银.webp" alt="粮食、运河与白银" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">粮食、运河与白银</div>
+                                    <div class="book-author">波音</div>
+                                    <div class="book-readers">抱朴🌲</div>
+                                    <div class="book-meta">
+                                        <span>250页</span>
+                                        <span>¥68</span>
+                                        <span>📅 2026-05-28</span>
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「读完此书，大楖了解中国上下几千年我们的先人们，从最早的农耕文明到货币的旦生，及以物易物，到货币交易，在到全球的贸易，杨广用举世无双的大运河连通中国南北，把南方人和北方人的文化，思维也被连成一片，一统的国度有了认同感。」
+                                    </div>
+                                </div>
+                            </div>
+                
                             <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/法庭上的柳叶刀.webp" alt="法庭上的柳叶刀" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
@@ -2220,6 +2237,23 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/半小时漫画世界史.webp" alt="半小时漫画世界史" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">半小时漫画世界史</div>
+                                    <div class="book-author">陈磊</div>
+                                    <div class="book-readers">清一🎋 锦安💰 西翁🦁</div>
+                                    <div class="book-meta">
+                                        <span>256页</span>
+                                        <span>📅 2026-04-28</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「看这个就跟之前看的《大战略》这本书上提到的希波战争和薛西斯串联起来了。加油。历史滚滚向前，人们苦苦挣扎。——不管你愿不愿意承认，历史上没有一场仗是因为爱和正义打起来的，所有的流血都是因为钱。\n历史上大多数的“正义”，通常都并存着非常直接的利益冲突，所以大家在理解历史、理解世界的过程中，要正确认识人性的作用，不要贬低也不要拔高。当然，我们没必要因此对世界失望，即便利益是每场战争的重大影响因素，人性的真善美总能在大方向上掌控全局。\n——日本，一个曾经在18世纪被美国打趴下的国家，但是他们不仅不怨恨，反而追着美国屁股学习，明治维新，然后坐上了一战二战的东风，跻身世界强国。所以被打倒没关系，重要的是还能站起来，继续前进，谁知道又会是怎样的一翻风景呢。\n。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/少有人走的路.webp" alt="少有人走的路" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">少有人走的路</div>
@@ -2235,23 +2269,6 @@
 书中打破了我对生活的固有认知，原来人生本就充满苦难，逃避痛苦、贪图安逸是人的本能，也是大多数人选择的轻松道路。而自律、直面问题、学会延迟满足，敢于正视内心的脆弱与不足，才是那条孤独却能让人蜕变的路。
 我们大部分人都喜欢舒服安逸，谁都不想主动给自己找难题。过往遇到困难时，我总习惯性逃避、敷衍了事，不愿正视自己的缺点。这本书让我明白了一个道理，心智成熟从来不是与生俱来的，而是在一次次自我约束、自我反省中慢慢修炼而来。真正的强大，不是无所不能，而是即便迷茫痛苦，也依然愿意直面问题、主动改变。 
 往后告诫自己要告别惰性与逃避，学会自律自省，勇敢面对生活中的难题，踏踏实实走好属于自己的成长之路。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/半小时漫画世界史.webp" alt="半小时漫画世界史" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">半小时漫画世界史</div>
-                                    <div class="book-author">陈磊</div>
-                                    <div class="book-readers">清一🎋 锦安💰 西翁🦁</div>
-                                    <div class="book-meta">
-                                        <span>256页</span>
-                                        <span>📅 2026-04-28</span>
-                                        
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「看这个就跟之前看的《大战略》这本书上提到的希波战争和薛西斯串联起来了。加油。历史滚滚向前，人们苦苦挣扎。——不管你愿不愿意承认，历史上没有一场仗是因为爱和正义打起来的，所有的流血都是因为钱。\n历史上大多数的“正义”，通常都并存着非常直接的利益冲突，所以大家在理解历史、理解世界的过程中，要正确认识人性的作用，不要贬低也不要拔高。当然，我们没必要因此对世界失望，即便利益是每场战争的重大影响因素，人性的真善美总能在大方向上掌控全局。\n——日本，一个曾经在18世纪被美国打趴下的国家，但是他们不仅不怨恨，反而追着美国屁股学习，明治维新，然后坐上了一战二战的东风，跻身世界强国。所以被打倒没关系，重要的是还能站起来，继续前进，谁知道又会是怎样的一翻风景呢。\n。」
                                     </div>
                                 </div>
                             </div>
@@ -3108,7 +3125,7 @@
     </div>
     
     <div class="stats">
-        📊 总计 160 册 · 累计 31,512 页 · 投资 ¥3856 元
+        📊 总计 161 册 · 累计 31,762 页 · 投资 ¥3924 元
     </div>
     
     <script>
