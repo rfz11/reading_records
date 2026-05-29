@@ -431,32 +431,32 @@
         <div class="recent-books">
     
         <div class="recent-card">
+            <img class="recent-cover" src="./books/罪行.webp" alt="罪行" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
+            <div class="recent-info">
+                <div class="recent-bookname">罪行</div>
+                <div class="recent-author">[德]费迪南德.冯.席拉赫</div>
+                <div class="recent-readers">清一🎋</div>
+                <div class="recent-note">「人生百态。」</div>
+            </div>
+        </div>
+        
+        <div class="recent-card">
+            <img class="recent-cover" src="./books/半小时漫画世界名著3.webp" alt="半小时漫画世界名著3" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
+            <div class="recent-info">
+                <div class="recent-bookname">半小时漫画世界名著3</div>
+                <div class="recent-author">陈磊</div>
+                <div class="recent-readers">清一🎋</div>
+                <div class="recent-note">「生活很苦，但是也得过，而且可以过得很好，比如高尔基。中小学必读二十多本世界名著，有好些都是小时候买过的读过的书，有机会再读读。」</div>
+            </div>
+        </div>
+        
+        <div class="recent-card">
             <img class="recent-cover" src="./books/2官封弼马温.webp" alt="2官封弼马温" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
             <div class="recent-info">
                 <div class="recent-bookname">2官封弼马温</div>
                 <div class="recent-author">吴承恩</div>
                 <div class="recent-readers">盈生🐤</div>
                 <div class="recent-note">「Thank you。」</div>
-            </div>
-        </div>
-        
-        <div class="recent-card">
-            <img class="recent-cover" src="./books/粮食、运河与白银.webp" alt="粮食、运河与白银" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
-            <div class="recent-info">
-                <div class="recent-bookname">粮食、运河与白银</div>
-                <div class="recent-author">波音</div>
-                <div class="recent-readers">抱朴🌲</div>
-                <div class="recent-note">「读完此书，大楖了解中国上下几千年我们的先人们，从最早的农耕文明到货币的旦生，及以物易物，到货币交易，在到全球的贸易，杨广用举世无双的大运河连通中国南北，把南方人和北方人的文化，思维也被连成一片，一统的国度有了认同感。」</div>
-            </div>
-        </div>
-        
-        <div class="recent-card">
-            <img class="recent-cover" src="./books/健忘先生.webp" alt="健忘先生" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
-            <div class="recent-info">
-                <div class="recent-bookname">健忘先生</div>
-                <div class="recent-author">[英]罗杰.哈格里维斯</div>
-                <div class="recent-readers">盈生🐤</div>
-                <div class="recent-note">「健忘先生太傻了，明明要说的是小路上有一只走散的羊，他说雨中有一只睡觉的鹅，真是太傻了，真是真太太太太太太太太太太太太太太太太太太太太太太太太傻了大傻的不能再傻了。要是我是健忘先生的话，我都会忘记这些滑稽的事情。\n。」</div>
             </div>
         </div>
         
@@ -468,11 +468,28 @@
         <div class="category">
             <div class="category-header">
                 <div class="category-title">📚 文学</div>
-                <div class="category-count">共 97 本</div>
+                <div class="category-count">共 98 本</div>
             </div>
             <div class="scroll-container">
                 <div class="book-grid">
     
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/罪行.webp" alt="罪行" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">罪行</div>
+                                    <div class="book-author">[德]费迪南德.冯.席拉赫</div>
+                                    <div class="book-readers">清一🎋</div>
+                                    <div class="book-meta">
+                                        <span>208页</span>
+                                        <span>📅 2026-05-29</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「人生百态。」
+                                    </div>
+                                </div>
+                            </div>
+                
                             <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/2官封弼马温.webp" alt="2官封弼马温" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
@@ -593,23 +610,6 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/幸运小姐.webp" alt="幸运小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">幸运小姐</div>
-                                    <div class="book-author">[英]罗杰.哈格里维斯</div>
-                                    <div class="book-readers">盈生🐤</div>
-                                    <div class="book-meta">
-                                        <span>36页</span>
-                                        <span>📅 2026-05-21</span>
-                                        
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「幸运小姐很喜欢读书，但故事书上有很多页都说了，我真想知道这本书的名字为什么叫幸运小姐，也不知道为什么。但是她读着读着书就听见门外有敲门声，她打开门哪里都没人，\n她走出门外没人，她到房子后面没人，哪儿都没人。后来有一阵大风吹过来，把幸运小姐的门关上了。幸运小姐想办法，这个刚才总是都没有进，后来呢，就有一阵大大的风吹过来把幸运小姐吹到了天上越吹越高，后来她掉在了草堆里面。后面才发现都是梦。\n。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/毛泽东选集第一卷.webp" alt="毛泽东选集第一卷" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">毛泽东选集第一卷</div>
@@ -622,6 +622,23 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「不同质的矛盾，只有用不同质的方法才能解决。例如，无产阶级和资产阶级的矛盾，用社会主义革命的方法去解决；人民大众和封建制度的矛盾，用民主革命的方法去解决；殖民地和帝国主义的矛盾，用民族革命战争的方法去解决；在社会主义社会中工人阶级和农民阶级的矛盾，用农业集体化和农业机械化的方法去解决；共产党内的矛盾，用批评和自我批评的方法去解决；社会和自然的矛盾，用发展生产力的方法去解决。过程变化，旧过程和旧矛盾消灭，新过程和新矛盾发生，解决矛盾的方法也因之而不同。俄国的二月革命和十月革命所解决的矛盾及其所用以解决矛盾的方法是根本上不相同的。用不同的方法去解决不同的矛盾，这是马克思列宁主义者必须严格地遵守的一个原则。\n——太有大智慧了，就像每个人一样，每个人在不同的阶段也会有遇到不同的矛盾，但我们首先要做的就是要识别出自己在当下阶段的矛盾，并且要知道自己的当下面对的主要矛盾是什么，同时找到对应的解决矛盾的方法。认知和实践是相辅相成的。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/幸运小姐.webp" alt="幸运小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">幸运小姐</div>
+                                    <div class="book-author">[英]罗杰.哈格里维斯</div>
+                                    <div class="book-readers">盈生🐤</div>
+                                    <div class="book-meta">
+                                        <span>36页</span>
+                                        <span>📅 2026-05-21</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「幸运小姐很喜欢读书，但故事书上有很多页都说了，我真想知道这本书的名字为什么叫幸运小姐，也不知道为什么。但是她读着读着书就听见门外有敲门声，她打开门哪里都没人，\n她走出门外没人，她到房子后面没人，哪儿都没人。后来有一阵大风吹过来，把幸运小姐的门关上了。幸运小姐想办法，这个刚才总是都没有进，后来呢，就有一阵大大的风吹过来把幸运小姐吹到了天上越吹越高，后来她掉在了草堆里面。后面才发现都是梦。\n。」
                                     </div>
                                 </div>
                             </div>
@@ -831,23 +848,6 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/阳光小姐.webp" alt="阳光小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">阳光小姐</div>
-                                    <div class="book-author">[英]罗杰.哈格里维斯</div>
-                                    <div class="book-readers">盈生🐤</div>
-                                    <div class="book-meta">
-                                        <span>30页</span>
-                                        <span>📅 2026-05-09</span>
-                                        
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「阳光小姐到了痛苦王国就问了好多遍国王为什么不能笑？为什么不能笑？为什么不能笑？国王一直都是哭着回答的，就是呢因为国王有一个大大的指示牌，上面写着你即将进入痛苦王国，禁止微笑，大笑，暗自发笑和咯咯笑。但现在那个大指示牌上面写着的是你已进入欢笑王国，可以微笑，暗自发笑，咯咯笑。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/瓦尔登湖（王家湘）.webp" alt="瓦尔登湖（王家湘）" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">瓦尔登湖（王家湘）</div>
@@ -860,6 +860,23 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「您的基本需求及时是可以很少的，而且大多数的奢侈品啊，以及那些什么说可以让自己生活更舒适的东西，但不是那种必不可少的物品，反而可能一定程度上会阻碍我们人类的崇高向上的追求。所以有的时候可以试着保持物质上的简单一点，少一点，把多一点的时间和精力去追求一些精神上的追求。真的需要那么多东西吗？可能精神不够富足的时候就需要这些物质的东西拿去填吧。为了自己的天平要平衡的话，以后就逐步逐步增加自己精神上的富足怎么样？。梭罗太牛了，年纪轻轻就在不断地思考，有完备的独立思考能力和行动。在他隐居在瓦尔登湖旁边的时候，他就在思考人类的分工不断地细化。他在想这个分工到什么时候才算结束呢？最终要到达什么目的呢？其实他当时就提到了说如果这样分工下去的话，别人也是能够替代我们思考的，但是如果别人替我们思考到排除掉了自我思考程度的话，那其实就是不可取的了，我就想到其实我们现在的AI并不就是有点像这样子的感觉吗？\n后面他又提到说年轻人的话，如果不去尝试实践生活的话，就怎么可能更好地学习生活呢？其实他认为这种学习生活就有点像是数学一样，就要去锻炼我们的头了，然后他就提到了我们学一些科学艺术呀，但只是教这些理论知识，但并不会去实践学习，比如说我们学习化学却不会告诉这个小朋友面包是怎么做错的学习，发现海王星这些新型，但是却不去看看自己是不是像一个只会追着就是行星跑得无奈的卫星学习各种知识，但是我们却没有实践，比如说学得去采矿时冶炼之后呢，但是自己却不会去学着做一把大刀。我当时就想就像我大学的时候学智能与空调，但是实际上我根本连空调就是实际长什么样子，里面的构造都不太了解，特别是智能的大型激素，这些没有食物的概念，包括自己毕业之后，如果别人让我推荐选一个什么空调，多大的房间选什么的空调，然后要买多少匹的，自己一点概念都没有，太缺乏实操了。当目不识丁的也许还鄙视一切的商人通过魄力和勤奋挣到了垂涎已久的闲暇和舒适生活进入了上层圈子之后呢，他可能会意识到自己文化的残缺以及财富的空虚无用，因此他会不遗余力地让他的子女获得知识文化，而且他也感觉到了自己在这方面的不足，在这样的情况下，让他就会成为一个家族的缔造。\n任何人可能都会不怕麻烦的去捡地上的¥100，但是呢，书籍中里头是有黄金的，而这些是古代大智者给我们留下的财富，而我们却在离开了学校之后就不再去读书了，这样子的话我们的阅读水平、谈吐和思想就会处在一个非常低级的水平上，因此我们还是应该要终身阅读。\n梭罗对于食物种植的认知，觉得好像只需要种一点点的食物，然后就可以很好地生存，我其实不太认可，如果他个人的年轻的时候的生存是可以的，但是其实确实没有任何应对风险的能力的，而且如果他是一个有家人有子女的话，那这样的方式其实也不是可取的，但是作为他当时做实验来说确实是一个不错的体验。我觉得我可能过不了这种隐居的生活，因为想到自己每天要做那么多事，然后种菜呀，弄房子呀，我就做不了，特别是我害怕种菜的那些虫虫什么之类的，我可以跟别人一起，我可以负责打扫卫生和做饭这些或者做一些手工，但我还挺想去体验一下劈柴这些活的。——太阳只不过是一颗晨星，也不过是万千恒星中的一颗。把目光朝向内息，你就会慢慢发现，心中千万个地区尚未被发现，到这些地方去旅行，成为内心宇宙志的专家。读万卷书，行万里路，这个路不一定是真实的地理旅游，也可以尝试着纵深向内心深处探索。之前在查鲁迅的时候，有一句话比较打动我，说什么时候开始读书都不晚，以前或许读不懂这些书，读书其实就是到了坐下来和自己对对话的时候了。\n——夕阳反射在救济院的窗子上，和反射在富人的宅窗上同样命令，门前的雪在春天也同时融化。所以好好对自己的生活，爱挑剔的人即使在天堂也能找出毛病来，所以修心修身。\n——卖掉衣服，保留你的思想。灵魂所需的必需品，一件也不需要用钱去买。良田万顷不过一日三餐,广厦万间只睡卧榻三尺。多一点思考，少一点欲念，多一点沉淀，少一点浮躁。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/阳光小姐.webp" alt="阳光小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">阳光小姐</div>
+                                    <div class="book-author">[英]罗杰.哈格里维斯</div>
+                                    <div class="book-readers">盈生🐤</div>
+                                    <div class="book-meta">
+                                        <span>30页</span>
+                                        <span>📅 2026-05-09</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「阳光小姐到了痛苦王国就问了好多遍国王为什么不能笑？为什么不能笑？为什么不能笑？国王一直都是哭着回答的，就是呢因为国王有一个大大的指示牌，上面写着你即将进入痛苦王国，禁止微笑，大笑，暗自发笑和咯咯笑。但现在那个大指示牌上面写着的是你已进入欢笑王国，可以微笑，暗自发笑，咯咯笑。」
                                     </div>
                                 </div>
                             </div>
@@ -1239,23 +1256,6 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/年过五十，我决定离家出走.webp" alt="年过五十，我决定离家出走" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">年过五十，我决定离家出走</div>
-                                    <div class="book-author">苏敏，卓夕琳</div>
-                                    <div class="book-readers">致虚🏔️ 清一🎋 抱朴🌲 凤书🐦‍🔥</div>
-                                    <div class="book-meta">
-                                        <span>240页</span>
-                                        <span>¥56</span>
-                                        <span>📅 2026-04-22</span>
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「自尊自爱，探索边界。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/笨拙先生.webp" alt="笨拙先生" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">笨拙先生</div>
@@ -1268,6 +1268,23 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「笨着先生实在是太搞笑了，他做什么事都很笨，因为呢，他买鸡蛋摔倒了，洗澡摔进了洗衣蓝里面，他也是最最最最最最最最笨的人，而且他很特别，他关灯的时候竟然摔到了地上，准确的说应该是从床上摔到了地上。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/年过五十，我决定离家出走.webp" alt="年过五十，我决定离家出走" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">年过五十，我决定离家出走</div>
+                                    <div class="book-author">苏敏，卓夕琳</div>
+                                    <div class="book-readers">致虚🏔️ 清一🎋 抱朴🌲 凤书🐦‍🔥</div>
+                                    <div class="book-meta">
+                                        <span>240页</span>
+                                        <span>¥56</span>
+                                        <span>📅 2026-04-22</span>
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「自尊自爱，探索边界。」
                                     </div>
                                 </div>
                             </div>
@@ -1409,6 +1426,23 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/〈文学回忆录〉补遗.webp" alt="〈文学回忆录〉补遗" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">〈文学回忆录〉补遗</div>
+                                    <div class="book-author">木心</div>
+                                    <div class="book-readers">致虚🏔️</div>
+                                    <div class="book-meta">
+                                        <span>220页</span>
+                                        <span>¥39</span>
+                                        <span>📅 2026-04-13</span>
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「阅读两三小时，写作十一二小时。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/话匣子先生.webp" alt="话匣子先生" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">话匣子先生</div>
@@ -1421,40 +1455,6 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「我觉得话匣子先生有一点点太会说话了，因为他之前带的绿色帽子会让他变得开开心心地说话，但他戴的橙色帽子就不会让他说话了，橙色帽子就会让他说不出来话，而且还会变大。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/福尔摩斯探案全集第一册.webp" alt="福尔摩斯探案全集第一册" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">福尔摩斯探案全集第一册</div>
-                                    <div class="book-author">[英]亚瑟·柯南·道尔</div>
-                                    <div class="book-readers">锦安💰</div>
-                                    <div class="book-meta">
-                                        <span>296页</span>
-                                        <span>📅 2026-04-13</span>
-                                        
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「下次再说」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/木心文学创作中的“文本再生”现象研究.webp" alt="木心文学创作中的“文本再生”现象研究" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">木心文学创作中的“文本再生”现象研究</div>
-                                    <div class="book-author">卢虹贝</div>
-                                    <div class="book-readers">致虚🏔️</div>
-                                    <div class="book-meta">
-                                        <span>154页</span>
-                                        <span>📅 2026-04-13</span>
-                                        
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「文本再生。」
                                     </div>
                                 </div>
                             </div>
@@ -1477,18 +1477,35 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/〈文学回忆录〉补遗.webp" alt="〈文学回忆录〉补遗" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <img class="book-cover" src="./books/木心文学创作中的“文本再生”现象研究.webp" alt="木心文学创作中的“文本再生”现象研究" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
-                                    <div class="book-title">〈文学回忆录〉补遗</div>
-                                    <div class="book-author">木心</div>
+                                    <div class="book-title">木心文学创作中的“文本再生”现象研究</div>
+                                    <div class="book-author">卢虹贝</div>
                                     <div class="book-readers">致虚🏔️</div>
                                     <div class="book-meta">
-                                        <span>220页</span>
-                                        <span>¥39</span>
+                                        <span>154页</span>
                                         <span>📅 2026-04-13</span>
+                                        
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「阅读两三小时，写作十一二小时。」
+                                        「文本再生。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/福尔摩斯探案全集第一册.webp" alt="福尔摩斯探案全集第一册" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">福尔摩斯探案全集第一册</div>
+                                    <div class="book-author">[英]亚瑟·柯南·道尔</div>
+                                    <div class="book-readers">锦安💰</div>
+                                    <div class="book-meta">
+                                        <span>296页</span>
+                                        <span>📅 2026-04-13</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「下次再说」
                                     </div>
                                 </div>
                             </div>
@@ -1596,6 +1613,23 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/魔法小姐.webp" alt="魔法小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">魔法小姐</div>
+                                    <div class="book-author">[英]罗杰.哈格里维斯</div>
+                                    <div class="book-readers">盈生🐤</div>
+                                    <div class="book-meta">
+                                        <span>32页</span>
+                                        <span>📅 2026-04-08</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「魔法小姐，为什么说话都可以边听她的，但是呢，我觉得魔法小姐还是有一点奇怪，因为呢魔法小姐对什么说就会作用，难道对人说也会有作用吗？。我觉得魔法小姐的魔法可以改一下，可以指着什么东西，然后再说一句话，然后才会提出要求，嗯，就是照办。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/1984（锦安）.webp" alt="1984（锦安）" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">1984（锦安）</div>
@@ -1630,23 +1664,6 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/魔法小姐.webp" alt="魔法小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">魔法小姐</div>
-                                    <div class="book-author">[英]罗杰.哈格里维斯</div>
-                                    <div class="book-readers">盈生🐤</div>
-                                    <div class="book-meta">
-                                        <span>32页</span>
-                                        <span>📅 2026-04-08</span>
-                                        
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「魔法小姐，为什么说话都可以边听她的，但是呢，我觉得魔法小姐还是有一点奇怪，因为呢魔法小姐对什么说就会作用，难道对人说也会有作用吗？。我觉得魔法小姐的魔法可以改一下，可以指着什么东西，然后再说一句话，然后才会提出要求，嗯，就是照办。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/生日先生.webp" alt="生日先生" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">生日先生</div>
@@ -1659,23 +1676,6 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「生日先生太喜欢派对了，因为呢，他给每个人的举行了一场派对，给贪吃先生准备了两个蛋糕，给快乐先生放了很多很多的气球。生日先生连自己的生日都不知道真是太搞笑了，可是呢，我觉得还是他更喜欢生日一点，他自己都不知道自己生日还要做生日派对，真是太搞笑啦。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/人间小满.webp" alt="人间小满" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">人间小满</div>
-                                    <div class="book-author">姑苏阿焦 / 焦佃毅</div>
-                                    <div class="book-readers">致虚🏔️</div>
-                                    <div class="book-meta">
-                                        <span>312页</span>
-                                        <span>¥58</span>
-                                        <span>📅 2026-04-06</span>
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「岁月静好的小书。终是放慢了脚步，抬头看见了月亮，亦如少年时那般明亮，小时候我们词不达意，长大后我们言不由衷。如今月光里的纯粹令人心驰神往，也许走了一圈，又回到了最初的地方。年轻时觉得人海里能耀眼最得劲儿，无所事事了此半生，\n才觉着卸下面子和伪装最省心，有些事随遇而安，有些人无须成为羁绊，有些事不必当真。知世故而不世故，历圆滑而弥天真，\n善自嘲而不嘲人，处江湖而远江湖。忙是治疗一切的良药，不做白日梦、不胡思乱想，不等着天上掉馅儿饼。」
                                     </div>
                                 </div>
                             </div>
@@ -1698,18 +1698,18 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/酷帅先生.webp" alt="酷帅先生" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <img class="book-cover" src="./books/人间小满.webp" alt="人间小满" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
-                                    <div class="book-title">酷帅先生</div>
-                                    <div class="book-author">[英]罗杰.哈格里维斯</div>
-                                    <div class="book-readers">盈生🐤</div>
+                                    <div class="book-title">人间小满</div>
+                                    <div class="book-author">姑苏阿焦 / 焦佃毅</div>
+                                    <div class="book-readers">致虚🏔️</div>
                                     <div class="book-meta">
-                                        <span>36页</span>
-                                        <span>📅 2026-04-05</span>
-                                        
+                                        <span>312页</span>
+                                        <span>¥58</span>
+                                        <span>📅 2026-04-06</span>
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「下次再说」
+                                        「岁月静好的小书。终是放慢了脚步，抬头看见了月亮，亦如少年时那般明亮，小时候我们词不达意，长大后我们言不由衷。如今月光里的纯粹令人心驰神往，也许走了一圈，又回到了最初的地方。年轻时觉得人海里能耀眼最得劲儿，无所事事了此半生，\n才觉着卸下面子和伪装最省心，有些事随遇而安，有些人无须成为羁绊，有些事不必当真。知世故而不世故，历圆滑而弥天真，\n善自嘲而不嘲人，处江湖而远江湖。忙是治疗一切的良药，不做白日梦、不胡思乱想，不等着天上掉馅儿饼。」
                                     </div>
                                 </div>
                             </div>
@@ -1727,6 +1727,23 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「有理无情。江西南城。一少年时，二从军行，三点绛唇。四携手游。五十字街头。六问归期。七君竟归去。寒来暑往。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/酷帅先生.webp" alt="酷帅先生" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">酷帅先生</div>
+                                    <div class="book-author">[英]罗杰.哈格里维斯</div>
+                                    <div class="book-readers">盈生🐤</div>
+                                    <div class="book-meta">
+                                        <span>36页</span>
+                                        <span>📅 2026-04-05</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「下次再说」
                                     </div>
                                 </div>
                             </div>
@@ -2807,11 +2824,28 @@
         <div class="category">
             <div class="category-header">
                 <div class="category-title">🔬 自然科学</div>
-                <div class="category-count">共 19 本</div>
+                <div class="category-count">共 20 本</div>
             </div>
             <div class="scroll-container">
                 <div class="book-grid">
     
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/半小时漫画世界名著3.webp" alt="半小时漫画世界名著3" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">半小时漫画世界名著3</div>
+                                    <div class="book-author">陈磊</div>
+                                    <div class="book-readers">清一🎋</div>
+                                    <div class="book-meta">
+                                        <span>260页</span>
+                                        <span>📅 2026-05-29</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「生活很苦，但是也得过，而且可以过得很好，比如高尔基。中小学必读二十多本世界名著，有好些都是小时候买过的读过的书，有机会再读读。」
+                                    </div>
+                                </div>
+                            </div>
+                
                             <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/半小时漫画世界名著2.webp" alt="半小时漫画世界名著2" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
@@ -3142,7 +3176,7 @@
     </div>
     
     <div class="stats">
-        📊 总计 162 册 · 累计 31,785 页 · 投资 ¥3924 元
+        📊 总计 164 册 · 累计 32,253 页 · 投资 ¥3924 元
     </div>
     
     <script>
