@@ -83,7 +83,7 @@
 </head>
 <body>
     <div class="page-title">🚅学富五车<a href="index.html" style="text-decoration: none;">🚃🚃🚃🚃🚃</a></div>
-    <div class="stats-bar" id="statsBar">📖 已读完 188 本</div>   <!-- ⭐ 添加 id，方便 JS 更新 -->
+    <div class="stats-bar" id="statsBar">📖 已读完 189 本</div>   <!-- ⭐ 添加 id，方便 JS 更新 -->
     <div class="reader-filter">
         <label for="readerSelect">👥筛选读者：</label>
         <select id="readerSelect"><option value="all">📚 所有读者</option><option value="凤书🐦‍🔥">凤书🐦‍🔥</option><option value="卓恒🪨">卓恒🪨</option><option value="善下🌊">善下🌊</option><option value="抱朴🌲">抱朴🌲</option><option value="清一🎋">清一🎋</option><option value="盈生🐤">盈生🐤</option><option value="致虚🏔️">致虚🏔️</option><option value="西翁🦁">西翁🦁</option><option value="锦安💰">锦安💰</option></select>
@@ -91,6 +91,14 @@
     <div id="note-bubble"></div>
     <div class='reading-wall'>
 
+    <div class='book-item' data-reader='致虚🏔️'>
+        <div class='img-wrapper is-unlocked'>
+            <div class='glass-reflection'></div>
+            <img src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCACgAHgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD6pooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooqtfXLWsaOsLygsAwQEkD1wBzQBZorGfW5UP8AyCNRIIBXEYOfUHniln1meDeW0u8cBQylADngZB6YOSfy/CgDYorJbWJAIz/Zl+d7bSNg+XpyeenP6U19YuYriWJ9KumCnCPF8ysPcnGKANiisV9clVCf7JvwRyQygYH1z6U9tadZCh0rUcg4yI1wffOaANeisg60wgEn9m35yQNoj55BPr7d8dajGt3BEbDSL4ozMp+X5lA6Eg+tAG3RWJBrk8jor6PqCbsjJQcYpG1y4Xy2/si8KOecD5l+YjkfgD+NAG5RWKddkUtv0rUevy7Y85GOp54Pt7Vf0+8N2rk288G3HEq4JyO1AFuiiigAooooAKDRRQACqeo2RvVVftEsKrz+7OCfx/CrlFAGLLoRaWd11G+Tzm3MqyDb16DI4H0pzaOZMrLfXboUVGXIGcY5OB1OOtac88UABmkWNT3Y4FQDUbItxd2/YZ8xcZ546+xoAzjodyJV8vWL5YQuCm4Z9ucfzzV3T9Pe0lZmvLi4BXbiYg459QBVuKeGb/Uyxyf7rA1IKAFooooAKKKKACiiigAooooAKKKKACqE+oeXM0X2S7facb0jyp/Gr9FAHLyG8nEiO9w6rggS2Sk8k8DnHpUSrNH5kTQTkkcFdOTGfXrzW/e6g1rOE+x3MykZ3RLkf56U1NSEiOy2l2pUfdeIqT9KAMiL7VBl7cXQSSTDA2Shh6ZwRx71pwanIpSGeyvN+Qu8R5Df7XB4FTwXzS3JhNpcIOf3jL8vFW8c0AOooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/Z' class='book-img' onclick="showBubble(event, '<strong>致虚🏔️读《Lecture Notes on Thermodynamics and Statistical Mechanics》有感</strong><br>全知地图。')">
+        </div>
+        <div class='status-tag' onclick="showBubble(event, '<strong>致虚🏔️读《Lecture Notes on Thermodynamics and Statistical Mechanics》有感</strong><br>全知地图。')">...</div>
+        <div class='date-info'>✨ 2026-05-31</div>
+    </div>
     <div class='book-item' data-reader='盈生🐤'>
         <div class='img-wrapper is-unlocked'>
             <div class='glass-reflection'></div>
