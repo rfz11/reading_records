@@ -431,6 +431,16 @@
         <div class="recent-books">
     
         <div class="recent-card">
+            <img class="recent-cover" src="./books/荒谬先生.webp" alt="荒谬先生" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
+            <div class="recent-info">
+                <div class="recent-bookname">荒谬先生</div>
+                <div class="recent-author">[英]罗杰·哈格里维斯</div>
+                <div class="recent-readers">盈生🐤</div>
+                <div class="recent-note">「『荒谬先生』一卷读罢，满室生香。」</div>
+            </div>
+        </div>
+        
+        <div class="recent-card">
             <img class="recent-cover" src="./books/Walden [Yale2006].webp" alt="Walden [Yale2006]" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
             <div class="recent-info">
                 <div class="recent-bookname">Walden [Yale2006]</div>
@@ -447,16 +457,6 @@
                 <div class="recent-author">[法]马克西姆·罗维尔</div>
                 <div class="recent-readers">致虚🏔️</div>
                 <div class="recent-note">「不知所谓。」</div>
-            </div>
-        </div>
-        
-        <div class="recent-card">
-            <img class="recent-cover" src="./books/罪行.webp" alt="罪行" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
-            <div class="recent-info">
-                <div class="recent-bookname">罪行</div>
-                <div class="recent-author">[德]费迪南德.冯.席拉赫</div>
-                <div class="recent-readers">清一🎋</div>
-                <div class="recent-note">「人生百态。」</div>
             </div>
         </div>
         
@@ -2163,11 +2163,28 @@
         <div class="category">
             <div class="category-header">
                 <div class="category-title">🏛️ 社科</div>
-                <div class="category-count">共 40 本</div>
+                <div class="category-count">共 41 本</div>
             </div>
             <div class="scroll-container">
                 <div class="book-grid">
     
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/荒谬先生.webp" alt="荒谬先生" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">荒谬先生</div>
+                                    <div class="book-author">[英]罗杰·哈格里维斯</div>
+                                    <div class="book-readers">盈生🐤</div>
+                                    <div class="book-meta">
+                                        <span>36页</span>
+                                        <span>📅 2026-05-31</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「下次再说」
+                                    </div>
+                                </div>
+                            </div>
+                
                             <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/如何对付蠢人.webp" alt="如何对付蠢人" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
@@ -3210,7 +3227,7 @@
     </div>
     
     <div class="stats">
-        📊 总计 166 册 · 累计 32,793 页 · 投资 ¥4026 元
+        📊 总计 167 册 · 累计 32,829 页 · 投资 ¥4026 元
     </div>
     
     <script>
