@@ -54,7 +54,7 @@
             border-left: 10px solid transparent; border-right: 10px solid transparent; border-bottom: 10px solid #FFD700;
         }
 
-        /* 新增：全解锁酷炫大横幅样式 */
+        /* 全解锁酷炫大横幅样式 */
         .unlock-banner {
             position: fixed;
             top: 35%;
@@ -69,15 +69,26 @@
             text-align: center;
             box-shadow: 0 10px 30px rgba(255,69,0,0.5);
             z-index: 9999;
-            pointer-events: none;
+            cursor: pointer; /* 鼠标放上去变成小手，提示可以点击 */
+            transition: all 0.3s;
             animation: bannerShow 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
             border: 4px solid #FFF;
+        }
+        /* 新增：点击后触发的消失类 */
+        .unlock-banner.hide {
+            animation: bannerHide 0.4s ease forwards;
+            pointer-events: none;
         }
         @keyframes bannerShow {
             0% { transform: translate(-50%, -50%) scale(0) rotate(-10deg); opacity: 0; }
             50% { transform: translate(-50%, -50%) scale(1.1) rotate(5deg); opacity: 1; }
             100% { transform: translate(-50%, -50%) scale(1) rotate(0deg); opacity: 1; }
+        }
+        /* 新增：缩小淡出动画 */
+        @keyframes bannerHide {
+            0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+            100% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
         }
         
     </style>
@@ -85,7 +96,12 @@
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1"></script>
 </head>
 <body>
-    <div class="unlock-banner">🎉 恭喜通关！西游智多星 👑</div>
+    
+    <div class="unlock-banner" onclick="this.classList.add('hide'); setTimeout(()=>{this.style.display='none'}, 400);">
+        🎉 恭喜通关！西游智多星 👑
+        <div style="font-size: 12px; font-weight: normal; margin-top: 5px; opacity: 0.8;">(点击任意处关闭)</div>
+    </div>
+    
     <div class="page-title">菜鸡🐥趣读西游记 <a href="index.html" style="text-decoration: none;">📿🐵🐷🧔🏽‍♂️🦄</a></div>
     <div class="stats-bar">📖 已解锁：10 / 10</div>
     <div id="note-bubble"></div>
