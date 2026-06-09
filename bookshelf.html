@@ -431,6 +431,16 @@
         <div class="recent-books">
     
         <div class="recent-card">
+            <img class="recent-cover" src="./books/一朝半世.webp" alt="一朝半世" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
+            <div class="recent-info">
+                <div class="recent-bookname">一朝半世</div>
+                <div class="recent-author">常</div>
+                <div class="recent-readers">致虚🏔️</div>
+                <div class="recent-note">「大开眼界。」</div>
+            </div>
+        </div>
+        
+        <div class="recent-card">
             <img class="recent-cover" src="./books/Fluctuation-induced quantum friction in nanoscale water flows.webp" alt="Fluctuation-induced quantum friction in nanoscale water flows" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
             <div class="recent-info">
                 <div class="recent-bookname">Fluctuation-induced quantum friction in nanoscale water flows</div>
@@ -450,16 +460,6 @@
             </div>
         </div>
         
-        <div class="recent-card">
-            <img class="recent-cover" src="./books/11车迟国斗法.webp" alt="11车迟国斗法" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
-            <div class="recent-info">
-                <div class="recent-bookname">11车迟国斗法</div>
-                <div class="recent-author">吴承恩</div>
-                <div class="recent-readers">盈生🐤</div>
-                <div class="recent-note">「孙悟空和鹿力、虎力、羊力一起比赛，他们比赛求雨，隔板猜物，坐禅，下油锅，砍头，剖腹，最后孙悟空赢了，因为他作了很多次弊。」</div>
-            </div>
-        </div>
-        
         </div>
     </div>
     
@@ -468,11 +468,28 @@
         <div class="category">
             <div class="category-header">
                 <div class="category-title">📚 文学</div>
-                <div class="category-count">共 113 本</div>
+                <div class="category-count">共 114 本</div>
             </div>
             <div class="scroll-container">
                 <div class="book-grid">
     
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/一朝半世.webp" alt="一朝半世" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">一朝半世</div>
+                                    <div class="book-author">常</div>
+                                    <div class="book-readers">致虚🏔️</div>
+                                    <div class="book-meta">
+                                        <span>209页</span>
+                                        <span>📅 2026-06-09</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「大开眼界。」
+                                    </div>
+                                </div>
+                            </div>
+                
                             <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/12女儿国除妖.webp" alt="12女儿国除妖" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
@@ -933,40 +950,6 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/另类人生 一个摄影师眼中的真实世界.webp" alt="另类人生 一个摄影师眼中的真实世界" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">另类人生 一个摄影师眼中的真实世界</div>
-                                    <div class="book-author">赵铁林</div>
-                                    <div class="book-readers">致虚🏔️</div>
-                                    <div class="book-meta">
-                                        <span>500页</span>
-                                        <span>¥30</span>
-                                        <span>📅 2026-05-17</span>
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「悲欢。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/1美猴王出世.webp" alt="1美猴王出世" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">1美猴王出世</div>
-                                    <div class="book-author">吴承恩</div>
-                                    <div class="book-readers">盈生🐤</div>
-                                    <div class="book-meta">
-                                        <span>23页</span>
-                                        <span>📅 2026-05-17</span>
-                                        
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「孙悟空学了很多的本事，有筋斗云七十二变，还有长生不老，但是孙悟空变出了很多的东西，一会儿变成松树，一会儿变成仙鹤，都不知道他要变成什么了。但孙悟空也是挺有本事的，他从石头跳出来的时候呢，他就可以钻进瀑布里，虽然那会儿他没有筋斗云，但是他跳得也很远，他还是挺勇敢的，最后被小猴子们称为大王，名叫美猴王。结果有一天老猴子死了，所以呢，孙悟空就驾着竹子做的小船前往了一座三星洞里，他学人走路学人说话，不仅还穿上了人的衣服，最后见到菩提老祖之后，他学会了很多术他的本事、还挺有用的嘛？说到这些我都想变成一只小蝴蝶了。我的家人也想变成其他的东西，比如大树或者仙鹤很多很多东西都很想。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/看不见的人-看不见的城市.webp" alt="看不见的人-看不见的城市" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">看不见的人-看不见的城市</div>
@@ -996,6 +979,40 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「信达雅占了一个“装”。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/另类人生 一个摄影师眼中的真实世界.webp" alt="另类人生 一个摄影师眼中的真实世界" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">另类人生 一个摄影师眼中的真实世界</div>
+                                    <div class="book-author">赵铁林</div>
+                                    <div class="book-readers">致虚🏔️</div>
+                                    <div class="book-meta">
+                                        <span>500页</span>
+                                        <span>¥30</span>
+                                        <span>📅 2026-05-17</span>
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「悲欢。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/1美猴王出世.webp" alt="1美猴王出世" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">1美猴王出世</div>
+                                    <div class="book-author">吴承恩</div>
+                                    <div class="book-readers">盈生🐤</div>
+                                    <div class="book-meta">
+                                        <span>23页</span>
+                                        <span>📅 2026-05-17</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「孙悟空学了很多的本事，有筋斗云七十二变，还有长生不老，但是孙悟空变出了很多的东西，一会儿变成松树，一会儿变成仙鹤，都不知道他要变成什么了。但孙悟空也是挺有本事的，他从石头跳出来的时候呢，他就可以钻进瀑布里，虽然那会儿他没有筋斗云，但是他跳得也很远，他还是挺勇敢的，最后被小猴子们称为大王，名叫美猴王。结果有一天老猴子死了，所以呢，孙悟空就驾着竹子做的小船前往了一座三星洞里，他学人走路学人说话，不仅还穿上了人的衣服，最后见到菩提老祖之后，他学会了很多术他的本事、还挺有用的嘛？说到这些我都想变成一只小蝴蝶了。我的家人也想变成其他的东西，比如大树或者仙鹤很多很多东西都很想。」
                                     </div>
                                 </div>
                             </div>
@@ -1103,6 +1120,23 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/瓦尔登湖（王家湘）.webp" alt="瓦尔登湖（王家湘）" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">瓦尔登湖（王家湘）</div>
+                                    <div class="book-author">[美]亨利·戴维·梭罗</div>
+                                    <div class="book-readers">清一🎋</div>
+                                    <div class="book-meta">
+                                        <span>360页</span>
+                                        <span>¥28</span>
+                                        <span>📅 2026-05-09</span>
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「您的基本需求及时是可以很少的，而且大多数的奢侈品啊，以及那些什么说可以让自己生活更舒适的东西，但不是那种必不可少的物品，反而可能一定程度上会阻碍我们人类的崇高向上的追求。所以有的时候可以试着保持物质上的简单一点，少一点，把多一点的时间和精力去追求一些精神上的追求。真的需要那么多东西吗？可能精神不够富足的时候就需要这些物质的东西拿去填吧。为了自己的天平要平衡的话，以后就逐步逐步增加自己精神上的富足怎么样？。梭罗太牛了，年纪轻轻就在不断地思考，有完备的独立思考能力和行动。在他隐居在瓦尔登湖旁边的时候，他就在思考人类的分工不断地细化。他在想这个分工到什么时候才算结束呢？最终要到达什么目的呢？其实他当时就提到了说如果这样分工下去的话，别人也是能够替代我们思考的，但是如果别人替我们思考到排除掉了自我思考程度的话，那其实就是不可取的了，我就想到其实我们现在的AI并不就是有点像这样子的感觉吗？\n后面他又提到说年轻人的话，如果不去尝试实践生活的话，就怎么可能更好地学习生活呢？其实他认为这种学习生活就有点像是数学一样，就要去锻炼我们的头了，然后他就提到了我们学一些科学艺术呀，但只是教这些理论知识，但并不会去实践学习，比如说我们学习化学却不会告诉这个小朋友面包是怎么做错的学习，发现海王星这些新型，但是却不去看看自己是不是像一个只会追着就是行星跑得无奈的卫星学习各种知识，但是我们却没有实践，比如说学得去采矿时冶炼之后呢，但是自己却不会去学着做一把大刀。我当时就想就像我大学的时候学智能与空调，但是实际上我根本连空调就是实际长什么样子，里面的构造都不太了解，特别是智能的大型激素，这些没有食物的概念，包括自己毕业之后，如果别人让我推荐选一个什么空调，多大的房间选什么的空调，然后要买多少匹的，自己一点概念都没有，太缺乏实操了。当目不识丁的也许还鄙视一切的商人通过魄力和勤奋挣到了垂涎已久的闲暇和舒适生活进入了上层圈子之后呢，他可能会意识到自己文化的残缺以及财富的空虚无用，因此他会不遗余力地让他的子女获得知识文化，而且他也感觉到了自己在这方面的不足，在这样的情况下，让他就会成为一个家族的缔造。\n任何人可能都会不怕麻烦的去捡地上的¥100，但是呢，书籍中里头是有黄金的，而这些是古代大智者给我们留下的财富，而我们却在离开了学校之后就不再去读书了，这样子的话我们的阅读水平、谈吐和思想就会处在一个非常低级的水平上，因此我们还是应该要终身阅读。\n梭罗对于食物种植的认知，觉得好像只需要种一点点的食物，然后就可以很好地生存，我其实不太认可，如果他个人的年轻的时候的生存是可以的，但是其实确实没有任何应对风险的能力的，而且如果他是一个有家人有子女的话，那这样的方式其实也不是可取的，但是作为他当时做实验来说确实是一个不错的体验。我觉得我可能过不了这种隐居的生活，因为想到自己每天要做那么多事，然后种菜呀，弄房子呀，我就做不了，特别是我害怕种菜的那些虫虫什么之类的，我可以跟别人一起，我可以负责打扫卫生和做饭这些或者做一些手工，但我还挺想去体验一下劈柴这些活的。——太阳只不过是一颗晨星，也不过是万千恒星中的一颗。把目光朝向内息，你就会慢慢发现，心中千万个地区尚未被发现，到这些地方去旅行，成为内心宇宙志的专家。读万卷书，行万里路，这个路不一定是真实的地理旅游，也可以尝试着纵深向内心深处探索。之前在查鲁迅的时候，有一句话比较打动我，说什么时候开始读书都不晚，以前或许读不懂这些书，读书其实就是到了坐下来和自己对对话的时候了。\n——夕阳反射在救济院的窗子上，和反射在富人的宅窗上同样命令，门前的雪在春天也同时融化。所以好好对自己的生活，爱挑剔的人即使在天堂也能找出毛病来，所以修心修身。\n——卖掉衣服，保留你的思想。灵魂所需的必需品，一件也不需要用钱去买。良田万顷不过一日三餐,广厦万间只睡卧榻三尺。多一点思考，少一点欲念，多一点沉淀，少一点浮躁。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/恩惠的太阳.webp" alt="恩惠的太阳" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">恩惠的太阳</div>
@@ -1132,23 +1166,6 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「阳光小姐到了痛苦王国就问了好多遍国王为什么不能笑？为什么不能笑？为什么不能笑？国王一直都是哭着回答的，就是呢因为国王有一个大大的指示牌，上面写着你即将进入痛苦王国，禁止微笑，大笑，暗自发笑和咯咯笑。但现在那个大指示牌上面写着的是你已进入欢笑王国，可以微笑，暗自发笑，咯咯笑。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/瓦尔登湖（王家湘）.webp" alt="瓦尔登湖（王家湘）" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">瓦尔登湖（王家湘）</div>
-                                    <div class="book-author">[美]亨利·戴维·梭罗</div>
-                                    <div class="book-readers">清一🎋</div>
-                                    <div class="book-meta">
-                                        <span>360页</span>
-                                        <span>¥28</span>
-                                        <span>📅 2026-05-09</span>
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「您的基本需求及时是可以很少的，而且大多数的奢侈品啊，以及那些什么说可以让自己生活更舒适的东西，但不是那种必不可少的物品，反而可能一定程度上会阻碍我们人类的崇高向上的追求。所以有的时候可以试着保持物质上的简单一点，少一点，把多一点的时间和精力去追求一些精神上的追求。真的需要那么多东西吗？可能精神不够富足的时候就需要这些物质的东西拿去填吧。为了自己的天平要平衡的话，以后就逐步逐步增加自己精神上的富足怎么样？。梭罗太牛了，年纪轻轻就在不断地思考，有完备的独立思考能力和行动。在他隐居在瓦尔登湖旁边的时候，他就在思考人类的分工不断地细化。他在想这个分工到什么时候才算结束呢？最终要到达什么目的呢？其实他当时就提到了说如果这样分工下去的话，别人也是能够替代我们思考的，但是如果别人替我们思考到排除掉了自我思考程度的话，那其实就是不可取的了，我就想到其实我们现在的AI并不就是有点像这样子的感觉吗？\n后面他又提到说年轻人的话，如果不去尝试实践生活的话，就怎么可能更好地学习生活呢？其实他认为这种学习生活就有点像是数学一样，就要去锻炼我们的头了，然后他就提到了我们学一些科学艺术呀，但只是教这些理论知识，但并不会去实践学习，比如说我们学习化学却不会告诉这个小朋友面包是怎么做错的学习，发现海王星这些新型，但是却不去看看自己是不是像一个只会追着就是行星跑得无奈的卫星学习各种知识，但是我们却没有实践，比如说学得去采矿时冶炼之后呢，但是自己却不会去学着做一把大刀。我当时就想就像我大学的时候学智能与空调，但是实际上我根本连空调就是实际长什么样子，里面的构造都不太了解，特别是智能的大型激素，这些没有食物的概念，包括自己毕业之后，如果别人让我推荐选一个什么空调，多大的房间选什么的空调，然后要买多少匹的，自己一点概念都没有，太缺乏实操了。当目不识丁的也许还鄙视一切的商人通过魄力和勤奋挣到了垂涎已久的闲暇和舒适生活进入了上层圈子之后呢，他可能会意识到自己文化的残缺以及财富的空虚无用，因此他会不遗余力地让他的子女获得知识文化，而且他也感觉到了自己在这方面的不足，在这样的情况下，让他就会成为一个家族的缔造。\n任何人可能都会不怕麻烦的去捡地上的¥100，但是呢，书籍中里头是有黄金的，而这些是古代大智者给我们留下的财富，而我们却在离开了学校之后就不再去读书了，这样子的话我们的阅读水平、谈吐和思想就会处在一个非常低级的水平上，因此我们还是应该要终身阅读。\n梭罗对于食物种植的认知，觉得好像只需要种一点点的食物，然后就可以很好地生存，我其实不太认可，如果他个人的年轻的时候的生存是可以的，但是其实确实没有任何应对风险的能力的，而且如果他是一个有家人有子女的话，那这样的方式其实也不是可取的，但是作为他当时做实验来说确实是一个不错的体验。我觉得我可能过不了这种隐居的生活，因为想到自己每天要做那么多事，然后种菜呀，弄房子呀，我就做不了，特别是我害怕种菜的那些虫虫什么之类的，我可以跟别人一起，我可以负责打扫卫生和做饭这些或者做一些手工，但我还挺想去体验一下劈柴这些活的。——太阳只不过是一颗晨星，也不过是万千恒星中的一颗。把目光朝向内息，你就会慢慢发现，心中千万个地区尚未被发现，到这些地方去旅行，成为内心宇宙志的专家。读万卷书，行万里路，这个路不一定是真实的地理旅游，也可以尝试着纵深向内心深处探索。之前在查鲁迅的时候，有一句话比较打动我，说什么时候开始读书都不晚，以前或许读不懂这些书，读书其实就是到了坐下来和自己对对话的时候了。\n——夕阳反射在救济院的窗子上，和反射在富人的宅窗上同样命令，门前的雪在春天也同时融化。所以好好对自己的生活，爱挑剔的人即使在天堂也能找出毛病来，所以修心修身。\n——卖掉衣服，保留你的思想。灵魂所需的必需品，一件也不需要用钱去买。良田万顷不过一日三餐,广厦万间只睡卧榻三尺。多一点思考，少一点欲念，多一点沉淀，少一点浮躁。」
                                     </div>
                                 </div>
                             </div>
@@ -1800,23 +1817,6 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/潜规则.webp" alt="潜规则" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">潜规则</div>
-                                    <div class="book-author">吴思</div>
-                                    <div class="book-readers">抱朴🌲</div>
-                                    <div class="book-meta">
-                                        <span>247页</span>
-                                        <span>¥58</span>
-                                        <span>📅 2026-04-10</span>
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「明朝未年，官场买官卖官，腐败到了顶峰，清官难做，明未兵匪之乱很严重，老百姓喜欢土匪，极端恨兵，因兵比匪恶。读完这本书，作者讲诉了古时的官场买官卖官，当官的欺上瞒下，以及公职人员对老百姓的压榨。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/在峡江的转弯处.webp" alt="在峡江的转弯处" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">在峡江的转弯处</div>
@@ -1851,6 +1851,23 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/潜规则.webp" alt="潜规则" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">潜规则</div>
+                                    <div class="book-author">吴思</div>
+                                    <div class="book-readers">抱朴🌲</div>
+                                    <div class="book-meta">
+                                        <span>247页</span>
+                                        <span>¥58</span>
+                                        <span>📅 2026-04-10</span>
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「明朝未年，官场买官卖官，腐败到了顶峰，清官难做，明未兵匪之乱很严重，老百姓喜欢土匪，极端恨兵，因兵比匪恶。读完这本书，作者讲诉了古时的官场买官卖官，当官的欺上瞒下，以及公职人员对老百姓的压榨。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/公主小姐.webp" alt="公主小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">公主小姐</div>
@@ -1868,23 +1885,6 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/魔法小姐.webp" alt="魔法小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">魔法小姐</div>
-                                    <div class="book-author">[英]罗杰.哈格里维斯</div>
-                                    <div class="book-readers">盈生🐤</div>
-                                    <div class="book-meta">
-                                        <span>32页</span>
-                                        <span>📅 2026-04-08</span>
-                                        
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「魔法小姐，为什么说话都可以边听她的，但是呢，我觉得魔法小姐还是有一点奇怪，因为呢魔法小姐对什么说就会作用，难道对人说也会有作用吗？。我觉得魔法小姐的魔法可以改一下，可以指着什么东西，然后再说一句话，然后才会提出要求，嗯，就是照办。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/我和琉璃的山居四季.webp" alt="我和琉璃的山居四季" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">我和琉璃的山居四季</div>
@@ -1897,6 +1897,23 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「和看过的电影小森林类似的剧情。摘抄：自食其力，尽我所能创造一些美的事物，更专注于想做的事，连接更多的人。当我动了搬进山里的念头，并且真真正正做到后，才知道人的活法可以有这么多种。城市、山间、草原甚至荒漠，都有人在生活——人在哪里都可以活着，关键看自己想要什么样的生活方式。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/魔法小姐.webp" alt="魔法小姐" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">魔法小姐</div>
+                                    <div class="book-author">[英]罗杰.哈格里维斯</div>
+                                    <div class="book-readers">盈生🐤</div>
+                                    <div class="book-meta">
+                                        <span>32页</span>
+                                        <span>📅 2026-04-08</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「魔法小姐，为什么说话都可以边听她的，但是呢，我觉得魔法小姐还是有一点奇怪，因为呢魔法小姐对什么说就会作用，难道对人说也会有作用吗？。我觉得魔法小姐的魔法可以改一下，可以指着什么东西，然后再说一句话，然后才会提出要求，嗯，就是照办。」
                                     </div>
                                 </div>
                             </div>
@@ -3516,7 +3533,7 @@
     </div>
     
     <div class="stats">
-        📊 总计 184 册 · 累计 35,021 页 · 投资 ¥4085 元
+        📊 总计 185 册 · 累计 35,230 页 · 投资 ¥4085 元
     </div>
     
     <script>
