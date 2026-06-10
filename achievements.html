@@ -32,19 +32,24 @@
     /* ======= 唯一修改的地方：给网格加上固定高度和滚动条 ======= */
     .grid { 
         display: grid; 
-        grid-template-columns: repeat(3, 1fr); 
+        /* grid-template-columns: repeat(3, 1fr); */
         gap: 8px; 
         padding: 5px; 
-        max-height: 380px; /* 固定高度，可根据手机屏幕自行微调 */
-        overflow-y: auto; /* 允许纵向滑动 */
-        -webkit-overflow-scrolling: touch; /* 让手机端滑动更丝滑 */
+    /* 1. 核心新增：强制所有格子排成一列（往右无限延伸） */
+        grid-auto-flow: column; 
+        grid-auto-columns: 120px;
+
+        /* 2. 修改：删掉固定高度，改成允许横向滑动 */
+        overflow-x: auto; /* overflow-y: auto 改为 overflow-x: auto */
+        -webkit-overflow-scrolling: touch;
     }
     
     /* 选做：美化一下滚动条，让它在暗色背景下不突兀 */
-    .grid::-webkit-scrollbar { width: 6px; }
+    .grid::-webkit-scrollbar { height: 6px; }
     .grid::-webkit-scrollbar-track { background: rgba(0,0,0,0.1); border-radius: 4px; }
     .grid::-webkit-scrollbar-thumb { background: #555; border-radius: 4px; }
     /* ========================================================== */
+
 
     .card { background: #252525; border-radius: 12px; padding: 8px 5px; text-align: center; border: 1px solid #333; position: relative; }
     .thumb-viewer { width: 100%; height: 70px; border-radius: 8px; pointer-events: none; --poster-color: transparent; }
