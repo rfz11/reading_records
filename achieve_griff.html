@@ -7,14 +7,14 @@
 <style>
     body { background: #121212; color: white; font-family: 'PingFang SC', sans-serif; margin: 0; padding: 10px; overflow: hidden; /* 防止整个页面跟着滑动 */ }
     .header-title { text-align: center; color: #ffd700; padding: 10px 0 5px 0; font-size: 1.3rem; font-weight: bold; }
-    .balance-tag { text-align: center; color: #00ff88; font-size: 0.9rem; margin-bottom: 15px; font-weight: bold; }
+    .balance-tag { text-align: center; color: #00ff88; font-size: 0.9rem; margin-bottom: 8px; font-weight: bold; }
     
     .gallery-container { max-width: 800px; margin: auto; }
     
     .hero-section { 
         width: 100%; height: 350px; background-color: #e0f7fa; 
         background-image: radial-gradient(circle at center, #ffffff 0%, #b2ebf2 100%);
-        border-radius: 25px; margin-bottom: 20px; position: relative; overflow: hidden; border: 4px solid #fff;
+        border-radius: 25px; margin-bottom: 8px; position: relative; overflow: hidden; border: 4px solid #fff;
     }
     
     .hero-label { 
@@ -32,16 +32,20 @@
     /* ======= 唯一修改的地方：给网格加上固定高度和滚动条 ======= */
     .grid { 
         display: grid; 
-        grid-template-columns: repeat(3, 1fr); 
+        /* grid-template-columns: repeat(3, 1fr); */
         gap: 8px; 
-        padding: 5px; 
-        max-height: 380px; /* 固定高度，可根据手机屏幕自行微调 */
-        overflow-y: auto; /* 允许纵向滑动 */
-        -webkit-overflow-scrolling: touch; /* 让手机端滑动更丝滑 */
+        padding: 3px; 
+    /* 1. 核心新增：强制所有格子排成一列（往右无限延伸） */
+        grid-auto-flow: column; 
+        grid-auto-columns: calc((100% - 16px) / 3);
+
+        /* 2. 修改：删掉固定高度，改成允许横向滑动 */
+        overflow-x: auto; /* overflow-y: auto 改为 overflow-x: auto */
+        -webkit-overflow-scrolling: touch;
     }
     
     /* 选做：美化一下滚动条，让它在暗色背景下不突兀 */
-    .grid::-webkit-scrollbar { width: 6px; }
+    .grid::-webkit-scrollbar { height: 6px; }
     .grid::-webkit-scrollbar-track { background: rgba(0,0,0,0.1); border-radius: 4px; }
     .grid::-webkit-scrollbar-thumb { background: #555; border-radius: 4px; }
     /* ========================================================== */
