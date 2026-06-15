@@ -68,21 +68,21 @@
 <body>
     <h3 class="header-title">盈生<a href="index.html" style="text-decoration: none;">🐤</a> 的菜鸡进化路</h3>
     <div class="balance-tag">
-        <span style="color: #ffd700; margin-right: 15px;">🪙 总积分 75 🦤</span>
-        <span style="color: #00ff88;">💎 当前余额 6 🦜</span>
+        <span style="color: #ffd700; margin-right: 15px;">🪙 总积分 76 🦤</span>
+        <span style="color: #00ff88;">💎 当前余额 0 🦜</span>
     </div>
     
     <div class="gallery-container">
         <div class="hero-section">
             <div class="hero-label" id="new-tag">最新解锁 ✨</div>
-            <model-viewer id="main-viewer" src="model/phoenix_on_fire_update.glb" 
+            <model-viewer id="main-viewer" src="model/phoenix_king.glb" 
                 autoplay animation-name="*" auto-rotate camera-controls 
                 shadow-intensity="1" shadow-softness="1" environment-image="neutral"
                 camera-target="0m 0.5m 0m" field-of-view="20deg">
             </model-viewer>
             <div class="hero-info-display">
-                <div class="hero-name" id="hero-name">浴火凤凰</div>
-                <div class="hero-date" id="hero-date">解锁时间：2026-06-07</div>
+                <div class="hero-name" id="hero-name">凤凰之王</div>
+                <div class="hero-date" id="hero-date">解锁时间：2026-06-15</div>
             </div>
         </div>
         <div class="grid">
@@ -303,24 +303,24 @@
         <div class="m-date">2026-06-07</div>
     </div>
     
-    <div class="card" style="opacity: 0.7;">
-        <div class="locked-box">🔒</div>
-        <div class="m-name">未解锁</div>
-        <div class="m-points">还需 1 分</div>
-        <div class="p-bar-bg"><div class="p-bar-fill" style="width: 85.71428571428571%"></div></div>
+    <div class="card" onclick="changeHero('model/phoenix_king.glb', '凤凰之王', '7', '2026-06-15')">
+        <model-viewer class="thumb-viewer" src="model/phoenix_king.glb" loading="lazy"></model-viewer>
+        <div class="m-name">凤凰之王</div>
+        <div class="m-points">已消耗 7 分</div>
+        <div class="m-date">2026-06-15</div>
     </div>
     
     <div class="card" style="opacity: 0.7;">
         <div class="locked-box">🔒</div>
         <div class="m-name">未解锁</div>
-        <div class="m-points">还需 2 分</div>
-        <div class="p-bar-bg"><div class="p-bar-fill" style="width: 75.0%"></div></div>
+        <div class="m-points">还需 8 分</div>
+        <div class="p-bar-bg"><div class="p-bar-fill" style="width: 0.0%"></div></div>
     </div>
     </div>
     </div>
 
 <script>
-const LATEST_NAME = "浴火凤凰";
+const LATEST_NAME = "凤凰之王";
 // 修改后的 JS 函数
 function changeHero(file, name, points, date) {
     const viewer = document.getElementById('main-viewer');
@@ -339,7 +339,7 @@ function changeHero(file, name, points, date) {
 }
 
 window.onload = () => {
-    const initialName = "浴火凤凰";
+    const initialName = "凤凰之王";
     if (initialName === LATEST_NAME && initialName !== "暂无") {
         document.getElementById('new-tag').style.display = 'block';
     }
