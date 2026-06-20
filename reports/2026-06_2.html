@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+/* Removed external Google Fonts import to avoid site CSP issues. Using system fonts instead. */
+        html { background-color: #FFFFFF; }
+        body { 
+            font-family: 'Google Sans', sans-serif, Arial, sans-serif; 
+            margin: 0; 
+            padding: 20px; 
+            background-color: #FFFFFF; 
+            color: #1f1f1f;
+            font-size: 10pt; /* Default message text size */
+            line-height: 1.4;  /* Default message line height */
+        }
+        .conversation-wrapper { max-width: 800px; margin: 0 auto; }
+        .export-header h1 {
+            font-size: 16pt;
+            font-weight: 500;
+            color: #1f1f1f;
+            margin-bottom: 4px;
+        }
+        .export-header .timestamp {
+            font-size: 8pt;
+            font-style: italic;
+            color: #5f6368;
+            margin-bottom: 16px;
+        }
+        .export-header hr {
+            border: none;
+            border-top: 1px solid #EFEFEF;
+            margin-bottom: 16px;
+        }
+        .message-pair { 
+            margin-bottom: 16px; 
+            border: 1px solid #EFEFEF; 
+            border-radius: 8px; 
+            overflow: hidden; 
+        }
+        .message-part { 
+            padding: 8px; /* Tightened padding */
+        }
+        .message-part.question { background-color: #F7F7F7; }
+        .message-part.answer { background-color: #FFFFFF; }
+        
+        .speaker-label {
+            font-size: 10pt;
+            font-weight: bold;
+            color: #1f1f1f;
+            margin: 0 0 4px 0; /* Tighten spacing below label */
+        }
+        .content { 
+            min-width: 0; 
+            word-wrap: break-word; 
+            color: inherit; /* Inherits from body or message-part */
+            font-size: 10pt; /* Ensure content text is 10pt */
+            line-height: 1.4; /* Ensure content text line-height */
+        }
+        .content * { max-width: 100%; box-sizing: border-box; }
+        .content p { margin: 0.5em 0; } /* Keep some paragraph spacing */
+        .content ul, .content ol { padding-left: 25px; margin: 0.5em 0; }
+        .content li { margin-bottom: 5px; }
+        .content strong, .content b { font-weight: bold; } /* Standard bold */
+        .content em, .content i { font-style: italic; } /* Standard italic */
+        
+        a { color: #1a73e8; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        img { height: auto; border-radius: 4px; margin: 5px 0; }
+        table { width: 100%; border-collapse: collapse; margin: 1em 0; page-break-inside: auto; }
+        th, td { border: 1px solid #EFEFEF; padding: 8px 10px; text-align: left; }
+        th { background-color: rgba(0,0,0,0.06); font-weight: bold; }
+        
+        code-block { display: block; margin: 1em 0; border-radius: 8px; overflow: hidden; border: 1px solid #EFEFEF; background-color: #f8f9fa !important; color: #1f1f1f !important; page-break-inside: avoid; }
+        .code-block-decoration { padding: 8px 12px; background-color: rgba(0,0,0,0.05); font-size: 12px; color: #3c4043; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #EFEFEF; }
+        .code-block-decoration .buttons { display: none; } 
+        .formatted-code-block-internal-container { padding: 0; }
+        pre { display: block; background-color: transparent !important; color: inherit !important; padding: 12px 15px; margin: 0; font-family: 'Roboto Mono', monospace; font-size: 9.5pt; /* Slightly smaller for pre */ line-height: 1.4; white-space: pre-wrap; word-wrap: break-word; overflow-x: auto; border: none; page-break-inside: auto; }
+        code { font-family: 'Roboto Mono', monospace; font-size: 0.9em; background-color: rgba(0,0,0,0.06); padding: 2px 4px; border-radius: 3px; color: inherit; word-break: break-all; }
+        pre code { background-color: transparent !important; padding: 0; font-size: inherit; border-radius: 0; }
+        
+        .hljs-keyword { color: #a31515; font-weight: bold; }
+        .hljs-string { color: #d69d85; }
+        .hljs-number { color: #098658; }
+        .hljs-comment { color: #008000; font-style: italic; }
+        .hljs-function .hljs-title { color: #795e26; }
+        .hljs-params { color: #267f99; }
+        .hljs-built_in, .hljs-literal { color: #0000ff; }
+        
+        .katex-display { display: block; text-align: center; margin: 1em 0; page-break-inside: avoid; }
+        .katex { font-size: 1.1em; color: inherit; }
+        sources-carousel-inline, sources-carousel, source-footnote { display: none !important; }
+    </style>
+</head>
+<body>
+    <div class="conversation-wrapper">
+        <div class="export-header">
+            <p class="timestamp">Exported on: 6/20/2026, 5:59:29 PM</p>
+            <hr>
+        </div>
+<div class="message-pair">
+    <div class="message-part answer" style="">
+        <div class="content"><h1 data-path-to-node="2"><a href="../index.html" 
+class="reading-link" style="text-decoration: none;">📚</a> 读书群六月中旬读书总结报告</h1><p data-path-to-node="1"><b data-path-to-node="1" data-index-in-node="0">统计周期</b>：2026年6月11日 —— 2026年6月20日</p><p data-path-to-node="2">年中盛夏，万物并秀，我们读书群在六月中旬也迎来了最具里程碑意义的高光时刻！在这十天里，书友们步履不停，不仅在社科、文学与硬核科学领域多点开花，更见证了群内<b data-path-to-node="2" data-index-in-node="77">首位“簪花🏵️”品级大师</b>的诞生！</p><h2 data-path-to-node="4">🎉 殿堂时刻：恭喜【凤书】荣登“簪花🏵️”宝座！</h2><p data-path-to-node="5">在本期总结的最核心位置，我们要用最热烈的掌声与最高的敬意，献给书友 <b data-path-to-node="5" data-index-in-node="34">【凤书】</b>！</p><blockquote data-path-to-node="6"><p data-path-to-node="6,0">2026年6月20日，【凤书】阅罢杨本芬的《秋园》，正式<b data-path-to-node="6,0" data-index-in-node="28">晋品【簪花🏵️】</b>！这是我们读书群自成立以来，诞生的<b data-path-to-node="6,0" data-index-in-node="54">第一个“簪花”成就</b>！从青莲到簪花，不仅是阅读册数的跃升，更是无数个静谧夜晚里与文字灵魂共鸣的勋章。凤书用细腻的阅读品味和持之以恒的定力，为全群树立了文学标杆！</p></blockquote><h2 data-path-to-node="8">一、 数据总览：六月中旬的“黄金里程”</h2><p data-path-to-node="9">本期以 6月10日的 <code data-path-to-node="9" data-index-in-node="11">0213本 41393页 322.87里</code> 为基准线，在这10天中，大家合力完成了惊人的跨越：</p><ul data-path-to-node="10"><li><p data-path-to-node="10,0,0"><b data-path-to-node="10,0,0" data-index-in-node="0">新读毕图书</b>：共 <b data-path-to-node="10,0,0" data-index-in-node="8">14 本</b>（群累计图书从 213 本上升至 227 本）</p></li><li><p data-path-to-node="10,1,0"><b data-path-to-node="10,1,0" data-index-in-node="0">新阅读页数</b>：共 <b data-path-to-node="10,1,0" data-index-in-node="8">1,571 页</b>（群累计页数从 41,393 页上升至 42,964 页）</p></li><li><p data-path-to-node="10,2,0"><b data-path-to-node="10,2,0" data-index-in-node="0">阅读新足迹</b>：共 <b data-path-to-node="10,2,0" data-index-in-node="8">12.25 里</b>（群累计长度从 322.87 里延伸至 335.12 里）</p></li></ul><h2 data-path-to-node="12">二、 达人风采：谁是六月中旬的“读书大咖”？</h2><p data-path-to-node="13">在这10天中，共有 <b data-path-to-node="13" data-index-in-node="10">6位</b> 书友迎来了“阅罢”时刻：</p><ol start="1" data-path-to-node="14"><li><p data-path-to-node="14,0,0"><b data-path-to-node="14,0,0" data-index-in-node="0">【盈生】（西行不止，高产依旧 👑）</b></p><ul data-path-to-node="14,0,1"><li><p data-path-to-node="14,0,1,0,0"><b data-path-to-node="14,0,1,0,0" data-index-in-node="0">战绩</b>：10天内读完 <b data-path-to-node="14,0,1,0,0" data-index-in-node="10">7本书</b>！</p></li><li><p data-path-to-node="14,0,1,1,0"><b data-path-to-node="14,0,1,1,0" data-index-in-node="0">书单</b>：《西游记》章回体继续狂飙（《13真假美猴王》到《16遇险假雷音》），以及奇先生妙小姐系列（《糊涂小姐》、《善变小姐》、《哎呀小姐》、《快乐小姐》）。</p></li><li><p data-path-to-node="14,0,1,2,0"><b data-path-to-node="14,0,1,2,0" data-index-in-node="0">成就</b>：稳步进阶至【🪷🪷🌸🌸🌿🌿🌱🌱】。</p></li><li><p data-path-to-node="14,0,1,3,0"><i data-path-to-node="14,0,1,3,0" data-index-in-node="0">未来推荐书目：《西游记》（盘丝洞/火焰山篇章）、《格林童话》</i></p></li></ul></li><li><p data-path-to-node="14,1,0"><b data-path-to-node="14,1,0" data-index-in-node="0">【致虚】（从心智到前沿物理的跨界者 ⚛️）</b></p><ul data-path-to-node="14,1,1"><li><p data-path-to-node="14,1,1,0,0"><b data-path-to-node="14,1,1,0,0" data-index-in-node="0">战绩</b>：读完 <b data-path-to-node="14,1,1,0,0" data-index-in-node="6">2本书</b>。</p></li><li><p data-path-to-node="14,1,1,1,0"><b data-path-to-node="14,1,1,1,0" data-index-in-node="0">书单</b>：心理学名著《少有人走的路》，以及顶级硬核论文《Hydroelectric energy conversion of waste flows through hydroelectronic drag》（通过流体电子拖拽实现废水流的流体电能转换）。</p></li><li><p data-path-to-node="14,1,1,2,0"><b data-path-to-node="14,1,1,2,0" data-index-in-node="0">成就</b>：进阶至【🪷🌸🌸🌿🌿🌱🌱】。</p></li><li><p data-path-to-node="14,1,1,3,0"><i data-path-to-node="14,1,1,3,0" data-index-in-node="0">未来推荐书目：《自然哲学的数学原理》、《心流》</i></p></li></ul></li><li><p data-path-to-node="14,2,0"><b data-path-to-node="14,2,0" data-index-in-node="0">【凤书】（一代宗师，簪花留香 🏵️）</b></p><ul data-path-to-node="14,2,1"><li><p data-path-to-node="14,2,1,0,0"><b data-path-to-node="14,2,1,0,0" data-index-in-node="0">战绩</b>：读完 <b data-path-to-node="14,2,1,0,0" data-index-in-node="6">1本书</b>（杨本芬的经典女性家族史小说《秋园》）。</p></li><li><p data-path-to-node="14,2,1,1,0"><b data-path-to-node="14,2,1,1,0" data-index-in-node="0">成就</b>：达成全群首个【晋品·簪花🏵️】！</p></li><li><p data-path-to-node="14,2,1,2,0"><i data-path-to-node="14,2,1,2,0" data-index-in-node="0">未来推荐书目：《浮生六记》、《浮木》</i></p></li></ul></li><li><p data-path-to-node="14,3,0"><b data-path-to-node="14,3,0" data-index-in-node="0">【西翁】（洞察人性的总结者 📝）</b></p><ul data-path-to-node="14,3,1"><li><p data-path-to-node="14,3,1,0,0"><b data-path-to-node="14,3,1,0,0" data-index-in-node="0">战绩</b>：读完 <b data-path-to-node="14,3,1,0,0" data-index-in-node="6">1本书</b>（刘震云的茅盾文学奖巨著《一句顶一万句》）。</p></li><li><p data-path-to-node="14,3,1,1,0"><b data-path-to-node="14,3,1,1,0" data-index-in-node="0">成就</b>：进阶至【🌸🌸🌿🌱】。</p></li><li><p data-path-to-node="14,3,1,2,0"><i data-path-to-node="14,3,1,2,0" data-index-in-node="0">未来推荐书目：《故乡面快速流传》、《平凡的世界》</i></p></li></ul></li><li><p data-path-to-node="14,4,0"><b data-path-to-node="14,4,0" data-index-in-node="0">【清一】（心理学深度探索者 🧠）</b></p><ul data-path-to-node="14,4,1"><li><p data-path-to-node="14,4,1,0,0"><b data-path-to-node="14,4,1,0,0" data-index-in-node="0">战绩</b>：读完 <b data-path-to-node="14,4,1,0,0" data-index-in-node="6">1本书</b>（阿德勒的个体心理学奠基之作《自卑与超越》）。</p></li><li><p data-path-to-node="14,4,1,1,0"><b data-path-to-node="14,4,1,1,0" data-index-in-node="0">成就</b>：进阶至【🪷🌸🌱】。</p></li><li><p data-path-to-node="14,4,1,2,0"><i data-path-to-node="14,4,1,2,0" data-index-in-node="0">未来推荐书目：《被讨厌的勇气》、《人性的弱点》</i></p></li></ul></li><li><p data-path-to-node="14,5,0"><b data-path-to-node="14,5,0" data-index-in-node="0">【锦安】（向往自然的芳菲 🌸）</b></p><ul data-path-to-node="14,5,1"><li><p data-path-to-node="14,5,1,0,0"><b data-path-to-node="14,5,1,0,0" data-index-in-node="0">战绩</b>：读完 <b data-path-to-node="14,5,1,0,0" data-index-in-node="6">1本书</b>（拾落的《我和琉璃的山居四季》）。</p></li><li><p data-path-to-node="14,5,1,1,0"><b data-path-to-node="14,5,1,1,0" data-index-in-node="0">成就</b>：成功【晋品·芳菲🌸】。</p></li><li><p data-path-to-node="14,5,1,2,0"><i data-path-to-node="14,5,1,2,0" data-index-in-node="0">未来推荐书目：《瓦尔登湖》、《阿勒泰的角落》</i></p></li></ul></li></ol><h2 data-path-to-node="16">三、 本期书单分类：人文史诗与前沿能量</h2><ul data-path-to-node="17"><li><p data-path-to-node="17,0,0"><b data-path-to-node="17,0,0" data-index-in-node="0">时代悲歌与大奖小说（灵魂深处的震撼）</b>：</p><ul data-path-to-node="17,0,1"><li><p data-path-to-node="17,0,1,0,0">《秋园》（杨本芬）—— 记录底层中国女性的坚韧与苦难，催人泪下。</p></li><li><p data-path-to-node="17,0,1,1,0">《一句顶一万句》（刘震云）—— 孤独感与中国式人际关系的终极解构。</p></li></ul></li><li><p data-path-to-node="17,1,0"><b data-path-to-node="17,1,0" data-index-in-node="0">前沿物理与心理学巨著（心智与科学的拓荒）</b>：</p><ul data-path-to-node="17,1,1"><li><p data-path-to-node="17,1,1,0,0">《Hydroelectric energy conversion...》（Baptiste Coquinot et al.）—— 废水流发电的流体电子技术论文，群内硬核学术天花板的又一次刷新！</p></li><li><p data-path-to-node="17,1,1,1,0">《自卑与超越》（阿德勒）—— 解码童年与人格，追寻人生意义的指南。</p></li><li><p data-path-to-node="17,1,1,2,0">《少有人走的路》（M·斯科特·派克）—— 再次被书友品读的自律与心智成熟之作。</p></li></ul></li><li><p data-path-to-node="17,2,0"><b data-path-to-node="17,2,0" data-index-in-node="0">古典名著与山居散文（文化传承与向往）</b>：</p><ul data-path-to-node="17,2,1"><li><p data-path-to-node="17,2,1,0,0">吴承恩《西游记》章回系列（13-16）—— 从真假美猴王的博弈到假雷音寺的遇险，【盈生】的西行路已经走过大半。</p></li><li><p data-path-to-node="17,2,1,1,0">《我和琉璃的山居四季》（拾落）—— 治愈系的自然主义散文。</p></li></ul></li><li><p data-path-to-node="17,3,0"><b data-path-to-node="17,3,0" data-index-in-node="0">轻松童趣（夏日里的清凉）</b>：</p><ul data-path-to-node="17,3,1"><li><p data-path-to-node="17,3,1,0,0">《奇先生妙小姐》系列以其稳定的高水准，继续为书友带来解压的阅读体验。</p></li></ul></li></ul><h2 data-path-to-node="19">四、 结语</h2><p data-path-to-node="20">14本书，1571页，以及12.25里的新足迹。六月中旬的报告不仅是一份数据的递增，更是一次精神品级的飞跃。【凤书】书友的“簪花”绽放，为我们所有人注入了极大的鼓舞！</p><p data-path-to-node="21">有人在《秋园》中体会生命的厚重，有人在《一句顶一万句》中寻找知音，有人在流体电子拖拽的公式里跨越科学前沿。五月到六月，我们的阅读总长度已经悄然跨过了 335 里。愿大家以簪花为榜样，在即将到来的夏至与下半月里，继续在文字的海洋里踏浪前行！</p></div>
+    </div>
+</div>
+
+    </div>
+</body>
+</html>
