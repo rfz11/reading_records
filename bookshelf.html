@@ -431,22 +431,22 @@
         <div class="recent-books">
     
         <div class="recent-card">
+            <img class="recent-cover" src="./books/我本芬芳.webp" alt="我本芬芳" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
+            <div class="recent-info">
+                <div class="recent-bookname">我本芬芳</div>
+                <div class="recent-author">杨本芬</div>
+                <div class="recent-readers">凤书🐦‍🔥</div>
+                <div class="recent-note">「那个艰苦年代里，她活出自己我，现在美好的时代，我们更加活出自我美好的生活。」</div>
+            </div>
+        </div>
+        
+        <div class="recent-card">
             <img class="recent-cover" src="./books/白雪先生.webp" alt="白雪先生" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
             <div class="recent-info">
                 <div class="recent-bookname">白雪先生</div>
                 <div class="recent-author">[英]罗杰.哈格里维斯</div>
                 <div class="recent-readers">盈生🐤</div>
                 <div class="recent-note">「白雪先生虽然从故事的开头没有出现，但是故事的开头讲的是一个圣诞节，从那个圣诞节开始下雪了，雪下下下下下下下下下下下下了整整晚上，这又大又软的雪，好像可以做一个很大很大的雪人。白雪先生虽然现在还不在故事里面，但是一会儿你就知道有他了。这天亮的时候，小朋友们看到有这么这么多的雪都惊呆了。房子里，房子的屋顶上、树枝上、道路上、田野里全都被雪覆盖了。毛这么一大一块儿，雪就像一堆毛茸茸的雪球一样。没过多久，太阳出来了，孩子们也出来了。他们裹着围巾，穿着羊毛大衣，戴着手套，穿着鞋子的，裹得严严实实的，这样就不会被冻感冒啦，有那么那么那么，那么那么，那么那么那么那么那么那么那么那么那么那么那么那么那么多的雪。孩子们都堆了一个很大很大的雪人，一起做雪人游戏。平安夜到了，这天晚上，孩子们都早早地回了家。他们想早点儿睡觉，第二天想早点儿起床，早点让收到圣诞老人的礼物。可是，圣诞老人遇到困难了，他没有很快地把礼物都送到孩子们的家里。因为呢，圣诞老人遇遇上麻烦了，有那么多的雪，圣诞老人都不能拖动驯鹿来到孩子们的家里。这时，圣诞老人坐在他的礼物包上面冥思苦想，想着怎么才可以很快地把礼物送到孩子们的手里。哦，天呐，这真是糟透了，圣诞老人说。圣诞老人被困住的地方正有一个雪人在那里，这时让圣诞老人想到了一个主意，一个好主意，一个非常好的主意。嗯，我可以说这确实是很好的主意。圣诞老人问那个雪人，你愿意帮我吗？当然，雪人没有回答，因为雪人是不会说话的。对了，我该用我的魔法把它变得活过来。说着，圣诞老人扯了三下他的白胡子，叽里咕噜地念了一一些咒语。突然，这个雪人活过来了。雪人跟圣诞老人说了很多很多很多的话。然后，他们开始分工合作了。雪白雪先生负责把礼物礼物放进袋子里，把确保每一个礼物都在正确的袋子里。圣诞老人的工作室送礼物，确把所有的礼物都送到他们的小主人身边。雪人先生和圣诞老人让苏三苏三得到了他想要的泰迪熊。雪人先生和圣诞老人让彼得得到了他想喜欢的小火车。雪人先生和圣诞老人让约翰得到了他最最最最想要的小猪存钱罐。雪人先生和圣诞先不对圣诞老人给，还让小简得到了他最爱玩儿的会吱吱响的特别喜欢的粉红色的小象。谢谢你的帮助。圣诞老人对雪人先生说，下次还要找我的话就来这儿找我哦，白雪先生对圣诞老人说，接下来，圣诞老人拉扯了3下他的胡子，白雪，白雪先生立马就变成了原来的那个雪人。最后，孩子们都得到了他们最想要的玩具，你可以知道这个人是谁，对吧？谁呀，谁给他们的礼物？那就是圣诞老人和白雪先生啦。\n。」</div>
-            </div>
-        </div>
-        
-        <div class="recent-card">
-            <img class="recent-cover" src="./books/我本芬芳.webp" alt="我本芬芳" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
-            <div class="recent-info">
-                <div class="recent-bookname">我本芬芳</div>
-                <div class="recent-author">未知作者</div>
-                <div class="recent-readers">凤书🐦‍🔥</div>
-                <div class="recent-note">「『我本芬芳』一卷读罢，满室生香。」</div>
             </div>
         </div>
         
@@ -468,11 +468,28 @@
         <div class="category">
             <div class="category-header">
                 <div class="category-title">📚 文学</div>
-                <div class="category-count">共 134 本</div>
+                <div class="category-count">共 135 本</div>
             </div>
             <div class="scroll-container">
                 <div class="book-grid">
     
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/我本芬芳.webp" alt="我本芬芳" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">我本芬芳</div>
+                                    <div class="book-author">杨本芬</div>
+                                    <div class="book-readers">凤书🐦‍🔥</div>
+                                    <div class="book-meta">
+                                        <span>242页</span>
+                                        <span>¥50</span>
+                                        <span>📅 2026-07-03</span>
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「那个艰苦年代里，她活出自己我，现在美好的时代，我们更加活出自我美好的生活。」
+                                    </div>
+                                </div>
+                            </div>
+                
                             <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/白雪先生.webp" alt="白雪先生" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
@@ -1018,23 +1035,6 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/4五行山收徒.webp" alt="4五行山收徒" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">4五行山收徒</div>
-                                    <div class="book-author">吴承恩</div>
-                                    <div class="book-readers">盈生🐤</div>
-                                    <div class="book-meta">
-                                        <span>23页</span>
-                                        <span>📅 2026-06-01</span>
-                                        
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「Apple banana blue狼狗Apple\nOrange\nYellow\nTa\n嗯嗯\n。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/5斗宝丢袈裟.webp" alt="5斗宝丢袈裟" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">5斗宝丢袈裟</div>
@@ -1047,6 +1047,23 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「唐僧的袈裟被偷掉了，袈裟被一个人偷了，他姥姥家有个家，他不有小心他的家没有丢，那是因为他有四个袈裟，就那张是唯一的一个，他的家是金南袈裟，就是他唯一的袈裟，只能波语，也是他唯一的袈裟，通关文牒是他唯一的袈裟拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉吃，花说我的家也被偷走了，拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉拉\n。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/4五行山收徒.webp" alt="4五行山收徒" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">4五行山收徒</div>
+                                    <div class="book-author">吴承恩</div>
+                                    <div class="book-readers">盈生🐤</div>
+                                    <div class="book-meta">
+                                        <span>23页</span>
+                                        <span>📅 2026-06-01</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「Apple banana blue狼狗Apple\nOrange\nYellow\nTa\n嗯嗯\n。」
                                     </div>
                                 </div>
                             </div>
@@ -1171,23 +1188,6 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/有一天，妈妈老了.webp" alt="有一天，妈妈老了" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">有一天，妈妈老了</div>
-                                    <div class="book-author">洪荣女</div>
-                                    <div class="book-readers">凤书🐦‍🔥</div>
-                                    <div class="book-meta">
-                                        <span>223页</span>
-                                        <span>¥28</span>
-                                        <span>📅 2026-05-24</span>
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「回首我所走过的道路，每个脚印都充满了悲伤的泪水。我这一生中经历了别人无法想象的痛苦，就像是传说一样。我的痛苦永无止境。现在我只能将它们交给上帝了。我不能让别人感到悲伤。每次看到那些伤心的朋友。我做不到视若无睹。我看不得别人可怜的样子。在生活的时候多做些有意义的事情吧。正正当当地生活。活得潇洒些吧。我暗下决心。我尽量自己努力地给孩子们一个美好的未来。安守本分。甩掉虚荣心做真实的自己。我应该好好珍惜剩余不多的日子，面对生活，面对冷漠，风儿把常年堆积的怨恨和牢骚都带走吧。笑着面对余生。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/圣诞先生.webp" alt="圣诞先生" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">圣诞先生</div>
@@ -1200,6 +1200,23 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「圣诞先生送了很多礼物。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/有一天，妈妈老了.webp" alt="有一天，妈妈老了" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">有一天，妈妈老了</div>
+                                    <div class="book-author">洪荣女</div>
+                                    <div class="book-readers">凤书🐦‍🔥</div>
+                                    <div class="book-meta">
+                                        <span>223页</span>
+                                        <span>¥28</span>
+                                        <span>📅 2026-05-24</span>
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「回首我所走过的道路，每个脚印都充满了悲伤的泪水。我这一生中经历了别人无法想象的痛苦，就像是传说一样。我的痛苦永无止境。现在我只能将它们交给上帝了。我不能让别人感到悲伤。每次看到那些伤心的朋友。我做不到视若无睹。我看不得别人可怜的样子。在生活的时候多做些有意义的事情吧。正正当当地生活。活得潇洒些吧。我暗下决心。我尽量自己努力地给孩子们一个美好的未来。安守本分。甩掉虚荣心做真实的自己。我应该好好珍惜剩余不多的日子，面对生活，面对冷漠，风儿把常年堆积的怨恨和牢骚都带走吧。笑着面对余生。」
                                     </div>
                                 </div>
                             </div>
@@ -1324,23 +1341,6 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/瓦尔登湖 潘庆舲 2014上海译文.webp" alt="瓦尔登湖 潘庆舲 2014上海译文" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">瓦尔登湖 潘庆舲 2014上海译文</div>
-                                    <div class="book-author">[美]梭罗/潘庆舲</div>
-                                    <div class="book-readers">致虚🏔️</div>
-                                    <div class="book-meta">
-                                        <span>432页</span>
-                                        <span>¥35</span>
-                                        <span>📅 2026-05-17</span>
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「信达雅占了一个“装”。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/看不见的人-看不见的城市.webp" alt="看不见的人-看不见的城市" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">看不见的人-看不见的城市</div>
@@ -1353,6 +1353,23 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「小时候看过。印象颇深。基本就是另类人生的再版。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/瓦尔登湖 潘庆舲 2014上海译文.webp" alt="瓦尔登湖 潘庆舲 2014上海译文" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">瓦尔登湖 潘庆舲 2014上海译文</div>
+                                    <div class="book-author">[美]梭罗/潘庆舲</div>
+                                    <div class="book-readers">致虚🏔️</div>
+                                    <div class="book-meta">
+                                        <span>432页</span>
+                                        <span>¥35</span>
+                                        <span>📅 2026-05-17</span>
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「信达雅占了一个“装”。」
                                     </div>
                                 </div>
                             </div>
@@ -4009,7 +4026,7 @@
     </div>
     
     <div class="stats">
-        📊 总计 217 册 · 累计 38,025 页 · 投资 ¥4274 元
+        📊 总计 217 册 · 累计 38,034 页 · 投资 ¥4324 元
     </div>
     
     <script>
