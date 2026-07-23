@@ -431,6 +431,16 @@
         <div class="recent-books">
     
         <div class="recent-card">
+            <img class="recent-cover" src="./books/不可能先生.webp" alt="不可能先生" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
+            <div class="recent-info">
+                <div class="recent-bookname">不可能先生</div>
+                <div class="recent-author">[英]罗杰·哈格里维斯</div>
+                <div class="recent-readers">盈生🐤</div>
+                <div class="recent-note">「『不可能先生』一卷读罢，满室生香。」</div>
+            </div>
+        </div>
+        
+        <div class="recent-card">
             <img class="recent-cover" src="./books/小王子.webp" alt="小王子" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
             <div class="recent-info">
                 <div class="recent-bookname">小王子</div>
@@ -447,16 +457,6 @@
                 <div class="recent-author">[英]罗杰·哈格里维斯</div>
                 <div class="recent-readers">盈生🐤</div>
                 <div class="recent-note">「『抱怨先生』一卷读罢，满室生香。」</div>
-            </div>
-        </div>
-        
-        <div class="recent-card">
-            <img class="recent-cover" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgICAgICA8ZGVmcz4KICAgICAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMxYTM2MzYiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMwZDFiMmEiLz4KICAgICAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgICAgICA8L2RlZnM+CiAgICAgICAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNnKSIvPgogICAgICAgIDxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSIxMzQiIGhlaWdodD0iMTg0IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4xNSkiLz4KICAgICAgICA8dGV4dCBmb250LWZhbWlseT0iJ05vdG8gU2VyaWYgQ0pLIFNDJywnU291cmNlIEhhbiBTZXJpZiBTQycsJ0dlb3JnaWEnLHNlcmlmIiBmb250LXNpemU9IjE5IiAKICAgICAgICAgICAgICBmaWxsPSIjZTBlMWRkIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgc3R5bGU9IndyaXRpbmctbW9kZTogdmVydGljYWwtcmw7Ij48dHNwYW4geD0iMTAyLjAiIHk9IjUwJSI+eyflsI/njKrkvanlpYc8L3RzcGFuPjx0c3BhbiB4PSI3NS4wIiB5PSI1MCUiPjAxLTAyJzwvdHNwYW4+PHRzcGFuIHg9IjQ4LjAiIHk9IjUwJSI+fTwvdHNwYW4+PC90ZXh0PgogICAgPC9zdmc+" alt="小猪佩奇01-02" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
-            <div class="recent-info">
-                <div class="recent-bookname">小猪佩奇01-02</div>
-                <div class="recent-author">未知作者</div>
-                <div class="recent-readers">盈生🐤</div>
-                <div class="recent-note">「I beg your pardon？。」</div>
             </div>
         </div>
         
@@ -2962,11 +2962,28 @@
         <div class="category">
             <div class="category-header">
                 <div class="category-title">🏛️ 社科</div>
-                <div class="category-count">共 52 本</div>
+                <div class="category-count">共 53 本</div>
             </div>
             <div class="scroll-container">
                 <div class="book-grid">
     
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/不可能先生.webp" alt="不可能先生" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">不可能先生</div>
+                                    <div class="book-author">[英]罗杰·哈格里维斯</div>
+                                    <div class="book-readers">盈生🐤</div>
+                                    <div class="book-meta">
+                                        <span>36页</span>
+                                        <span>📅 2026-07-23</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「下次再说」
+                                    </div>
+                                </div>
+                            </div>
+                
                             <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/抱怨先生.webp" alt="抱怨先生" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
@@ -4349,7 +4366,7 @@
     </div>
     
     <div class="stats">
-        📊 总计 236 册 · 累计 40,314 页 · 投资 ¥4524 元
+        📊 总计 237 册 · 累计 40,350 页 · 投资 ¥4524 元
     </div>
     
     <script>
