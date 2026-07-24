@@ -431,6 +431,16 @@
         <div class="recent-books">
     
         <div class="recent-card">
+            <img class="recent-cover" src="./books/挠痒痒先生.webp" alt="挠痒痒先生" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
+            <div class="recent-info">
+                <div class="recent-bookname">挠痒痒先生</div>
+                <div class="recent-author">（英）罗杰.哈格里维斯</div>
+                <div class="recent-readers">盈生🐤</div>
+                <div class="recent-note">「挠痒痒先生特别喜欢挠痒痒，因为他挠痒痒的时候总是会熬到晚上。他从凌晨熬到凌晨，因为呢？他从早上的凌晨熬到晚上的凌晨。」</div>
+            </div>
+        </div>
+        
+        <div class="recent-card">
             <img class="recent-cover" src="./books/不可能先生.webp" alt="不可能先生" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
             <div class="recent-info">
                 <div class="recent-bookname">不可能先生</div>
@@ -450,16 +460,6 @@
             </div>
         </div>
         
-        <div class="recent-card">
-            <img class="recent-cover" src="./books/抱怨先生.webp" alt="抱怨先生" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
-            <div class="recent-info">
-                <div class="recent-bookname">抱怨先生</div>
-                <div class="recent-author">[英]罗杰·哈格里维斯</div>
-                <div class="recent-readers">盈生🐤</div>
-                <div class="recent-note">「『抱怨先生』一卷读罢，满室生香。」</div>
-            </div>
-        </div>
-        
         </div>
     </div>
     
@@ -468,11 +468,28 @@
         <div class="category">
             <div class="category-header">
                 <div class="category-title">📚 文学</div>
-                <div class="category-count">共 146 本</div>
+                <div class="category-count">共 147 本</div>
             </div>
             <div class="scroll-container">
                 <div class="book-grid">
     
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/挠痒痒先生.webp" alt="挠痒痒先生" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">挠痒痒先生</div>
+                                    <div class="book-author">（英）罗杰.哈格里维斯</div>
+                                    <div class="book-readers">盈生🐤</div>
+                                    <div class="book-meta">
+                                        <span>36页</span>
+                                        <span>📅 2026-07-24</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「挠痒痒先生特别喜欢挠痒痒，因为他挠痒痒的时候总是会熬到晚上。他从凌晨熬到凌晨，因为呢？他从早上的凌晨熬到晚上的凌晨。」
+                                    </div>
+                                </div>
+                            </div>
+                
                             <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/小王子.webp" alt="小王子" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
@@ -4366,7 +4383,7 @@
     </div>
     
     <div class="stats">
-        📊 总计 237 册 · 累计 40,350 页 · 投资 ¥4524 元
+        📊 总计 238 册 · 累计 40,386 页 · 投资 ¥4524 元
     </div>
     
     <script>
