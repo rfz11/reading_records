@@ -431,6 +431,16 @@
         <div class="recent-books">
     
         <div class="recent-card">
+            <img class="recent-cover" src="./books/三体3：死神永生.webp" alt="三体3：死神永生" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
+            <div class="recent-info">
+                <div class="recent-bookname">三体3：死神永生</div>
+                <div class="recent-author">刘慈欣</div>
+                <div class="recent-readers">西翁🦁</div>
+                <div class="recent-note">「第二次阅读，又有了全新的感悟。」</div>
+            </div>
+        </div>
+        
+        <div class="recent-card">
             <img class="recent-cover" src="./books/沉默者的国度.webp" alt="沉默者的国度" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
             <div class="recent-info">
                 <div class="recent-bookname">沉默者的国度</div>
@@ -450,16 +460,6 @@
             </div>
         </div>
         
-        <div class="recent-card">
-            <img class="recent-cover" src="./books/时间贫困.webp" alt="时间贫困" onerror="this.src='https://via.placeholder.com/100x133?text=📖'">
-            <div class="recent-info">
-                <div class="recent-bookname">时间贫困</div>
-                <div class="recent-author">〔英〕凯茜·霍姆斯</div>
-                <div class="recent-readers">锦安💰</div>
-                <div class="recent-note">「『时间贫困』一卷读罢，满室生香。」</div>
-            </div>
-        </div>
-        
         </div>
     </div>
     
@@ -468,11 +468,28 @@
         <div class="category">
             <div class="category-header">
                 <div class="category-title">📚 文学</div>
-                <div class="category-count">共 158 本</div>
+                <div class="category-count">共 159 本</div>
             </div>
             <div class="scroll-container">
                 <div class="book-grid">
     
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/三体3：死神永生.webp" alt="三体3：死神永生" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">三体3：死神永生</div>
+                                    <div class="book-author">刘慈欣</div>
+                                    <div class="book-readers">西翁🦁</div>
+                                    <div class="book-meta">
+                                        <span>513页</span>
+                                        <span>¥38</span>
+                                        <span>📅 2026-08-17</span>
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「第二次阅读，又有了全新的感悟。」
+                                    </div>
+                                </div>
+                            </div>
+                
                             <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/沉默者的国度.webp" alt="沉默者的国度" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
@@ -746,23 +763,6 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/我的母亲做保洁.webp" alt="我的母亲做保洁" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">我的母亲做保洁</div>
-                                    <div class="book-author">张小满</div>
-                                    <div class="book-readers">凤书🐦‍🔥</div>
-                                    <div class="book-meta">
-                                        <span>386页</span>
-                                        <span>¥60</span>
-                                        <span>📅 2026-07-11</span>
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「妈妈都是这样过来的。人就是要到大城市里面走走看看。多学多看，多听，相信自己，越来越好。亲亲们爱自己。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/明朝那些事儿第三部.webp" alt="明朝那些事儿第三部" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">明朝那些事儿第三部</div>
@@ -775,6 +775,23 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「最近终于《明朝那些事儿》第三部看完了，整段故事看得心里七上八下，跟坐过山车一样。这本书没有枯燥难懂的古文，轻轻松松就能看懂明朝这段跌宕起。前期仁宣之治还算国泰民安，可明英宗朱祁镇实在糊涂，听信宦官怂恿，闹出土木堡之变，几十万大军全军覆没，就连皇帝本人都被敌军抓走，大明直接濒临亡国。就在所有人打算放弃京城跑路的时候，于谦站了出来，顶着各方压力守住北京城，硬生生把王朝从悬崖边上拉了回来，这份魄力实在让人佩服。可结局让人惋惜，朱祁镇复辟之后，听信小人谗言，害死了救国功臣于谦。这段历史也让我明白，再强盛的国家，遇上昏庸掌权者也会走下坡路。反观于谦，身居高位却坚守本心，不求荣华富贵，只想着守护家国。往后生活里，我也希望能学习他的品格，遇事敢于承担责任，守住自己的底线。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/我的母亲做保洁.webp" alt="我的母亲做保洁" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">我的母亲做保洁</div>
+                                    <div class="book-author">张小满</div>
+                                    <div class="book-readers">凤书🐦‍🔥</div>
+                                    <div class="book-meta">
+                                        <span>386页</span>
+                                        <span>¥60</span>
+                                        <span>📅 2026-07-11</span>
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「妈妈都是这样过来的。人就是要到大城市里面走走看看。多学多看，多听，相信自己，越来越好。亲亲们爱自己。」
                                     </div>
                                 </div>
                             </div>
@@ -1239,23 +1256,6 @@
                             </div>
                 
                             <div class="book-item" onclick="toggleNote(this)">
-                                <img class="book-cover" src="./books/12女儿国除妖.webp" alt="12女儿国除妖" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
-                                <div class="book-info">
-                                    <div class="book-title">12女儿国除妖</div>
-                                    <div class="book-author">吴承恩</div>
-                                    <div class="book-readers">盈生🐤</div>
-                                    <div class="book-meta">
-                                        <span>21页</span>
-                                        <span>📅 2026-06-08</span>
-                                        
-                                    </div>
-                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
-                                        「这是我最喜欢的一本书。故事讲的是：春天到了，唐僧师徒来到一条小河边，唐僧和猪八戒喝了小河里的水，不一会儿唐僧和猪八戒的肚子变大了，还很疼。老婆婆说这条河叫字母河，喝了里面的水不久就会生孩子。猪八戒很不想生孩子，老婆婆说山上有一泉水，喝了泉水胎儿就没有了。孙悟空一个筋斗云飞到山上，带回满满一桶泉水。唐僧和猪八戒喝了一口泉水，不一会两人的肚子变得不疼。师徒四人继续西行，到了女儿国，这里一个男子都没有，打鱼的，耕地的，做买卖的全是女子。大家围着唐僧师徒指指点点，来到王宫女儿国的女王对唐僧说，长老，请留下来与我作为夫妻。孙悟空假装答应，女儿国的女王很高兴特意安排了酒席招待。猪八戒敞开肚皮吃了个痛快，吃完了就嚷嚷，我们该去西天取经了。唐僧和女儿国女王走下龙车，唐僧说我该去西天取经了，突然路边闪出一个女妖怪就把唐僧给抓起起来了。孙悟空猪八戒还有沙和尚，一路赶到琵琶洞。孙悟空变成一只小虫子，飞进洞里，看见对妖精说唐僧哥哥请留下来与我成亲，孙悟空的火冒三丈，忍不现出原形。妖精拿出三股叉和孙悟空打起来，悟空突然看到妖精的屁股上，突然伸出一个蝎子似的尾巴在他脑袋上扎了一下。孙悟空爆头叫疼，猪八戒说师兄俺老猪来帮你，猪八戒把琵琶洞的大门打了个稀巴烂。妖精又窜出来说猪头，敢打我大门。于是妖精又使出毒刺在猪八戒的嘴巴上刺了一下。孙悟空的脑袋，猪八戒嘴，两人疼得直哼哼。突然远处走来一位老婆婆，孙悟空一看是观音菩萨，就磕头说，望菩萨救我师傅。观音菩萨说这是个蝎子精，她的毒刺十分厉害，你去天宫找昴日星官帮忙。孙悟空来到天宫对昴日星官说请新官救我我师傅。孙悟空来的琵琶洞大骂丑八怪，俺老孙又来了。气得蝎子精拿出三股叉就想打孙悟空。昴日星官变成一只威风凛凛的大公鸡，叫一声喔喔喔。第一声鸡叫，蝎子精献出原形，第二声鸡叫，蝎子鸡浑身发软，当场死去，孙悟空一把火烧了琵琶洞。师徒四人继续踏上了西天取经之路。」
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="book-item" onclick="toggleNote(this)">
                                 <img class="book-cover" src="./books/11车迟国斗法.webp" alt="11车迟国斗法" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
                                 <div class="book-info">
                                     <div class="book-title">11车迟国斗法</div>
@@ -1268,6 +1268,23 @@
                                     </div>
                                     <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
                                         「孙悟空和鹿力、虎力、羊力一起比赛，他们比赛求雨，隔板猜物，坐禅，下油锅，砍头，剖腹，最后孙悟空赢了，因为他作了很多次弊。」
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="book-item" onclick="toggleNote(this)">
+                                <img class="book-cover" src="./books/12女儿国除妖.webp" alt="12女儿国除妖" onerror="this.src='https://via.placeholder.com/70x93?text=📖'">
+                                <div class="book-info">
+                                    <div class="book-title">12女儿国除妖</div>
+                                    <div class="book-author">吴承恩</div>
+                                    <div class="book-readers">盈生🐤</div>
+                                    <div class="book-meta">
+                                        <span>21页</span>
+                                        <span>📅 2026-06-08</span>
+                                        
+                                    </div>
+                                    <div class="book-note" style="display: none; margin-top: 8px; padding: 8px; background: #fff0f5; border-radius: 12px; font-size: 0.85em; color: #8b5a2b; font-style: italic; border-left: 3px solid #d6336c; text-align: left;">
+                                        「这是我最喜欢的一本书。故事讲的是：春天到了，唐僧师徒来到一条小河边，唐僧和猪八戒喝了小河里的水，不一会儿唐僧和猪八戒的肚子变大了，还很疼。老婆婆说这条河叫字母河，喝了里面的水不久就会生孩子。猪八戒很不想生孩子，老婆婆说山上有一泉水，喝了泉水胎儿就没有了。孙悟空一个筋斗云飞到山上，带回满满一桶泉水。唐僧和猪八戒喝了一口泉水，不一会两人的肚子变得不疼。师徒四人继续西行，到了女儿国，这里一个男子都没有，打鱼的，耕地的，做买卖的全是女子。大家围着唐僧师徒指指点点，来到王宫女儿国的女王对唐僧说，长老，请留下来与我作为夫妻。孙悟空假装答应，女儿国的女王很高兴特意安排了酒席招待。猪八戒敞开肚皮吃了个痛快，吃完了就嚷嚷，我们该去西天取经了。唐僧和女儿国女王走下龙车，唐僧说我该去西天取经了，突然路边闪出一个女妖怪就把唐僧给抓起起来了。孙悟空猪八戒还有沙和尚，一路赶到琵琶洞。孙悟空变成一只小虫子，飞进洞里，看见对妖精说唐僧哥哥请留下来与我成亲，孙悟空的火冒三丈，忍不现出原形。妖精拿出三股叉和孙悟空打起来，悟空突然看到妖精的屁股上，突然伸出一个蝎子似的尾巴在他脑袋上扎了一下。孙悟空爆头叫疼，猪八戒说师兄俺老猪来帮你，猪八戒把琵琶洞的大门打了个稀巴烂。妖精又窜出来说猪头，敢打我大门。于是妖精又使出毒刺在猪八戒的嘴巴上刺了一下。孙悟空的脑袋，猪八戒嘴，两人疼得直哼哼。突然远处走来一位老婆婆，孙悟空一看是观音菩萨，就磕头说，望菩萨救我师傅。观音菩萨说这是个蝎子精，她的毒刺十分厉害，你去天宫找昴日星官帮忙。孙悟空来到天宫对昴日星官说请新官救我我师傅。孙悟空来的琵琶洞大骂丑八怪，俺老孙又来了。气得蝎子精拿出三股叉就想打孙悟空。昴日星官变成一只威风凛凛的大公鸡，叫一声喔喔喔。第一声鸡叫，蝎子精献出原形，第二声鸡叫，蝎子鸡浑身发软，当场死去，孙悟空一把火烧了琵琶洞。师徒四人继续踏上了西天取经之路。」
                                     </div>
                                 </div>
                             </div>
@@ -4689,7 +4706,7 @@
     </div>
     
     <div class="stats">
-        📊 总计 258 册 · 累计 44,685 页 · 投资 ¥4920 元
+        📊 总计 259 册 · 累计 45,198 页 · 投资 ¥4958 元
     </div>
     
     <script>
