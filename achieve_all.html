@@ -19,6 +19,7 @@
   --mist: #9fb0aa;
   --shelf-pad: 16px;
   --face-w: 90px;
+  --lean: 11deg;   /* tilt of the last finished book on each shelf */
   --base-h: calc(var(--face-w) * 1.5);   /* spine base height = cover height */
   --serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Noto Serif SC', 'Songti SC', Georgia, serif;
   --sans: system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Noto Sans SC', sans-serif;
@@ -83,18 +84,22 @@ h1 a:hover { border-bottom-color: var(--brass); }
   transition: transform .18s ease, box-shadow .18s ease;
 }
 .spine.active { transform: translateY(-12px); box-shadow: 0 14px 18px rgba(0,0,0,.4), inset 1px 0 0 rgba(255,255,255,.35); z-index: 5; }
+/* last book of each shelf leans into the empty space on the right (pivots on its bottom-right corner) */
+.spine.lean { transform-origin: right bottom; transform: rotate(var(--lean)); }
+.spine.lean.active { transform: translateY(-12px) rotate(var(--lean)); }
 .spine-title {
   writing-mode: vertical-rl; text-orientation: mixed; font-size: var(--fs, 11px); font-weight: 600;
-  letter-spacing: .5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-shadow: var(--shadow);
+  letter-spacing: .5px; overflow: hidden; white-space: nowrap; text-shadow: var(--shadow);
 }
+.spine-title.clip { text-overflow: ellipsis; }   /* added by JS only when the title really overflows */
 
-/* Currently-reading books stand on the shelf, full cover facing out, slightly angled for a subtle 3D look */
+/* Currently-reading books stand on the shelf, full cover facing out, slightly angled for a subtle 3D look (left side higher than right) */
 .face {
   all: unset; display: block; box-sizing: border-box; cursor: pointer; flex: none; position: relative;
-  width: var(--face-w); aspect-ratio: 2 / 3; margin: 0 7px 0 4px; overflow: hidden;
+  width: var(--face-w); aspect-ratio: 2 / 3; margin: 0 5px 0 6px; overflow: hidden;
   border-radius: 2px 4px 4px 2px; touch-action: manipulation; -webkit-tap-highlight-color: transparent;
-  transform: perspective(520px) rotateY(-14deg); transform-origin: left center;
-  box-shadow: 1px 0 0 #ddd5c0, 2px 0 0 #d0c8b0, 3px 0 0 #c3baa0, 6px 6px 10px rgba(0,0,0,.5);
+  transform: perspective(520px) rotateY(14deg); transform-origin: left bottom;   /* left edge nearer/taller, right edge farther/shorter, bottom stays on the shelf */
+  box-shadow: -1px 0 0 #6e6558, -2px 0 0 #5a5246, -3px 0 0 #453f36, 6px 6px 10px rgba(0,0,0,.5);   /* visible spine edge on the left */
   transition: transform .2s ease, box-shadow .2s ease;
 }
 .face img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -104,7 +109,7 @@ h1 a:hover { border-bottom-color: var(--brass); }
               rgba(255,255,255,0) 30%, rgba(255,255,255,.10) 55%, rgba(0,0,0,.16) 100%);
 }
 .face .no-cover { font-size: 11px; }
-.face.active { transform: perspective(520px) rotateY(-4deg) translateY(-12px); z-index: 5; }
+.face.active { transform: perspective(520px) rotateY(4deg) translateY(-12px); z-index: 5; }
 .no-cover { font-size: 11px; }
 .face.active { transform: translateY(-12px); z-index: 5; }
 
@@ -112,7 +117,8 @@ h1 a:hover { border-bottom-color: var(--brass); }
 
 @media (hover: hover) {
   .spine:hover { transform: translateY(-12px); box-shadow: 0 14px 18px rgba(0,0,0,.4), inset 1px 0 0 rgba(255,255,255,.35); z-index: 5; }
-  .face:hover { transform: perspective(520px) rotateY(-4deg) translateY(-12px); z-index: 5; }
+  .spine.lean:hover { transform: translateY(-12px) rotate(var(--lean)); }
+  .face:hover { transform: perspective(520px) rotateY(4deg) translateY(-12px); z-index: 5; }
   .toolbar select, .spine { cursor: pointer; }
 }
 
@@ -140,7 +146,8 @@ body.popup-open #scrim { display: block; }
 @keyframes sheet-up { from { transform: translateY(100%); } to { transform: none; } }
 
 @media (max-width: 600px) {
-  :root { --shelf-pad: 8px; --face-w: 72px; }
+  /* >= 4 currently-read covers per row: (viewport - page/cabinet padding) / 4 minus the margins of one cover */
+  :root { --shelf-pad: 8px; --face-w: min(72px, calc((100vw - 48px) / 4 - 14px)); }
   body { padding-left: calc(10px + env(safe-area-inset-left)); padding-right: calc(10px + env(safe-area-inset-right)); padding-top: calc(16px + env(safe-area-inset-top)); }
   .stats { font-size: 13px; }
   .toolbar { gap: 8px; margin-bottom: 16px; }
@@ -207,8 +214,22 @@ function shelfPadding() {
 }
 
 function faceWidth() {
-  const v = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--face-w'));
-  return (isNaN(v) ? 90 : v) + 11;   // + left/right margin
+  // --face-w can be a min()/calc() expression, so measure the real rendered width with a probe
+  const probe = document.createElement('div');
+  probe.style.cssText = 'position:absolute;visibility:hidden;width:var(--face-w)';
+  document.body.appendChild(probe);
+  const w = probe.offsetWidth;
+  probe.remove();
+  return w || 90;
+}
+
+// Mobile browsers put an ellipsis on the last character of vertical, shrink-to-fit text even when it fits.
+// So CSS never applies it by default: measure each title and add .clip only if it is really cut off.
+function markClippedTitles() {
+  const titles = Array.from(cabinet.querySelectorAll('.spine-title'));
+  titles.forEach(t => t.classList.remove('clip'));
+  const clipped = titles.map(t => t.scrollHeight > t.clientHeight + 2);   // read all first (one reflow)
+  titles.forEach((t, i) => { if (clipped[i]) t.classList.add('clip'); });
 }
 
 function layout() {
@@ -217,26 +238,46 @@ function layout() {
   const q = search.value.trim().toLowerCase();
   const match = el => (reader === 'all' || el.dataset.reader === reader) &&
     (!q || el.dataset.title.toLowerCase().includes(q));
+  const visibleFaces = faces.filter(match);
   const visibleSpines = spines.filter(match);
-  const visible = faces.filter(match).concat(visibleSpines);   // reading covers first
 
+  spines.forEach(sp => sp.classList.remove('lean'));
   cabinet.innerHTML = '';
-  if (!visible.length) {
+  if (!visibleFaces.length && !visibleSpines.length) {
     cabinet.innerHTML = '<div class="empty">No books match. Try another reader or search term.</div>';
   } else {
-    const avail = cabinet.clientWidth - shelfPadding();
+    const full = cabinet.clientWidth - shelfPadding();
+    const fw = faceWidth();
     let row = null, used = 0;
     const board = () => { const b = document.createElement('div'); b.className = 'shelf-board'; cabinet.appendChild(b); };
-    visible.forEach(el => {
-      const w = (el.classList.contains('face') ? faceWidth() : +el.dataset.w) + GAP;
-      if (!row || used + w > avail) {
-        if (row) board();
-        row = document.createElement('div'); row.className = 'shelf-row'; cabinet.appendChild(row); used = 0;
-      }
+    const newRow = () => {
+      if (row) board();
+      row = document.createElement('div'); row.className = 'shelf-row'; cabinet.appendChild(row); used = 0;
+      return row;
+    };
+
+    // 1) currently-read covers get their own shelf; the cover width (CSS) guarantees >= 4 fit per row
+    visibleFaces.forEach(el => {
+      const w = fw + 11 + GAP;                      // cover + its left/right margins
+      if (!row || used + w > full) newRow();
       row.appendChild(el); used += w;
     });
+
+    // 2) finished books: keep blank space at the right end of every shelf; the last book leans into it
+    const reserve = Math.round(fw * 1.5 * 0.45);
+    const avail = full - reserve;
+    const spineRows = [];
+    if (visibleSpines.length) spineRows.push(newRow());
+    visibleSpines.forEach(el => {
+      const w = +el.dataset.w + GAP;
+      if (used > 0 && used + w > avail) spineRows.push(newRow());
+      row.appendChild(el); used += w;
+    });
+    spineRows.forEach(r => r.lastElementChild.classList.add('lean'));
     board();
   }
+
+  markClippedTitles();
 
   const label = reader === 'all' ? '' : ` read by ${reader}`;
   stats.textContent = `${visibleSpines.length} of ${spines.length} books${label}`;
