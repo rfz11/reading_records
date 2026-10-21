@@ -92,7 +92,7 @@ h1 a:hover { border-bottom-color: var(--brass); }
 /* Currently-reading books stand on the shelf, full cover facing out, slightly angled for a subtle 3D look (left side higher than right) */
 .face {
   all: unset; display: block; box-sizing: border-box; cursor: pointer; flex: none; position: relative;
-  width: var(--face-w); aspect-ratio: 2 / 3; margin: 0 5px 0 6px; overflow: hidden;
+  width: var(--face-w); aspect-ratio: 2 / 3; margin: 0 0 0 3px; overflow: hidden;
   border-radius: 2px 4px 4px 2px; touch-action: manipulation; -webkit-tap-highlight-color: transparent;
   transform: perspective(520px) rotateY(14deg); transform-origin: left bottom;   /* left edge nearer/taller, right edge farther/shorter, bottom stays on the shelf */
   box-shadow: -1px 0 0 #6e6558, -2px 0 0 #5a5246, -3px 0 0 #453f36, 6px 6px 10px rgba(0,0,0,.5);   /* visible spine edge on the left */
@@ -242,7 +242,7 @@ function layout() {
   const visibleSpines = spines.filter(match);
 
   spines.forEach(sp => { sp.style.width = sp.dataset.w + 'px'; });
-  faces.forEach(f => { f.style.marginLeft = ''; });
+  faces.forEach(f => { f.style.marginLeft = ''; f.style.marginRight = ''; });
   cabinet.innerHTML = '';
   if (!visibleFaces.length && !visibleSpines.length) {
     cabinet.innerHTML = '<div class="empty">No books match. Try another reader or search term.</div>';
@@ -254,7 +254,7 @@ function layout() {
     const fw = faceWidth();
     const overlap = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--face-overlap')) || 0.15;
     const itemW = (el, first) => el.classList.contains('face')
-      ? (first ? fw + 11 : fw * (1 - overlap) + 5)      // cover + margins (later covers overlap the previous one)
+      ? (first ? fw + 3 : fw * (1 - overlap))           // cover + left margin (later covers overlap the previous one)
       : +el.dataset.w;
 
     const groups = [];
@@ -279,6 +279,14 @@ function layout() {
       const fcs = grp.els.filter(el => el.classList.contains('face'));
       const spW = sp.reduce((a, el) => a + +el.dataset.w, 0);
       const lastShelf = k === groups.length - 1;
+      // close the gap between the last cover and the first spine: the tilted cover's right edge looks
+      // narrower (perspective 520px, rotateY 14deg, same as the CSS), plus the flex gap
+      if (fcs.length && sp.length) {
+        const th = 14 * Math.PI / 180;
+        const pull = fw * (1 - Math.cos(th) * 520 / (520 + fw * Math.sin(th))) + GAP;
+        fcs[fcs.length - 1].style.marginRight = `-${pull.toFixed(2)}px`;
+        grp.width -= pull;
+      }
       let free = full - grp.width;                       // empty px at the right end of this shelf
 
       // a) widen the spines a little (the shelf with the covers is always filled; a half-empty last shelf of spines is not)
