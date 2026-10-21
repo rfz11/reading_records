@@ -242,6 +242,7 @@ function layout() {
   const visibleSpines = spines.filter(match);
 
   spines.forEach(sp => { sp.style.width = sp.dataset.w + 'px'; });
+  faces.forEach(f => { f.style.marginLeft = ''; });
   cabinet.innerHTML = '';
   if (!visibleFaces.length && !visibleSpines.length) {
     cabinet.innerHTML = '<div class="empty">No books match. Try another reader or search term.</div>';
@@ -275,12 +276,23 @@ function layout() {
       row = document.createElement('div'); row.className = 'shelf-row'; cabinet.appendChild(row);
 
       const sp = grp.els.filter(el => !el.classList.contains('face'));
+      const fcs = grp.els.filter(el => el.classList.contains('face'));
       const spW = sp.reduce((a, el) => a + +el.dataset.w, 0);
       const lastShelf = k === groups.length - 1;
-      const free = full - grp.width;
-      if (sp.length && !(lastShelf && free > full * 0.15)) {
-        const f = (full - (grp.width - spW)) / spW;      // widen only the spines
-        if (f > 1 && f <= 1.25) sp.forEach(el => { el.style.width = Math.floor(+el.dataset.w * f * 100) / 100 + 'px'; });
+      let free = full - grp.width;                       // empty px at the right end of this shelf
+
+      // a) widen the spines a little (the shelf with the covers is always filled; a half-empty last shelf of spines is not)
+      if (sp.length && (fcs.length || !(lastShelf && free > full * 0.15))) {
+        const f = Math.min(1.25, (full - (grp.width - spW)) / spW);
+        if (f > 1) {
+          sp.forEach(el => { el.style.width = Math.floor(+el.dataset.w * f * 100) / 100 + 'px'; });
+          free -= spW * (f - 1);
+        }
+      }
+      // b) anything still left on a shelf with covers is shared out by easing the covers apart (less overlap)
+      if (fcs.length > 1 && free > 0.5) {
+        const extra = Math.min(free / (fcs.length - 1), fw * 0.35);
+        fcs.slice(1).forEach(el => { el.style.marginLeft = `calc(var(--face-w) * var(--face-overlap) * -1 + ${extra.toFixed(2)}px)`; });
       }
       grp.els.forEach(el => row.appendChild(el));
     });
