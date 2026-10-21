@@ -17,8 +17,8 @@
   --muted: #6b7570;
   --brass: #d1a94f;
   --mist: #9fb0aa;
-  --shelf-pad: 16px;
   --face-w: 90px;
+  --face-overlap: .15;   /* share of a cover hidden by the next cover */
   --base-h: calc(var(--face-w) * 1.5);   /* spine base height = cover height */
   --serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Noto Serif SC', 'Songti SC', Georgia, serif;
   --sans: system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Noto Sans SC', sans-serif;
@@ -61,8 +61,7 @@ h1 a:hover { border-bottom-color: var(--brass); }
   border: 10px solid #5a4030; border-radius: 10px; padding: 26px 0 0;
   box-shadow: 0 16px 36px rgba(0,0,0,.22), inset 0 0 40px rgba(0,0,0,.45);
 }
-.shelf-row { display: flex; align-items: flex-end; gap: 2px; padding: 0 var(--shelf-pad); min-height: calc(var(--base-h) + 30px); }
-.shelf-row.tight { padding: 0; }   /* finished-book shelves: books touch both side walls */
+.shelf-row { display: flex; align-items: flex-end; gap: 2px; padding: 0; min-height: calc(var(--base-h) + 30px); }
 .shelf-board {
   height: 16px; margin: 0 -2px 26px;
   background: linear-gradient(180deg, #c79a69, var(--oak) 45%, var(--oak-dark));
@@ -105,6 +104,7 @@ h1 a:hover { border-bottom-color: var(--brass); }
   background: linear-gradient(100deg, rgba(0,0,0,.35) 0, rgba(255,255,255,.22) 4%, rgba(0,0,0,.12) 8%,
               rgba(255,255,255,0) 30%, rgba(255,255,255,.10) 55%, rgba(0,0,0,.16) 100%);
 }
+.face + .face { margin-left: calc(var(--face-w) * var(--face-overlap) * -1); }   /* neighbouring covers overlap slightly */
 .face .no-cover { font-size: 11px; }
 .face.active { transform: perspective(520px) rotateY(4deg) translateY(-12px); z-index: 5; }
 .no-cover { font-size: 11px; }
@@ -143,7 +143,7 @@ body.popup-open #scrim { display: block; }
 
 @media (max-width: 600px) {
   /* >= 4 currently-read covers per row: (viewport - page/cabinet padding) / 4 minus the margins of one cover */
-  :root { --shelf-pad: 8px; --face-w: min(72px, calc((100vw - 48px) / 4 - 14px)); }
+  :root { --face-w: min(72px, calc((100vw - 48px) / 4 - 14px)); }
   body { padding-left: calc(10px + env(safe-area-inset-left)); padding-right: calc(10px + env(safe-area-inset-right)); padding-top: calc(16px + env(safe-area-inset-top)); }
   .stats { font-size: 13px; }
   .toolbar { gap: 8px; margin-bottom: 16px; }
@@ -204,11 +204,6 @@ const faces = Array.from(document.querySelectorAll('#pool .face'));
 const mobileQuery = window.matchMedia('(max-width: 600px)');
 let activeEl = null, focusBack = null;
 
-function shelfPadding() {
-  const v = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--shelf-pad'));
-  return 2 * (isNaN(v) ? 16 : v);
-}
-
 function faceWidth() {
   // --face-w can be a min()/calc() expression, so measure the real rendered width with a probe
   const probe = document.createElement('div');
@@ -242,48 +237,43 @@ function layout() {
   if (!visibleFaces.length && !visibleSpines.length) {
     cabinet.innerHTML = '<div class="empty">No books match. Try another reader or search term.</div>';
   } else {
-    const full = cabinet.clientWidth - shelfPadding();
+    // One continuous flow: currently-read covers first (slightly overlapping), finished books right after
+    // them on the same shelf. Every shelf runs edge to edge: the leftover pixels are absorbed by widening
+    // the spines a little (covers keep their size). A half-empty last shelf keeps natural widths.
+    const full = cabinet.clientWidth;
     const fw = faceWidth();
-    let row = null, used = 0;
-    const board = () => { const b = document.createElement('div'); b.className = 'shelf-board'; cabinet.appendChild(b); };
-    const newRow = () => {
-      if (row) board();
-      row = document.createElement('div'); row.className = 'shelf-row'; cabinet.appendChild(row); used = 0;
-      return row;
-    };
-
-    // 1) currently-read covers get their own shelf; the cover width (CSS) guarantees >= 4 fit per row
-    visibleFaces.forEach(el => {
-      const w = fw + 11 + GAP;                      // cover + its left/right margins
-      if (!row || used + w > full) newRow();
-      row.appendChild(el); used += w;
-    });
-
-    // 2) finished books: every shelf is filled edge to edge (no side padding, spines widened a little
-    //    to absorb the leftover pixels). Only a half-empty LAST shelf keeps its natural width.
-    const spineFull = cabinet.clientWidth;
+    const overlap = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--face-overlap')) || 0.15;
+    const itemW = (el, first) => el.classList.contains('face')
+      ? (first ? fw + 11 : fw * (1 - overlap) + 5)      // cover + margins (later covers overlap the previous one)
+      : +el.dataset.w;
 
     const groups = [];
-    let g = [], gw = 0;                                  // gw = spine widths + gaps in the current shelf
-    visibleSpines.forEach(el => {
-      const w = +el.dataset.w;
-      if (g.length && gw + GAP + w > spineFull) { groups.push({ els: g, width: gw }); g = []; gw = 0; }
-      gw = g.length ? gw + GAP + w : w;
-      g.push(el);
-    });
-    if (g.length) groups.push({ els: g, width: gw });
-
-    groups.forEach((grp, k) => {
-      const r = newRow(); r.classList.add('tight');
-      const n = grp.els.length;
-      const free = spineFull - grp.width;
-      const lastShelf = k === groups.length - 1;
-      // a half-empty last shelf keeps natural widths; every other shelf (and a nearly full last one) is filled
-      if (!(lastShelf && free > spineFull * 0.15) && n >= 3) {
-        const f = (spineFull - GAP * (n - 1)) / (grp.width - GAP * (n - 1));
-        grp.els.forEach(el => { el.style.width = Math.floor(+el.dataset.w * f * 100) / 100 + 'px'; });
+    let g = { els: [], width: 0 };
+    visibleFaces.concat(visibleSpines).forEach(el => {
+      let w = itemW(el, g.els.length === 0);
+      if (g.els.length && g.width + GAP + w > full) {
+        groups.push(g); g = { els: [], width: 0 }; w = itemW(el, true);
       }
-      grp.els.forEach(el => r.appendChild(el));
+      g.width = g.els.length ? g.width + GAP + w : w;
+      g.els.push(el);
+    });
+    if (g.els.length) groups.push(g);
+
+    let row = null;
+    const board = () => { const b = document.createElement('div'); b.className = 'shelf-board'; cabinet.appendChild(b); };
+    groups.forEach((grp, k) => {
+      if (row) board();
+      row = document.createElement('div'); row.className = 'shelf-row'; cabinet.appendChild(row);
+
+      const sp = grp.els.filter(el => !el.classList.contains('face'));
+      const spW = sp.reduce((a, el) => a + +el.dataset.w, 0);
+      const lastShelf = k === groups.length - 1;
+      const free = full - grp.width;
+      if (sp.length && !(lastShelf && free > full * 0.15)) {
+        const f = (full - (grp.width - spW)) / spW;      // widen only the spines
+        if (f > 1 && f <= 1.25) sp.forEach(el => { el.style.width = Math.floor(+el.dataset.w * f * 100) / 100 + 'px'; });
+      }
+      grp.els.forEach(el => row.appendChild(el));
     });
     board();
   }
