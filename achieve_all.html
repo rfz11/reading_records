@@ -177,7 +177,7 @@ body.popup-open #scrim { display: block; }
 
   <div class="toolbar">
     <select id="readerSelect" aria-label="Filter by reader"><option value="all">All readers</option><option value="凤书🐦‍🔥">凤书🐦‍🔥</option><option value="卓恒🪨">卓恒🪨</option><option value="善下🌊">善下🌊</option><option value="抱朴🌲">抱朴🌲</option><option value="清一🎋">清一🎋</option><option value="盈生🐤">盈生🐤</option><option value="致虚🏔️">致虚🏔️</option><option value="若缺🌒">若缺🌒</option><option value="西翁🦁">西翁🦁</option><option value="锦安💰">锦安💰</option></select>
-    <input id="search" type="search" enterkeyhint="search" autocomplete="off" placeholder="Search titles" aria-label="Search titles">
+    <input id="search" type="search" enterkeyhint="search" autocomplete="off" placeholder="Search titles or notes" aria-label="Search titles or notes">
   </div>
 
   <div class="cabinet" id="cabinet"></div>
@@ -223,12 +223,21 @@ function markClippedTitles() {
   titles.forEach((t, i) => { if (clipped[i]) t.classList.add('clip'); });
 }
 
+// Search covers the title and the reading note (cached per element)
+function searchText(el) {
+  if (el._hay === undefined) {
+    const d = (el.classList.contains('face') ? READING : BOOKS)[el.dataset.id];
+    el._hay = (d.title + ' ' + (d.note || '')).toLowerCase();
+  }
+  return el._hay;
+}
+
 function layout() {
   closePopup();
   const reader = readerSelect.value;
   const q = search.value.trim().toLowerCase();
   const match = el => (reader === 'all' || el.dataset.reader === reader) &&
-    (!q || el.dataset.title.toLowerCase().includes(q));
+    (!q || searchText(el).includes(q));
   const visibleFaces = faces.filter(match);
   const visibleSpines = spines.filter(match);
 
